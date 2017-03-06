@@ -1,0 +1,19 @@
+$title-grey: #777;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px Helvetica, sans-serif;
+  color: #555;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 300;
+}
+
+h3 {
+  color: $title-grey;
+}

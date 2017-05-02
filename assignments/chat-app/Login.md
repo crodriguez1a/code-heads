@@ -2,6 +2,24 @@
 ---
 ### Assignments - Building a Login
 
+##### You should already have completed...
+- Set up your CodeAnywhere project and **HTML5** container
+
+- Created an `index.html` file using the **SSH Terminal** and the `touch` command
+
+- Written your HTML template where you would have added your two open source **CSS** stylesheets from [Bulma.io](http://Bulma.io/) and [FontAwesome.io](http://fontawesome.io/):
+
+      <html>
+        <head>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+          </head>
+        </head>
+        <body>
+          Hello world
+        </body>
+      </html>
+
 ##### Goals
 - Getting familiar with HTML
 
@@ -35,3 +53,7 @@
 Your finished product should look something like this:
 
 <img src="login.gif" />
+
+## Have Questions?
+
+Send me an email me at <mailto:crodriguez1a@gmail.com>

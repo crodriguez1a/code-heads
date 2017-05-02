@@ -3,7 +3,7 @@
 ## Assignments - Building a Login
 
 ### You should already have completed...
-- Set up your CodeAnywhere project and **HTML5** container
+- Started a CodeAnywhere project and added **HTML5** container
 
 - Created an `index.html` file using the **SSH Terminal** and the `touch` command
 

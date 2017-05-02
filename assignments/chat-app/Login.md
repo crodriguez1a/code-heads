@@ -1,8 +1,8 @@
 # Chat App Project
 ---
-### Assignments - Building a Login
+## Assignments - Building a Login
 
-##### You should already have completed...
+### You should already have completed...
 - Set up your CodeAnywhere project and **HTML5** container
 
 - Created an `index.html` file using the **SSH Terminal** and the `touch` command
@@ -20,7 +20,7 @@
         </body>
       </html>
 
-##### Goals
+### Goals
 - Getting familiar with HTML
 
 - Learning to leverage community libraries (a.k.a., open source libraries)
@@ -30,7 +30,7 @@
 - Reading and understanding library documentation
   - **documentation** - A set guides for writing code using a community library
 
-##### Instructions
+### Instructions
 
   1. Login to [CodeAnywhere](http://codeanywhere.com)
   - Click on your chat app connection to and select `index.html` to edit

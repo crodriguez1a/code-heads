@@ -49,11 +49,12 @@
 
   5. Now for the fun part. Using the examples provided on [Bulma.io/form](http://bulma.io/documentation/elements/form/), create a login form that has the following:
 
-    - An input field with a label called "username" (extra credit if you can also add an email icon)
+    
+      - An input field with a label called "username" (extra credit if you can also add an email icon)
 
-    - An input field with a label called "password" (extra credit if the password is masked)
+      - An input field with a label called "password" (extra credit if the password is masked)
 
-    - A button with a label called "Login" (extra credit if your button is blue, or has a unique icon from [FontAwesome.io](http://fontawesome.io/))
+      - A button with a label called "Login" (extra credit if your button is blue, or has a unique icon from [FontAwesome.io](http://fontawesome.io/))
 
 
 Your finished product should look something like this:

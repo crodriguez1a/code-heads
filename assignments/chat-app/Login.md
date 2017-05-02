@@ -35,11 +35,11 @@
 
   1. Login to [CodeAnywhere](http://codeanywhere.com)
 
-  - Click on your chat app connection, then select `index.html` to edit
+  2. Click on your chat app connection, then select `index.html` to edit
 
-  - Inside of the `body`, create a `section` following the example provided on [Bulma.io/section](http://bulma.io/documentation/layout/section/)
+  3. Inside of the `body`, create a `section` following the example provided on [Bulma.io/section](http://bulma.io/documentation/layout/section/)
 
-  - Inside of your section, create a form using the HTML `form` tag. We'll discuss form tags and their functionality on our next session. Your form should go inside of the section you created on the previous step.
+  4. Inside of your section, create a form using the HTML `form` tag. We'll discuss form tags and their functionality on our next session. Your form should go inside of the section you created on the previous step.
 
         <section class="section">
           <form>
@@ -47,7 +47,7 @@
           </form>
         </section>
 
-  - Now for the fun part. Using the examples provided on [Bulma.io/form](http://bulma.io/documentation/elements/form/), create a login form that has the following:
+  5. Now for the fun part. Using the examples provided on [Bulma.io/form](http://bulma.io/documentation/elements/form/), create a login form that has the following:
 
     - An input field with a label called "username" (extra credit if you can also add an email icon)
 

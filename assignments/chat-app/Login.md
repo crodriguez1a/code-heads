@@ -39,7 +39,7 @@
 
   3. Inside of the `body`, create a `section` following the example provided on [Bulma.io/section](http://bulma.io/documentation/layout/section/)
 
-  4. Inside of your section, create a form using the HTML `form` tag. We'll discuss form tags and their functionality on our next session. Your form should go inside of the section you created on the previous step.
+  4. Inside of your section, create a form using the HTML `form` tag. We'll discuss form tags and their functionality during our next session. Your form should go inside of the section you created on the previous step.
 
     <section class="section">
       <form>

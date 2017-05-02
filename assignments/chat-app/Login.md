@@ -56,4 +56,4 @@ Your finished product should look something like this:
 
 ## Have Questions?
 
-Send me an email me at <mailto:crodriguez1a@gmail.com>
+Send me an email me at <a href="mailto:crodriguez1a@gmail.com">crodriguez1a@gmail.com</a>

@@ -35,7 +35,7 @@
 
   1. Login to [CodeAnywhere](http://codeanywhere.com)
 
-  - Click on your chat app connection to and select `index.html` to edit
+  - Click on your chat app connection, then select `index.html` to edit
 
   - Inside of the `body`, create a `section` following the example provided on [Bulma.io/section](http://bulma.io/documentation/layout/section/)
 

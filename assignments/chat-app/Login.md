@@ -41,11 +41,11 @@
 
   4. Inside of your section, create a form using the HTML `form` tag. We'll discuss form tags and their functionality on our next session. Your form should go inside of the section you created on the previous step.
 
-        <section class="section">
-          <form>
-            <!-- Your login will live here-->
-          </form>
-        </section>
+    <section class="section">
+      <form>
+        <!-- Your login will live here-->
+      </form>
+    </section>
 
   5. Now for the fun part. Using the examples provided on [Bulma.io/form](http://bulma.io/documentation/elements/form/), create a login form that has the following:
 

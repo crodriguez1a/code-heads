@@ -30,7 +30,7 @@ module.exports = function(defaults) {
   II. Imported modules that wouldn't automatically be resolved (e.g., reducers), should be placed in either `src/utils`, or inside of a collection `my-component/-utils`. Note the local `-utils` is pre-fixed with a hyphen. This is explained in the following Glimmer issue:
   <https://github.com/glimmerjs/resolution-map-builder/issues/8>
 
-  Here's an example of file system some custom modules added:
+  Here's an example of file system with some custom modules added:
 
       my-app
     ├── config

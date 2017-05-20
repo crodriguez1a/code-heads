@@ -39,21 +39,22 @@
 
   3. Inside of the `body`, create a `section` following the example provided on [Bulma.io/section](http://bulma.io/documentation/layout/section/)
 
-  4. Inside of your section, create a form using the HTML `form` tag. We'll discuss form tags and their functionality on our next session. Your form should go inside of the section you created on the previous step.
+  4. Inside of your section, create a form using the HTML `form` tag. We'll discuss form tags and their functionality during our next session. Your form should go inside of the section you created on the previous step.
 
-        <section class="section">
-          <form>
-            <!-- Your login will live here-->
-          </form>
-        </section>
+    <section class="section">
+      <form>
+        <!-- Your login will live here-->
+      </form>
+    </section>
 
   5. Now for the fun part. Using the examples provided on [Bulma.io/form](http://bulma.io/documentation/elements/form/), create a login form that has the following:
 
-    - An input field with a label called "username" (extra credit if you can also add an email icon)
 
-    - An input field with a label called "password" (extra credit if the password is masked)
+      - An input field with a label called "username" (extra credit if you can also add an email icon)
 
-    - A button with a label called "Login" (extra credit if your button is blue, or has a unique icon from [FontAwesome.io](http://fontawesome.io/))
+      - An input field with a label called "password" (extra credit if the password is masked)
+
+      - A button with a label called "Login" (extra credit if your button is blue, or has a unique icon from [FontAwesome.io](http://fontawesome.io/))
 
 
 Your finished product should look something like this:

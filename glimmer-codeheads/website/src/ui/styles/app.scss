@@ -1,0 +1,40 @@
+$blue: #3ABAD4;
+
+@import 'node_modules/bulma/bulma';
+
+html {
+  background: #121b26;
+}
+
+.no-backgound {
+  background: none !important;
+}
+
+.hero--logo {
+  img {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+.nav--logo {
+  color: $white;
+  font-weight: 100;
+
+  .icon {
+    font-weight: bolder;
+    display: inline-flex;
+    padding-right: 2.25rem;
+    font-family: monospace;
+    letter-spacing: -5px;
+    font-size: 1.5rem;
+    margin-left: 1.25rem;
+    margin-top: -0.2rem;
+
+    .upsidedown {
+      transform: rotate(180deg);
+      display: inline-block;
+      margin: 14px 0 0 10px;
+    }
+  }
+}

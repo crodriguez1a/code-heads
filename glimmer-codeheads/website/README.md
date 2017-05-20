@@ -7,7 +7,7 @@ A short introduction of this app could easily go here.
 
 I. Using Redux without React may require some additional work at build time
 
-  - A missing node environment global called `process` can somehow end up in the browser, and throw an error: <https://github.com/angular-redux/store/issues/336>. To solve this with ember-cli, you'll have to configure `rollup` to hard-code this value in `ember-cli-build.js`.
+  - A check for a missing global called `process` can somehow end up in the browser, and throw an error: <https://github.com/angular-redux/store/issues/336>. To solve this with ember-cli, you'll have to configure `rollup` to hard-code this value in `ember-cli-build.js`.
 
 
 ```es6
@@ -27,7 +27,7 @@ module.exports = function(defaults) {
 }
 ```
 
-  II. Import files that wouldn't automatically be resolved (e.g., reducers), should be placed in either `src/utils`, or inside of a collection `my-component/-utils`. Note the local `-utils` is pre-fixed with a hyphen. This is explained in the following Glimmer issue:
+  II. Imported modules that wouldn't automatically be resolved (e.g., reducers), should be placed in either `src/utils`, or inside of a collection `my-component/-utils`. Note the local `-utils` is pre-fixed with a hyphen. This is explained in the following Glimmer issue:
   <https://github.com/glimmerjs/resolution-map-builder/issues/8>
 
   Here's an example of file system some custom modules added:

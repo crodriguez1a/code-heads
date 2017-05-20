@@ -38,38 +38,13 @@
 <main>
   <section class="section">
     <div class="columns">
-      <div class="column">
-        <div class="box">
-          <h1 class="title is-5">A Practical Approach</h1>
-          <p>
-            Description <a href="#">More</a>
-          </p>
+      {{#each articles key="@index" as |article index|}}
+        <div class="column">
+          <div class="box">
+            <article-card @article={{article}} @didRead={{action markAsRead index}} />
+          </div>
         </div>
-      </div>
-      <div class="column">
-        <div class="box">
-          <h1 class="title is-5">Keep Learning Free</h1>
-          <p>
-            Description <a href="#">More</a>
-          </p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="box">
-          <h1 class="title is-5">Contributors &amp; Curators</h1>
-          <p>
-            Description <a href="#">More</a>
-          </p>
-        </div>
-      </div>
-      <div class="column">
-        <div class="box">
-          <h1 class="title is-5">Start learning on your own</h1>
-          <p>
-            Description <a href="#">More</a>
-          </p>
-        </div>
-      </div>
+      {{/each}}
     </div>
   </section>
 </main>

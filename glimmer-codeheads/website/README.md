@@ -1,4 +1,4 @@
-# website
+# Code-Heads Club Website
 
 This README outlines the details of collaborating on this Glimmer/Redux application.
 A short introduction of this app could easily go here.

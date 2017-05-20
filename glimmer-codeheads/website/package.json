@@ -21,6 +21,7 @@
     "ember-cli": "github:ember-cli/ember-cli",
     "ember-cli-inject-live-reload": "^1.6.1",
     "ember-cli-uglify": "^1.2.0",
+    "lodash": "^4.17.4",
     "process": "^0.11.10",
     "redux": "^3.6.0",
     "typescript": "^2.2.2"

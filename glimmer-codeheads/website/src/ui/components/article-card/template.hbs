@@ -1,0 +1,7 @@
+<div class="was-read-{{@article.read}}">
+  {{! NOTE arguments always start with an @ sign (think "A is for arguments") }}
+  <h1 class="title is-5">{{@article.title}}</h1>
+  <p>
+    {{@article.description}} <a href="#" onclick={{@didRead}}>{{@article.teaser}}</a>
+  </p>
+</div>

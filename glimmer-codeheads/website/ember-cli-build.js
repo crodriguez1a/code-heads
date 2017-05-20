@@ -12,7 +12,7 @@ module.exports = function(defaults) {
           redux/process issue https://github.com/angular-redux/store/issues/336
         */
         replace({
-            'process.env.NODE_ENV': JSON.stringify( 'production' )
+          'process.env.NODE_ENV': JSON.stringify( 'production' )
         })
       ]
     }

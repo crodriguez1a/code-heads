@@ -2,10 +2,10 @@ import Component, { tracked } from "@glimmer/component";
 import { createStore } from 'redux';
 import Articles from './-utils/reducers/articles';
 
-
 export default class Website extends Component {
   // Create a redux store using the content reducer
   articles: Store = createStore(Articles, {
+    // TODO @type StoreEnhancer
     articles: [
       {
         title: 'Hello redux',

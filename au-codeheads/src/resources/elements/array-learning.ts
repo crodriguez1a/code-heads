@@ -4,12 +4,10 @@ export class ArrayLearning {
   @bindable model = [];
 
   constructor(
-    public arrayMaze: Array<any>
+    public arrayMaze: string[][]
   ) {
     this.arrayMaze = [
-      [0, 0, 0, 1],
-      [0, 1, 0, 1],
-      [0, 0, 1, 1]
+      ['ʕ','•','ᴥ','•','ʔ']
     ]
   }
 

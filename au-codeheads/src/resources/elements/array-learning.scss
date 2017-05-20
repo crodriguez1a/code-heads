@@ -2,7 +2,7 @@ $border-color: lightgrey;
 $font-color: #777;
 $highlight-color: #279AF1;
 
-.array-maze {
+.ascii-face-challenge {
   font: 1rem courier;
   color: $font-color;
   width: auto;
@@ -22,24 +22,6 @@ $highlight-color: #279AF1;
         margin: 0;
         position: relative;
         text-align: center;
-
-        &:after {
-          position: absolute;
-          top: 1.25rem;
-          left: 40%;
-          content: "";
-          display: inline-block;
-          width: 0.75rem;
-          height: 0.75rem;
-          border-radius: 100%;
-          background: $font-color;
-        }
-
-        &.is-1 {
-          &:after {
-            background: $highlight-color;
-          }
-        }
       }
     }
   }

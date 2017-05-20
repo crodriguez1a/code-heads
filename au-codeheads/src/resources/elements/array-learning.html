@@ -1,15 +1,15 @@
 <template>
     <require from="./array-learning.css"></require>
 
-    <h3>Puzzle 1</h3>
+    <h3>The Emoticon Challenge</h3>
     <p>
       todo: instructions
     </p>
-    <div class="array-maze">
+    <div class="ascii-face-challenge">
       <template repeat.for="column of arrayMaze">
         <ul class="maze-column">
           <template repeat.for="item of column">
-            <li class="is-${item}"></li>
+            <li class="is-${item}">${item}</li>
           </template>
         </ul>
       </template>
@@ -29,5 +29,17 @@
         <li><code>slice</code> - Copy an array</li>
       </ul>
     </div>
+
+    <note class="instructor-notes">
+      <h4>Instructor Notes</h4>
+      <p>
+        Students will access a starting array from the global codeheads library <code>window.Codeheads.findChallenge('ascii-face-challenge')</code>.
+        This access requires the codehead library to be included as part of their dependencies in their html files.
+
+        <pre>
+          show link and script tags
+        </pre>
+      </p>
+    </note>
 
 </template>

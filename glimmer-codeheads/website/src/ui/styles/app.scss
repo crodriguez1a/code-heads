@@ -21,19 +21,24 @@ html {
   opacity: 0.5;
 }
 
+.nav-item {
+  color: $blue !important;
+}
+
 .nav--logo {
-  color: $white;
-  font-weight: 100;
+  &.nav-item a {
+    color: $white !important;
+    font-size: 1.25em;
+  }
 
   .icon {
     font-weight: bolder;
     display: inline-flex;
-    padding-right: 2.25rem;
+    padding-right: 1.5rem;
     font-family: monospace;
     letter-spacing: -5px;
     font-size: 1.5rem;
-    margin-left: 1.25rem;
-    margin-top: -0.2rem;
+    margin: -0.2rem 0 0 1.25rem;
 
     .upsidedown {
       transform: rotate(180deg);

@@ -6,7 +6,7 @@
       </div>
     </div>
     <div class="nav-right">
-      <a class="nav-item">
+      <a class="nav-item" href="#!/about">
         About
       </a>
       <a class="nav-item">
@@ -38,13 +38,27 @@
 <main>
   <section class="section">
     <div class="columns">
-      {{#each articles key="@index" as |article index|}}
-        <div class="column">
-          <div class="box">
-            <article-card @article={{article}} @didRead={{action markAsRead index}} />
+
+      {{! Home}}
+      {{#if atHome}}
+        {{#each articles key="@index" as |article index|}}
+          <div class="column">
+            <div class="box">
+              <article-card @article={{article}} @didRead={{action markAsRead index}} />
+            </div>
           </div>
+        {{/each}}
+      {{/if}}
+
+      {{! About}}
+      {{#if atAbout}}
+        <div class="column">
+          <h1 class="title is-5">About</h1>
         </div>
-      {{/each}}
+      {{/if}}
+
     </div>
   </section>
 </main>
+
+<article-modal @content={{content}} />

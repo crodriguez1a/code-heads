@@ -17,6 +17,7 @@
     "@glimmer/blueprint": "^0.1.12",
     "@glimmer/component": "^0.3.8",
     "@glimmer/resolver": "^0.3.0",
+    "@glimmer/web-component": "^0.1.2",
     "broccoli-asset-rev": "^2.5.0",
     "ember-cli": "github:ember-cli/ember-cli",
     "ember-cli-inject-live-reload": "^1.6.1",
@@ -24,6 +25,7 @@
     "lodash": "^4.17.4",
     "process": "^0.11.10",
     "redux": "^3.6.0",
+    "rollup-plugin-replace": "^1.1.1",
     "typescript": "^2.2.2"
   },
   "engines": {
@@ -32,6 +34,7 @@
   "private": true,
   "dependencies": {
     "bulma": "^0.4.1",
-    "rollup-plugin-replace": "^1.1.1"
+    "navigo": "^4.8.0",
+    "urlWatch": "^0.0.2"
   }
 }

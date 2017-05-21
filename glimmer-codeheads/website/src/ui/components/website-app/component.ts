@@ -1,20 +1,65 @@
 import Component, { tracked } from "@glimmer/component";
 import { createStore } from 'redux';
 import Reducer from './-utils/reducers/articles';
+import Router from './-utils/router/router';
+
+const router = new Router({debug:true});
 
 export default class Website extends Component {
   constructor(options) {
     super(options);
 
-    // REVIEW async belong here or with redux?
-    // this.loadArticles();
+    // this.loadMarkdown();
+
+    // subscribe to router listener
+    router.listen(this.routeNameUpdate.bind(this));
   }
 
-  async loadArticles() {
-    // let request = await fetch('https://api.example.com/person.json');
-    // let json = await request.json();
-    // this.person = json.person;
+  /**
+    Name of current route
+
+    @property routeName
+  */
+  @tracked routeName;
+
+  /**
+    Signal route is home
+
+    @property atHome
+  */
+  @tracked('routeName')
+  get atHome() {
+    return this.routeName === '';
   }
+
+  /**
+    Signal route is home
+
+    @property atAbout
+  */
+  @tracked('routeName')
+  get atAbout() {
+    return this.routeName === 'about';
+  }
+
+
+  /**
+    Call back for route listener
+
+    @method routeUpdate
+  */
+  public routeNameUpdate(name) {
+    this.routeName = name;
+  }
+
+  /*
+    NOTE async await Throws regenaratorRuntime error https://github.com/glimmerjs/glimmer-website/issues/62
+  async loadMarkdown(file='foo') {
+    let req = await fetch(`./-utils/md/articles/${file}.md`);
+    let json = await request.json();
+    console.log('async response', json);
+  }
+  */
 
   /**
     Create a redux store using the reducer

@@ -7,11 +7,11 @@ A short introduction of this app could easily go here.
 
 **Using Redux without React may require some additional work at build time**
 
-  - #<https://github.com/crodriguez1a/code-heads/issues/2>
+  - Issue [#2](https://github.com/crodriguez1a/code-heads/issues/2)
 
 **Imported modules (e.g., reducers) are not automatically resolved.**
 
-  - #<https://github.com/crodriguez1a/code-heads/issues/3>
+  - Issue [#3](https://github.com/crodriguez1a/code-heads/issues/3)
 
 
 ## Prerequisites

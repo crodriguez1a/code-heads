@@ -19,22 +19,21 @@
     "@glimmer/resolver": "^0.3.0",
     "@glimmer/web-component": "^0.1.2",
     "broccoli-asset-rev": "^2.5.0",
+    "bulma": "^0.4.1",
     "ember-cli": "github:ember-cli/ember-cli",
     "ember-cli-inject-live-reload": "^1.6.1",
     "ember-cli-uglify": "^1.2.0",
     "lodash": "^4.17.4",
+    "navigo": "^4.8.0",
     "process": "^0.11.10",
     "redux": "^3.6.0",
     "rollup-plugin-replace": "^1.1.1",
-    "typescript": "^2.2.2"
+    "typescript": "^2.2.2",
+    "urlWatch": "^0.0.2"
   },
   "engines": {
     "node": ">= 4.0"
   },
   "private": true,
-  "dependencies": {
-    "bulma": "^0.4.1",
-    "navigo": "^4.8.0",
-    "urlWatch": "^0.0.2"
-  }
+  "dependencies": {}
 }

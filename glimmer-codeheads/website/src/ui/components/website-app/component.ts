@@ -8,7 +8,6 @@ const router = new Router({debug:true});
 export default class Website extends Component {
   constructor(options) {
     super(options);
-
     // this.loadMarkdown();
 
     // subscribe to router listener
@@ -42,6 +41,15 @@ export default class Website extends Component {
     return this.routeName === 'about';
   }
 
+  /**
+    Signal route is home
+
+    @property atAbout
+  */
+  @tracked('routeName')
+  get atResume() {
+    return this.routeName === 'resume';
+  }
 
   /**
     Call back for route listener
@@ -66,22 +74,22 @@ export default class Website extends Component {
 
     @property store
   */
-  private store: Object = createStore(Reducer);
+  private store: any = createStore(Reducer);
 
   /**
     Get the current state of the articles model from the store
 
     @property articles
   */
-  @tracked articles: Array = this.store.getState(), ['read'];
+  @tracked articles: Array<any> = this.store.getState();
 
   /**
     Proxy the store.dispatch function
 
     @method dispatch
   */
-  private dispatch() {
-    return this.store.dispatch(...arguments);
+  private dispatch(action: Object = {}) {
+    return this.store.dispatch(action);
   }
 
   /**

@@ -1,4 +1,4 @@
-const articles: Array = [
+const articles: Array<any> = [
   {
     title: 'A Practical Approach',
     description: 'Hello glimmer-redux',
@@ -30,7 +30,7 @@ const articles: Array = [
 ];
 
 export default function ArticlesReducer (state=articles, action) {
-  // TODO where would an async fetch belong? 
+  // TODO where would an async fetch belong?
   switch (action.type) {
     case 'MARK_AS_READ':
       return state.map((article, index) => {

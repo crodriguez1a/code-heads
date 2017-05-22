@@ -30,8 +30,8 @@ UrlWatcher.prototype = {
           }
           self.location.href = self.expectedUrl;
           var id = '_iframe_notify_' + notify[1];
-          var notifyFn = angularCallbacks[id];
-          delete angularCallbacks[id];
+          var notifyFn = null;
+          var noop = function() { return; };
           try {
             (notifyFn||noop)();
           } catch (e) {

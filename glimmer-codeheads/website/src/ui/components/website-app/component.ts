@@ -1,6 +1,6 @@
 import Component, { tracked } from "@glimmer/component";
 import { createStore } from 'redux';
-import Reducer from './-utils/reducers/articles';
+import Reducers from './-utils/reducers';
 import Router from './-utils/router/router';
 
 const router = new Router({debug:true});
@@ -47,7 +47,7 @@ export default class Website extends Component {
     @property atAbout
   */
   @tracked('routeName')
-  get atResume() {
+  get atCV() {
     return this.routeName === 'resume';
   }
 
@@ -74,7 +74,7 @@ export default class Website extends Component {
 
     @property store
   */
-  private store: any = createStore(Reducer);
+  private store: any = createStore(Reducers);
 
   /**
     Get the current state of the articles model from the store

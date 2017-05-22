@@ -7,57 +7,11 @@ A short introduction of this app could easily go here.
 
 **Using Redux without React may require some additional work at build time**
 
-  - A check for a missing Global called `process` throws an error in the  browser : <https://github.com/angular-redux/store/issues/336>. To solve this with ember-cli, you'll have to configure `rollup` to hard-code this value in `ember-cli-build.js`.
-
-
-```es6
-const GlimmerApp = require('@glimmer/application-pipeline').GlimmerApp;
-const replace = require('rollup-plugin-replace');
-
-module.exports = function(defaults) {
-  let app = new GlimmerApp(defaults, {
-    rollup: {
-      plugins: [
-        replace({
-          'process.env.NODE_ENV': JSON.stringify( 'production' )
-        })
-      ]
-    }
-  });
-}
-```
+  - #<https://github.com/crodriguez1a/code-heads/issues/2>
 
 **Imported modules (e.g., reducers) are not automatically resolved.**
 
-  - Custom modules should be placed in either `src/utils`, or inside of a collection (e.g `my-component/-utils`). Note that when referencing from inside a collection, `-utils` is pre-fixed with a hyphen. This convention is further explained in the following Glimmer issue:
-  <https://github.com/glimmerjs/resolution-map-builder/issues/8>
-
-Here's an example of file system with some custom modules added:
-
-      my-app
-    ├── config
-    │   ├── environment.js
-    │   ├── module-map.ts
-    │   └── resolver-configuration.ts
-    ├── dist/
-    ├── src
-    │   ├── utils
-    │   │   ├── my-modules
-    |   │   │   └── module.ts
-    │   ├── ui
-    │   │   ├── components
-    │   │   │   └── my-app
-    │   │   │       ├── component.ts
-    │   │   │       └── template.hbs
-    │   │   │       └── -utils
-    |   │   │           └── my-reducer.ts
-    │   │   ├── styles
-    │   │   │   └── app.css
-    │   │   └── index.html
-    │   ├── index.ts
-    │   └── main.ts
-    ├── ember-cli-build.js
-    │
+  - #<https://github.com/crodriguez1a/code-heads/issues/3>
 
 
 ## Prerequisites

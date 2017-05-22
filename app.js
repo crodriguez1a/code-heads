@@ -10117,6 +10117,32 @@ var ComponentManager = function () {
     return ComponentManager;
 }();
 
+var AboutOverview = function (_Component) {
+  inherits(AboutOverview, _Component);
+
+  function AboutOverview() {
+    classCallCheck(this, AboutOverview);
+    return possibleConstructorReturn(this, _Component.apply(this, arguments));
+  }
+
+  return AboutOverview;
+}(Component);
+
+var __ui_components_about_overview_template__ = { "id": "Y29LHKL+", "block": "{\"symbols\":[],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"About Code-Heads\"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    The Code-Heads Club is partnership between Engineers and Students.\\n    Our mission is to maintain a free curriculum for young adults learning to code.\\n\\n    Lorem ipsum\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"media\"],[7],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-left\"],[7],[0,\"\\n          \"],[6,\"figure\"],[9,\"class\",\"image is-64x64\"],[7],[0,\"\\n            \"],[6,\"img\"],[9,\"src\",\"https://lh3.googleusercontent.com/-ztm7wZFUgrU/VWdSIgKmMGI/AAAAAAAABIA/xfI_6KKPOQQXtZnnkdApDETUaUyd-W8MgCEw/w280-h280-p/profile_google.jpg\"],[9,\"alt\",\"Github avatar image\"],[7],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-content\"],[7],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"title is-4\"],[7],[0,\"Carlos Rodriguez\"],[8],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n            \"],[6,\"i\"],[9,\"class\",\"fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n            \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n              \"],[6,\"strong\"],[7],[0,\"crodriguez\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n\\n      \"],[6,\"div\"],[9,\"class\",\"content\"],[7],[0,\"\\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\n        Phasellus nec iaculis mauris.\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"footer\"],[9,\"class\",\"card-footer\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"#!/about/resume\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-paper-plane-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n        Resume\\n      \"],[8],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-envelope-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n        Email\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-overview" } };
+
+var AboutResume = function (_Component) {
+  inherits(AboutResume, _Component);
+
+  function AboutResume() {
+    classCallCheck(this, AboutResume);
+    return possibleConstructorReturn(this, _Component.apply(this, arguments));
+  }
+
+  return AboutResume;
+}(Component);
+
+var __ui_components_about_resume_template__ = { "id": "l0b3A4N6", "block": "{\"symbols\":[],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column resume\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"\\n    Carlos Rodriguez\\n  \"],[8],[0,\"\\n  \"],[6,\"h2\"],[9,\"class\",\"subtitle is-5\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n      \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"crodriguez\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n      \"],[6,\"strong\"],[9,\"class\",\"title is-5\"],[7],[0,\"Ally Financial\"],[8],[0,\" \"],[6,\"small\"],[7],[0,\"2013 - Present\"],[8],[0,\"\\n      \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[0,\"Senior Software Engineer + Application Architect\"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"hr\"],[7],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-resume" } };
+
 var ArticleCard = function (_Component) {
   inherits(ArticleCard, _Component);
 
@@ -10128,7 +10154,20 @@ var ArticleCard = function (_Component) {
   return ArticleCard;
 }(Component);
 
-var __ui_components_article_card_template__ = { "id": "RP6vkiAY", "block": "{\"symbols\":[\"@article\",\"@didRead\"],\"prelude\":[[6,\"div\"]],\"head\":[[10,\"class\",[26,[\"was-read-\",[19,1,[\"read\"]]]]],[7]],\"statements\":[[0,\"\\n\"],[0,\"  \"],[6,\"h1\"],[9,\"class\",\"title is-5\"],[7],[1,[19,1,[\"title\"]],false],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[1,[19,1,[\"description\"]],false],[0,\" \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[19,2,[]],null],[7],[1,[19,1,[\"teaser\"]],false],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/article-card", "<template-meta>": true } };
+var __ui_components_article_card_template__ = { "id": "RHtZ0CA1", "block": "{\"symbols\":[\"@article\",\"@didRead\"],\"prelude\":[[6,\"div\"]],\"head\":[[10,\"class\",[26,[\"was-read-\",[19,1,[\"read\"]]]]],[7]],\"statements\":[[0,\"\\n\"],[0,\"  \"],[6,\"h1\"],[9,\"class\",\"title is-5\"],[7],[1,[19,1,[\"title\"]],false],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[1,[19,1,[\"description\"]],false],[0,\" \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[19,2,[]],null],[7],[1,[19,1,[\"teaser\"]],false],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/article-card" } };
+
+var ArticleModal = function (_Component) {
+  inherits(ArticleModal, _Component);
+
+  function ArticleModal() {
+    classCallCheck(this, ArticleModal);
+    return possibleConstructorReturn(this, _Component.apply(this, arguments));
+  }
+
+  return ArticleModal;
+}(Component);
+
+var __ui_components_article_modal_template__ = { "id": "BRvguZhl", "block": "{\"symbols\":[\"@content\"],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"modal\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"modal-background\"],[7],[8],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"modal-content\"],[7],[0,\"\\n    \"],[1,[19,1,[]],false],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"button\"],[9,\"class\",\"modal-close\"],[7],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/article-modal" } };
 
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
@@ -10665,7 +10704,7 @@ function ArticlesReducer() {
     var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : articles;
     var action = arguments[1];
 
-    // TODO where would an async fetch belong? 
+    // TODO where would an async fetch belong?
     switch (action.type) {
         case 'MARK_AS_READ':
             return state.map(function (article, index) {
@@ -10679,6 +10718,535 @@ function ArticlesReducer() {
     }
 }
 
+function isPushStateAvailable() {
+  return !!(typeof window !== 'undefined' && window.history && window.history.pushState);
+}
+
+function Navigo(r, useHash, hash) {
+  this.root = null;
+  this._routes = [];
+  this._useHash = useHash;
+  this._hash = typeof hash === 'undefined' ? '#' : hash;
+  this._paused = false;
+  this._destroyed = false;
+  this._lastRouteResolved = null;
+  this._notFoundHandler = null;
+  this._defaultHandler = null;
+  this._usePushState = !useHash && isPushStateAvailable();
+  this._onLocationChange = this._onLocationChange.bind(this);
+  this._genericHooks = null;
+
+  if (r) {
+    this.root = useHash ? r.replace(/\/$/, '/' + this._hash) : r.replace(/\/$/, '');
+  } else if (useHash) {
+    this.root = this._cLoc().split(this._hash)[0].replace(/\/$/, '/' + this._hash);
+  }
+
+  this._listen();
+  this.updatePageLinks();
+}
+
+function clean(s) {
+  if (s instanceof RegExp) return s;
+  return s.replace(/\/+$/, '').replace(/^\/+/, '/');
+}
+
+function regExpResultToParams(match, names) {
+  if (names.length === 0) return null;
+  if (!match) return null;
+  return match.slice(1, match.length).reduce(function (params, value, index) {
+    if (params === null) params = {};
+    params[names[index]] = decodeURIComponent(value);
+    return params;
+  }, null);
+}
+
+function replaceDynamicURLParts(route) {
+  var paramNames = [],
+      regexp;
+
+  if (route instanceof RegExp) {
+    regexp = route;
+  } else {
+    regexp = new RegExp(clean(route).replace(Navigo.PARAMETER_REGEXP, function (full, dots, name) {
+      paramNames.push(name);
+      return Navigo.REPLACE_VARIABLE_REGEXP;
+    }).replace(Navigo.WILDCARD_REGEXP, Navigo.REPLACE_WILDCARD) + Navigo.FOLLOWED_BY_SLASH_REGEXP, Navigo.MATCH_REGEXP_FLAGS);
+  }
+  return { regexp: regexp, paramNames: paramNames };
+}
+
+function getUrlDepth(url) {
+  return url.replace(/\/$/, '').split('/').length;
+}
+
+function compareUrlDepth(urlA, urlB) {
+  return getUrlDepth(urlB) - getUrlDepth(urlA);
+}
+
+function findMatchedRoutes(url) {
+  var routes = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+
+  return routes.map(function (route) {
+    var _replaceDynamicURLPar = replaceDynamicURLParts(route.route),
+        regexp = _replaceDynamicURLPar.regexp,
+        paramNames = _replaceDynamicURLPar.paramNames;
+
+    var match = url.match(regexp);
+    var params = regExpResultToParams(match, paramNames);
+
+    return match ? { match: match, route: route, params: params } : false;
+  }).filter(function (m) {
+    return m;
+  });
+}
+
+function match(url, routes) {
+  return findMatchedRoutes(url, routes)[0] || false;
+}
+
+function root$3(url, routes) {
+  var matched = findMatchedRoutes(url, routes.filter(function (route) {
+    var u = clean(route.route);
+
+    return u !== '' && u !== '*';
+  }));
+  var fallbackURL = clean(url);
+
+  if (matched.length > 0) {
+    return matched.map(function (m) {
+      return clean(url.substr(0, m.match.index));
+    }).reduce(function (root, current) {
+      return current.length < root.length ? current : root;
+    }, fallbackURL);
+  }
+  return fallbackURL;
+}
+
+function isHashChangeAPIAvailable() {
+  return !!(typeof window !== 'undefined' && 'onhashchange' in window);
+}
+
+function extractGETParameters(url) {
+  return url.split(/\?(.*)?$/).slice(1).join('');
+}
+
+function getOnlyURL(url, useHash, hash) {
+  var onlyURL = url.split(/\?(.*)?$/)[0];
+
+  if (typeof hash === 'undefined') {
+    // To preserve BC
+    hash = '#';
+  }
+
+  if (isPushStateAvailable() && !useHash) {
+    onlyURL = onlyURL.split(hash)[0];
+  }
+
+  return onlyURL;
+}
+
+function manageHooks(handler, hooks, params) {
+  if (hooks && (typeof hooks === 'undefined' ? 'undefined' : _typeof(hooks)) === 'object') {
+    if (hooks.before) {
+      hooks.before(function () {
+        var shouldRoute = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
+        if (!shouldRoute) return;
+        handler();
+        hooks.after && hooks.after(params);
+      }, params);
+    } else if (hooks.after) {
+      handler();
+      hooks.after && hooks.after(params);
+    }
+    return;
+  }
+  handler();
+}
+
+function isHashedRoot(url, useHash, hash) {
+  if (isPushStateAvailable() && !useHash) {
+    return false;
+  }
+
+  if (!url.match(hash)) {
+    return false;
+  }
+
+  var split = url.split(hash);
+
+  if (split.length < 2 || split[1] === '') {
+    return true;
+  }
+
+  return false;
+}
+
+Navigo.prototype = {
+  helpers: {
+    match: match,
+    root: root$3,
+    clean: clean
+  },
+  navigate: function navigate(path, absolute) {
+    var to;
+
+    path = path || '';
+    if (this._usePushState) {
+      to = (!absolute ? this._getRoot() + '/' : '') + path.replace(/^\/+/, '/');
+      to = to.replace(/([^:])(\/{2,})/g, '$1/');
+      history[this._paused ? 'replaceState' : 'pushState']({}, '', to);
+    } else if (typeof window !== 'undefined') {
+      path = path.replace(new RegExp('^' + this._hash), '');
+      window.location.href = window.location.href.replace(/#$/, '').replace(new RegExp(this._hash + '.*$'), '') + this._hash + path;
+    }
+    return this;
+  },
+  on: function on() {
+    var _this = this;
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    if (typeof args[0] === 'function') {
+      this._defaultHandler = { handler: args[0], hooks: args[1] };
+    } else if (args.length >= 2) {
+      if (args[0] === '/') {
+        var func = args[1];
+
+        if (_typeof(args[1]) === 'object') {
+          func = args[1].uses;
+        }
+
+        this._defaultHandler = { handler: func, hooks: args[2] };
+      } else {
+        this._add(args[0], args[1], args[2]);
+      }
+    } else if (_typeof(args[0]) === 'object') {
+      var orderedRoutes = Object.keys(args[0]).sort(compareUrlDepth);
+
+      orderedRoutes.forEach(function (route) {
+        _this.on(route, args[0][route]);
+      });
+    }
+    return this;
+  },
+  off: function off(handler) {
+    if (this._defaultHandler !== null && handler === this._defaultHandler.handler) {
+      this._defaultHandler = null;
+    } else if (this._notFoundHandler !== null && handler === this._notFoundHandler.handler) {
+      this._notFoundHandler = null;
+    }
+    this._routes = this._routes.reduce(function (result, r) {
+      if (r.handler !== handler) result.push(r);
+      return result;
+    }, []);
+    return this;
+  },
+  notFound: function notFound(handler, hooks) {
+    this._notFoundHandler = { handler: handler, hooks: hooks };
+    return this;
+  },
+  resolve: function resolve(current) {
+    var _this2 = this;
+
+    var handler, m;
+    var url = (current || this._cLoc()).replace(this._getRoot(), '');
+
+    if (this._useHash) {
+      url = url.replace(new RegExp('^\/' + this._hash), '/');
+    }
+
+    var GETParameters = extractGETParameters(current || this._cLoc());
+    var onlyURL = getOnlyURL(url, this._useHash, this._hash);
+
+    if (this._paused || this._lastRouteResolved && onlyURL === this._lastRouteResolved.url && GETParameters === this._lastRouteResolved.query) {
+      return false;
+    }
+
+    m = match(onlyURL, this._routes);
+
+    if (m) {
+      this._callLeave();
+      this._lastRouteResolved = { url: onlyURL, query: GETParameters, hooks: m.route.hooks };
+      handler = m.route.handler;
+      manageHooks(function () {
+        manageHooks(function () {
+          m.route.route instanceof RegExp ? handler.apply(undefined, m.match.slice(1, m.match.length)) : handler(m.params, GETParameters);
+        }, m.route.hooks, m.params, _this2._genericHooks);
+      }, this._genericHooks);
+      return m;
+    } else if (this._defaultHandler && (onlyURL === '' || onlyURL === '/' || onlyURL === this._hash || isHashedRoot(onlyURL, this._useHash, this._hash))) {
+      manageHooks(function () {
+        manageHooks(function () {
+          _this2._callLeave();
+          _this2._lastRouteResolved = { url: onlyURL, query: GETParameters, hooks: _this2._defaultHandler.hooks };
+          _this2._defaultHandler.handler(GETParameters);
+        }, _this2._defaultHandler.hooks);
+      }, this._genericHooks);
+      return true;
+    } else if (this._notFoundHandler) {
+      manageHooks(function () {
+        manageHooks(function () {
+          _this2._callLeave();
+          _this2._lastRouteResolved = { url: onlyURL, query: GETParameters, hooks: _this2._notFoundHandler.hooks };
+          _this2._notFoundHandler.handler(GETParameters);
+        }, _this2._notFoundHandler.hooks);
+      }, this._genericHooks);
+    }
+    return false;
+  },
+  destroy: function destroy() {
+    this._routes = [];
+    this._destroyed = true;
+    clearTimeout(this._listenningInterval);
+    if (typeof window !== 'undefined') {
+      window.removeEventListener('popstate', this._onLocationChange);
+      window.removeEventListener('hashchange', this._onLocationChange);
+    }
+  },
+  updatePageLinks: function updatePageLinks() {
+    var self = this;
+
+    if (typeof document === 'undefined') return;
+
+    this._findLinks().forEach(function (link) {
+      if (!link.hasListenerAttached) {
+        link.addEventListener('click', function (e) {
+          var location = self.getLinkPath(link);
+
+          if (!self._destroyed) {
+            e.preventDefault();
+            self.navigate(clean(location));
+          }
+        });
+        link.hasListenerAttached = true;
+      }
+    });
+  },
+  generate: function generate(name) {
+    var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+    var result = this._routes.reduce(function (result, route) {
+      var key;
+
+      if (route.name === name) {
+        result = route.route;
+        for (key in data) {
+          result = result.toString().replace(':' + key, data[key]);
+        }
+      }
+      return result;
+    }, '');
+
+    return this._useHash ? this._hash + result : result;
+  },
+  link: function link(path) {
+    return this._getRoot() + path;
+  },
+  pause: function pause() {
+    var status = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : true;
+
+    this._paused = status;
+  },
+  resume: function resume() {
+    this.pause(false);
+  },
+  disableIfAPINotAvailable: function disableIfAPINotAvailable() {
+    if (!isPushStateAvailable()) {
+      this.destroy();
+    }
+  },
+  lastRouteResolved: function lastRouteResolved() {
+    return this._lastRouteResolved;
+  },
+  getLinkPath: function getLinkPath(link) {
+    return link.pathname || link.getAttribute('href');
+  },
+  hooks: function hooks(_hooks) {
+    this._genericHooks = _hooks;
+  },
+
+  _add: function _add(route) {
+    var handler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+    var hooks = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+    if (typeof route === 'string') {
+      route = encodeURI(route);
+    }
+    if ((typeof handler === 'undefined' ? 'undefined' : _typeof(handler)) === 'object') {
+      this._routes.push({
+        route: route,
+        handler: handler.uses,
+        name: handler.as,
+        hooks: hooks || handler.hooks
+      });
+    } else {
+      this._routes.push({ route: route, handler: handler, hooks: hooks });
+    }
+    return this._add;
+  },
+  _getRoot: function _getRoot() {
+    if (this.root !== null) return this.root;
+    this.root = root$3(this._cLoc().split('?')[0], this._routes);
+    return this.root;
+  },
+  _listen: function _listen() {
+    var _this3 = this;
+
+    if (this._usePushState) {
+      window.addEventListener('popstate', this._onLocationChange);
+    } else if (isHashChangeAPIAvailable()) {
+      window.addEventListener('hashchange', this._onLocationChange);
+    } else {
+      var cached = this._cLoc(),
+          current = void 0,
+          _check = void 0;
+
+      _check = function check() {
+        current = _this3._cLoc();
+        if (cached !== current) {
+          cached = current;
+          _this3.resolve();
+        }
+        _this3._listenningInterval = setTimeout(_check, 200);
+      };
+      _check();
+    }
+  },
+  _cLoc: function _cLoc() {
+    if (typeof window !== 'undefined') {
+      if (typeof window.__NAVIGO_WINDOW_LOCATION_MOCK__ !== 'undefined') {
+        return window.__NAVIGO_WINDOW_LOCATION_MOCK__;
+      }
+      return clean(window.location.href);
+    }
+    return '';
+  },
+  _findLinks: function _findLinks() {
+    return [].slice.call(document.querySelectorAll('[data-navigo]'));
+  },
+  _onLocationChange: function _onLocationChange() {
+    this.resolve();
+  },
+  _callLeave: function _callLeave() {
+    if (this._lastRouteResolved && this._lastRouteResolved.hooks && this._lastRouteResolved.hooks.leave) {
+      this._lastRouteResolved.hooks.leave();
+    }
+  }
+};
+
+Navigo.PARAMETER_REGEXP = /([:*])(\w+)/g;
+Navigo.WILDCARD_REGEXP = /\*/g;
+Navigo.REPLACE_VARIABLE_REGEXP = '([^\/]+)';
+Navigo.REPLACE_WILDCARD = '(?:.*)';
+Navigo.FOLLOWED_BY_SLASH_REGEXP = '(?:\/$|$)';
+Navigo.MATCH_REGEXP_FLAGS = '';
+
+/*
+  Borrowing angular's url watcher
+  https://github.com/fracz/refactor-extractor/blob/2271f87be2585ceb65504b7df65eb8ffad64ff42/results/angular.js/d934054cfc22325d817eb0643dc061f9d212804d/before/Angular.js
+*/
+function UrlWatcher$1(location) {
+    this.location = location;
+    this.delay = 25;
+    this.setTimeout = function (fn, delay) {
+        window.setTimeout(fn, delay);
+    };
+    this.listener = function (url) {
+        return url;
+    };
+    this.expectedUrl = location.href;
+}
+UrlWatcher$1.prototype = {
+    listen: function listen(fn) {
+        this.listener = fn;
+    },
+    watch: function watch() {
+        var self = this;
+        var pull = function pull() {
+            if (self.expectedUrl !== self.location.href) {
+                var notify = self.location.hash.match(/^#\$iframe_notify=(.*)$/);
+                if (notify) {
+                    if (!self.expectedUrl.match(/#/)) {
+                        self.expectedUrl += "#";
+                    }
+                    self.location.href = self.expectedUrl;
+                    var id = '_iframe_notify_' + notify[1];
+                    var notifyFn = null;
+                    var noop = function noop() {
+                        return;
+                    };
+                    try {
+                        (notifyFn || noop)();
+                    } catch (e) {
+                        alert(e);
+                    }
+                } else {
+                    self.listener(self.location.href);
+                    self.expectedUrl = self.location.href;
+                }
+            }
+            self.setTimeout(pull, self.delay);
+        };
+        pull();
+    },
+    set: function set(url) {
+        var existingURL = this.location.href;
+        if (!existingURL.match(/#/)) existingURL += '#';
+        if (existingURL != url) this.location.href = url;
+        this.existingURL = url;
+    },
+    get: function get() {
+        return window.location.href;
+    }
+};
+
+var router$1 = new Navigo(null, true, '#!');
+var watcher = new UrlWatcher$1(window.location);
+
+var Router = function () {
+    function Router() {
+        var opts = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : { debug: false };
+        classCallCheck(this, Router);
+
+        this.opts = opts;
+        this.opts = opts;
+        watcher.watch();
+    }
+
+    Router.prototype.listen = function listen(sendNameUpdate) {
+        var _this = this;
+
+        watcher.listen(function (url) {
+            if (_this.opts.debug) {
+                console.log('Route:', url);
+            }
+            return _this.handle(sendNameUpdate);
+        });
+        // send the intial update before listening begins
+        return this.handle(sendNameUpdate);
+    };
+
+    Router.prototype.handle = function handle(sendNameUpdate) {
+        return router$1.on({
+            '/about': function about() {
+                sendNameUpdate('about');
+            },
+            '/about/resume': function aboutResume() {
+                sendNameUpdate('resume');
+            },
+            '': function _() {
+                sendNameUpdate('');
+            }
+        }).resolve();
+    };
+
+    return Router;
+}();
+
 var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
     var c = arguments.length,
         r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
@@ -10687,36 +11255,22 @@ var __decorate = undefined && undefined.__decorate || function (decorators, targ
         if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     }return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __awaiter = undefined && undefined.__awaiter || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) {
-            try {
-                step(generator.next(value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-        function rejected(value) {
-            try {
-                step(generator["throw"](value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-        function step(result) {
-            result.done ? resolve(result.value) : new P(function (resolve) {
-                resolve(result.value);
-            }).then(fulfilled, rejected);
-        }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
+var router = new Router({ debug: true });
+
 var Website = function (_Component) {
     inherits(Website, _Component);
 
     function Website(options) {
         classCallCheck(this, Website);
 
+        /*
+          NOTE async await Throws regenaratorRuntime error https://github.com/glimmerjs/glimmer-website/issues/62
+        async loadMarkdown(file='foo') {
+          let req = await fetch(`./-utils/md/articles/${file}.md`);
+          let json = await request.json();
+          console.log('async response', json);
+        }
+        */
         /**
           Create a redux store using the reducer
                  @property store
@@ -10729,23 +11283,23 @@ var Website = function (_Component) {
                  @property articles
         */
         _this.articles = _this.store.getState();
-        // REVIEW async belong here or with redux?
-        // this.loadArticles();
+        // this.loadMarkdown();
+        // subscribe to router listener
+        router.listen(_this.routeNameUpdate.bind(_this));
         return _this;
     }
+    /**
+      Signal route is home
+         @property atHome
+    */
 
-    Website.prototype.loadArticles = function loadArticles() {
-        return __awaiter(this, void 0, void 0, regeneratorRuntime.mark(function _callee() {
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-                while (1) {
-                    switch (_context.prev = _context.next) {
-                        case 0:
-                        case "end":
-                            return _context.stop();
-                    }
-                }
-            }, _callee, this);
-        }));
+
+    /**
+      Call back for route listener
+         @method routeUpdate
+    */
+    Website.prototype.routeNameUpdate = function routeNameUpdate(name) {
+        this.routeName = name;
     };
     /**
       Proxy the store.dispatch function
@@ -10754,9 +11308,9 @@ var Website = function (_Component) {
 
 
     Website.prototype.dispatch = function dispatch() {
-        var _store;
+        var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-        return (_store = this.store).dispatch.apply(_store, arguments);
+        return this.store.dispatch(action);
     };
     /**
       Tell the store that the item has been read
@@ -10775,14 +11329,44 @@ var Website = function (_Component) {
         this.articles = this.store.getState();
     };
 
+    createClass(Website, [{
+        key: "atHome",
+        get: function get$$1() {
+            return this.routeName === '';
+        }
+        /**
+          Signal route is home
+             @property atAbout
+        */
+
+    }, {
+        key: "atAbout",
+        get: function get$$1() {
+            return this.routeName === 'about';
+        }
+        /**
+          Signal route is home
+             @property atAbout
+        */
+
+    }, {
+        key: "atResume",
+        get: function get$$1() {
+            return this.routeName === 'resume';
+        }
+    }]);
     return Website;
 }(Component);
 
+__decorate([tracked], Website.prototype, "routeName", void 0);
+__decorate([tracked('routeName')], Website.prototype, "atHome", null);
+__decorate([tracked('routeName')], Website.prototype, "atAbout", null);
+__decorate([tracked('routeName')], Website.prototype, "atResume", null);
 __decorate([tracked], Website.prototype, "articles", void 0);
 
-var __ui_components_website_app_template__ = { "id": "jiAVUZdq", "block": "{\"symbols\":[\"article\",\"index\"],\"prelude\":[[6,\"header\"]],\"head\":[[7]],\"statements\":[[0,\"\\n  \"],[6,\"nav\"],[9,\"class\",\"nav no-backgound\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-left\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"nav--logo nav-item\"],[7],[0,\"\\n        \"],[6,\"span\"],[9,\"class\",\"icon\"],[7],[0,\"{ \"],[6,\"span\"],[9,\"class\",\"upsidedown\"],[7],[0,\";\"],[8],[0,\" }\"],[8],[0,\" Code-Heads Club\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-right\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"class\",\"nav-item\"],[7],[0,\"\\n        About\\n      \"],[8],[0,\"\\n      \"],[6,\"a\"],[9,\"class\",\"nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[9,\"class\",\"button is-info is-outlined\"],[7],[0,\"\\n          \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[7],[8],[0,\" GitHub\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"section\"],[9,\"class\",\"hero is-info no-backgound has-text-centered\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"hero-body\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title\"],[7],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"hero--logo\"],[7],[0,\"\\n          \"],[6,\"img\"],[9,\"src\",\"img/logo_single_color.svg\"],[9,\"alt\",\"Code-heads Club Logo\"],[7],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"content subtitle\"],[7],[0,\"\\n        \"],[6,\"p\"],[7],[0,\"\\n          The Code-Heads Club is partnership between Engineers and Students.\\n          \"],[6,\"br\"],[7],[8],[0,\"\\n          Our mission is to maintain a \"],[6,\"strong\"],[7],[0,\"free\"],[8],[0,\" curriculum for young adults learning to code.\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\\n\"],[6,\"main\"],[7],[0,\"\\n  \"],[6,\"section\"],[9,\"class\",\"section\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n\"],[4,\"each\",[[19,0,[\"articles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"        \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n          \"],[6,\"div\"],[9,\"class\",\"box\"],[7],[0,\"\\n            \"],[5,\"article-card\",[],[[\"@article\",\"@didRead\"],[[19,1,[]],[25,\"action\",[[19,0,[\"markAsRead\"]],[19,2,[]]],null]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n\"]],\"parameters\":[1,2]},null],[0,\"    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/website-app", "<template-meta>": true } };
+var __ui_components_website_app_template__ = { "id": "soYoaFix", "block": "{\"symbols\":[\"article\",\"index\"],\"prelude\":[[6,\"header\"]],\"head\":[[7]],\"statements\":[[0,\"\\n  \"],[6,\"nav\"],[9,\"class\",\"nav no-backgound\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-left\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"nav--logo nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[7],[0,\"\\n          \"],[6,\"span\"],[9,\"class\",\"icon\"],[7],[0,\"{ \"],[6,\"span\"],[9,\"class\",\"upsidedown\"],[7],[0,\";\"],[8],[0,\" }\"],[8],[0,\" Code-Heads Club\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-right\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"class\",\"nav-item\"],[9,\"href\",\"#!/about\"],[7],[0,\"\\n        About\\n      \"],[8],[0,\"\\n      \"],[6,\"span\"],[9,\"class\",\"nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a/code-heads\"],[9,\"target\",\"_blank\"],[9,\"class\",\"nav-item button is-info is-outlined\"],[7],[0,\"\\n          \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[7],[8],[0,\" GitHub\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"section\"],[9,\"class\",\"hero is-info no-backgound has-text-centered\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"hero-body\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title\"],[7],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"hero--logo\"],[7],[0,\"\\n          \"],[6,\"img\"],[9,\"src\",\"img/logo_single_color.svg\"],[9,\"alt\",\"Code-heads Club Logo\"],[7],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"content subtitle\"],[7],[0,\"\\n        \"],[6,\"p\"],[7],[0,\"\\n          The Code-Heads Club is partnership between Engineers and Students.\\n          \"],[6,\"br\"],[7],[8],[0,\"\\n          Our mission is to maintain a \"],[6,\"strong\"],[7],[0,\"free\"],[8],[0,\" curriculum for young adults learning to code.\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\\n\"],[6,\"main\"],[7],[0,\"\\n  \"],[6,\"section\"],[9,\"class\",\"section\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n\\n\"],[4,\"if\",[[19,0,[\"atHome\"]]],null,{\"statements\":[[4,\"each\",[[19,0,[\"articles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"          \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n            \"],[6,\"div\"],[9,\"class\",\"box\"],[7],[0,\"\\n              \"],[5,\"article-card\",[],[[\"@article\",\"@didRead\"],[[19,1,[]],[25,\"action\",[[19,0,[\"markAsRead\"]],[19,2,[]]],null]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[1,2]},null]],\"parameters\":[]},null],[0,\"\\n\"],[4,\"if\",[[19,0,[\"atAbout\"]]],null,{\"statements\":[[0,\"        \"],[5,\"about-overview\",[],[[],[]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\"],[4,\"if\",[[19,0,[\"atResume\"]]],null,{\"statements\":[[0,\"        \"],[5,\"about-resume\",[],[[],[]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\\n\"],[5,\"article-modal\",[],[[\"@content\"],[[18,\"content\"]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/website-app" } };
 
-var moduleMap = { 'component:/website-app/components/article-card': ArticleCard, 'template:/website-app/components/article-card': __ui_components_article_card_template__, 'component:/website-app/components/website-app': Website, 'template:/website-app/components/website-app': __ui_components_website_app_template__ };
+var moduleMap = { 'component:/website-app/components/about-overview': AboutOverview, 'template:/website-app/components/about-overview': __ui_components_about_overview_template__, 'component:/website-app/components/about-resume': AboutResume, 'template:/website-app/components/about-resume': __ui_components_about_resume_template__, 'component:/website-app/components/article-card': ArticleCard, 'template:/website-app/components/article-card': __ui_components_article_card_template__, 'component:/website-app/components/article-modal': ArticleModal, 'template:/website-app/components/article-modal': __ui_components_article_modal_template__, 'component:/website-app/components/website-app': Website, 'template:/website-app/components/website-app': __ui_components_website_app_template__ };
 
 var resolverConfiguration = { "app": { "name": "website-app", "rootName": "website-app" }, "types": { "application": { "definitiveCollection": "main" }, "component": { "definitiveCollection": "components" }, "helper": { "definitiveCollection": "components" }, "renderer": { "definitiveCollection": "main" }, "template": { "definitiveCollection": "components" } }, "collections": { "main": { "types": ["application", "renderer"] }, "components": { "group": "ui", "types": ["component", "template", "helper"], "defaultType": "component", "privateCollections": ["utils"] }, "styles": { "group": "ui", "unresolvable": true }, "utils": { "unresolvable": true } } };
 

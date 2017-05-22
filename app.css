@@ -4276,6 +4276,10 @@ label.panel-block {
 html {
   background: #121b26; }
 
+.icon.fa {
+  vertical-align: middle;
+  padding-right: 0.35rem; }
+
 .no-backgound {
   background: none !important; }
 
@@ -4286,19 +4290,22 @@ html {
 .was-read-true {
   opacity: 0.5; }
 
-.nav--logo {
-  color: white;
-  font-weight: 100; }
-  .nav--logo .icon {
-    font-weight: bolder;
-    display: inline-flex;
-    padding-right: 2.25rem;
-    font-family: monospace;
-    letter-spacing: -5px;
-    font-size: 1.5rem;
-    margin-left: 1.25rem;
-    margin-top: -0.2rem; }
-    .nav--logo .icon .upsidedown {
-      transform: rotate(180deg);
-      display: inline-block;
-      margin: 14px 0 0 10px; }
+.nav-item {
+  color: #3ABAD4 !important; }
+
+.nav--logo.nav-item a {
+  color: white !important;
+  font-size: 1.25em; }
+
+.nav--logo .icon {
+  font-weight: bolder;
+  display: inline-flex;
+  padding-right: 1.5rem;
+  font-family: monospace;
+  letter-spacing: -5px;
+  font-size: 1.5rem;
+  margin: -0.2rem 0 0 1.25rem; }
+  .nav--logo .icon .upsidedown {
+    transform: rotate(180deg);
+    display: inline-block;
+    margin: 14px 0 0 10px; }

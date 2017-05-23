@@ -21,6 +21,15 @@ export default class Website extends Component {
   */
   @tracked routeName;
 
+  /**
+    Call back for route listener
+
+    @method routeUpdate
+  */
+  public routeNameUpdate(name) {
+    this.routeName = name;
+  }
+
   /*
     NOTE async await Throws regenaratorRuntime error https://github.com/glimmerjs/glimmer-website/issues/62
   async loadMarkdown(file='foo') {

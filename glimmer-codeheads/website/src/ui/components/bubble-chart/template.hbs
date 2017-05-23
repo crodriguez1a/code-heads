@@ -1,0 +1,26 @@
+<div>
+  {{#if highlighted}}
+    <div class="details content">
+      <h2 class="subtitle is-6">
+        <a href="#" onclick={{action closeDetails}}>
+          &lt; All projects
+        </a>
+      </h2>
+      <p>
+        {{html-safe highlighted.description}}
+      </p>
+    </div>
+  {{else}}
+    <div class="bubble-chart">
+      <ul>
+        {{#each @list key="@index" as |bubble|}}
+          <li class="bubble {{bubble.size}}">
+            <a href="#" onclick={{action toggleDetails bubble}}>
+              {{html-safe bubble.text}}
+            </a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+</div>

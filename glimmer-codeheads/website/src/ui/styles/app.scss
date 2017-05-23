@@ -1,54 +1,7 @@
 $blue: #3ABAD4;
+$primary: $blue;
 
 @import 'node_modules/bulma/bulma';
+@import 'global';
 
-html {
-  background: #121b26;
-}
-
-.icon.fa {
-  vertical-align: middle;
-  padding-right: 0.35rem;
-}
-
-.no-backgound {
-  background: none !important;
-}
-
-.hero--logo {
-  img {
-    width: 15rem;
-    height: 15rem;
-  }
-}
-
-.was-read-true {
-  opacity: 0.5;
-}
-
-.nav-item {
-  color: $blue !important;
-}
-
-.nav--logo {
-  &.nav-item a {
-    color: $white !important;
-    font-size: 1.25em;
-  }
-
-  .icon {
-    font-weight: bolder;
-    display: inline-flex;
-    padding-right: 1.5rem;
-    font-family: monospace;
-    letter-spacing: -5px;
-    font-size: 1.5rem;
-    margin: -0.2rem 0 0 1.25rem;
-
-    .upsidedown {
-      transform: rotate(180deg);
-      display: inline-block;
-      margin: 14px 0 0 10px;
-    }
-  }
-}
+@import 'components/bubble-chart';

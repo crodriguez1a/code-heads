@@ -1,0 +1,52 @@
+.bubble-chart {
+  text-align: center;
+  line-height: 0;
+
+  .details {
+    text-align: left;
+  }
+
+  .bubble {
+    border: 1px dashed;
+    border-radius: 100%;
+    width: auto;
+    text-align: center;
+    display: inline-flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 1rem;
+    line-height: 1.25;
+    margin: 0.05rem;
+
+    a {
+      color: $black;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    &.small {
+      font-size: 0.75rem;
+    }
+
+    &.medium {
+      font-size: 0.85rem;
+    }
+
+    &.large {
+      font-size: 0.95rem;
+    }
+
+    &.x-large {
+      font-size: 1rem;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+}

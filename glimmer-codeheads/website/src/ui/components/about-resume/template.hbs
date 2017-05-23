@@ -7,12 +7,37 @@
       <i class="icon fa fa-github" aria-hidden="true"></i>crodriguez
     </a>
   </h2>
+  <p>
+    <a target="_blank" href="mailto:crodriguez1a@gmail.com">crodriguez1a@gmail.com</a>
+  </p>
+  <p>
+    <a href="tel:(980)267-4467">980-267-4467</a>
+  </p>
+  <br>
 
-  <div class="card">
-    <div class="card-content">
-      <strong class="title is-5">Ally Financial</strong> <small>2013 - Present</small>
-      <h2 class="title is-6">Senior Software Engineer + Application Architect</h2>
+  {{#each @resume key="@index" as |resume|}}
+    <div class="card">
+      <div class="card-content">
+        <p>
+          <strong class="title is-5">{{resume.employer}}</strong> <small>{{resume.tenure}}</small>
+        </p>
+
+        <h2 class="title is-6">
+          {{#each resume.titles key="@index" as |title|}}
+            {{title}}&nbsp;
+          {{/each}}
+        </h2>
+
+        {{#if resume.bubbles}}
+          <p>
+            <hr>
+            <h1 class="title is-6">{{resume.bubblesTitle}}</h1>
+            <bubble-chart @list={{resume.bubbles}} />
+          </p>
+        {{/if}}
+
+      </div>
     </div>
-  </div>
-  <hr>
+    <hr>
+  {{/each}}
 </div>

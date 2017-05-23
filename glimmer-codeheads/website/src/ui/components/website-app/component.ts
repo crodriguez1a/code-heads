@@ -47,11 +47,31 @@ export default class Website extends Component {
   private store: any = createStore(Reducers);
 
   /**
-    Get the current state of the articles model from the store
+    Get the current state of the model from the store
 
     @property articles
   */
-  @tracked articles: Array<any> = this.store.getState();
+  @tracked state: Array<any> = this.store.getState();
+
+  /**
+    An array of articles
+
+    @property articles
+  */
+  @tracked('state')
+  get articles() {
+    return this.state.filter((item) => item.type === 'article');
+  }
+
+  /**
+    An array of resume parts
+
+    @property resume
+  */
+  @tracked('state')
+  get resume() {
+    return this.state.filter((item) => item.type === 'resume');
+  }
 
   /**
     Proxy the store.dispatch function
@@ -77,6 +97,6 @@ export default class Website extends Component {
     });
 
     // update glimmer tracked prop
-    this.articles = this.store.getState();
+    this.state = this.store.getState();
   }
 }

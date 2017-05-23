@@ -42,7 +42,7 @@
     <div class="columns">
 
       {{! Home}}
-      {{#if atHome}}
+      {{#if (equals routeName '')}}
         {{#each articles key="@index" as |article index|}}
           <div class="column">
             <div class="box">
@@ -53,12 +53,12 @@
       {{/if}}
 
       {{! About}}
-      {{#if atAbout}}
+      {{#if (equals routeName 'about')}}
         <about-overview />
       {{/if}}
 
       {{! About/resume}}
-      {{#if atCV}}
+      {{#if (equals routeName 'resume')}}
         <about-resume />
       {{/if}}
 

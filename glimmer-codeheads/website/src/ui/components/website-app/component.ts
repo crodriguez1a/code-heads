@@ -21,45 +21,6 @@ export default class Website extends Component {
   */
   @tracked routeName;
 
-  /**
-    Signal route is home
-
-    @property atHome
-  */
-  @tracked('routeName')
-  get atHome() {
-    return this.routeName === '';
-  }
-
-  /**
-    Signal route is home
-
-    @property atAbout
-  */
-  @tracked('routeName')
-  get atAbout() {
-    return this.routeName === 'about';
-  }
-
-  /**
-    Signal route is home
-
-    @property atAbout
-  */
-  @tracked('routeName')
-  get atCV() {
-    return this.routeName === 'resume';
-  }
-
-  /**
-    Call back for route listener
-
-    @method routeUpdate
-  */
-  public routeNameUpdate(name) {
-    this.routeName = name;
-  }
-
   /*
     NOTE async await Throws regenaratorRuntime error https://github.com/glimmerjs/glimmer-website/issues/62
   async loadMarkdown(file='foo') {

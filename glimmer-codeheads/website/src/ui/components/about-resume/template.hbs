@@ -109,24 +109,30 @@
           {{/each}}
         </h2>
 
-        <h2 class="title is-6"><strong>Technologies</strong></h2>
         <p class="content">
-          <ul class="content">
+          <h2 class="title is-6"><strong>Technologies</strong></h2>
+          <ul>
             {{#each resume.technologies key="@index" as |technology|}}
               <li>{{technology}}</li>
             {{/each}}
           </ul>
         </p>
 
-        <h2 class="title is-6"><strong>Overview</strong></h2>
-        <p>
+        <p class="content">
+          <h2 class="title is-6"><strong>Company</strong></h2>
+          {resume.snapshot 1 million users}
+        </p>
+
+        <p class="content">
+          <h2 class="title is-6"><strong>Overview</strong></h2>
           {{resume.overview}}
         </p>
 
-        <h2 class="title is-6"><strong>Leadership Experience</strong></h2>
+        {{! TODO if}}
         <p class="content">
+          <h2 class="title is-6"><strong>Leadership Experience</strong></h2>
           <ul>
-            <li>Daily live code reviews with off-shore contractors</li>
+            <li>{resume.leadership}</li>
           </ul>
         </p>
 

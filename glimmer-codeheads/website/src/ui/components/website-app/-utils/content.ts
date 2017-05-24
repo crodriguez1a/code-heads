@@ -60,7 +60,14 @@ export const resume = [
     company: 'A Leader in Digital Financial Services. The Ally Online Services software platform has over 1 million active users',
     overview: 'Architecting and engineering software infrastructure for various enterprise web applications that make up Ally Online Services. Project Lead responsible for oversight and code-review of first party, third party, and off-shore engineers and developers. Teaching repeatable patterns, intelligent abstractions, and best practices. Responsibilities for overall applications stability, maintainability, and scalability.',
     leadership: [
-      'leadership experience here'
+      'Project leadership',
+      'Architecting and Solutioning',
+      'Project and Timeline Management',
+      'Live coding reviews with off-shore teams, and staff augmentation teams',
+      'Oversight and live code review of third party feature contributors',
+      'Peer code review',
+      'Mentoring and Education',
+      'Spearheading Open Source Initiatives'
     ],
     bubblesTitle: 'Core contributor on:',
     bubbles: [

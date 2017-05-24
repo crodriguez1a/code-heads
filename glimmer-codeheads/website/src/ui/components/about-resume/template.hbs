@@ -120,7 +120,7 @@
 
         <p class="content">
           <h2 class="title is-6"><strong>Company</strong></h2>
-          {resume.snapshot 1 million users}
+          {{resume.company}}
         </p>
 
         <p class="content">
@@ -128,13 +128,16 @@
           {{resume.overview}}
         </p>
 
-        {{! TODO if}}
-        <p class="content">
-          <h2 class="title is-6"><strong>Leadership Experience</strong></h2>
-          <ul>
-            <li>{resume.leadership}</li>
-          </ul>
-        </p>
+        {{#if resume.leadership}}
+          <p class="content">
+            <h2 class="title is-6"><strong>Leadership Experience</strong></h2>
+            <ul>
+              {{#each resume.leadership key="@index" as |activity|}}
+                <li>{{activity}}</li>
+              {{/each}}
+            </ul>
+          </p>
+        {{/if}}
 
 
         {{#if resume.bubbles}}

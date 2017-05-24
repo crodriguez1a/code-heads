@@ -60,7 +60,7 @@
       {{/if}}
 
       {{! About/resume}}
-      {{#if (str-contains routeName 'resume')}}
+      {{#if (equals routeName 'resume')}}
         <about-resume @resume={{resume}} @routeName={{routeName}} />
       {{/if}}
 

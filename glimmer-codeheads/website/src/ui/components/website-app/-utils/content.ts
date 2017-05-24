@@ -57,7 +57,11 @@ export const resume = [
       'Github Enterprise',
       'Bitbucket Enterprise'
     ],
-    overview: 'Architecting and engineering software infrastructure for various enterprise web applications. Project Lead responsible for oversight and code-review of first party, third party, and off-shore engineers and developers. Teaching repeatable patterns, intelligent abstractions, and best practices. Responsibilities for overall applications stability, maintainability, and scalability.',
+    company: 'A Leader in Digital Financial Services. The Ally Online Services software platform has over 1 million active users',
+    overview: 'Architecting and engineering software infrastructure for various enterprise web applications that make up Ally Online Services. Project Lead responsible for oversight and code-review of first party, third party, and off-shore engineers and developers. Teaching repeatable patterns, intelligent abstractions, and best practices. Responsibilities for overall applications stability, maintainability, and scalability.',
+    leadership: [
+      'leadership experience here'
+    ],
     bubblesTitle: 'Core contributor on:',
     bubbles: [
       {
@@ -75,42 +79,49 @@ export const resume = [
         description:'<h1 class="title is-5"><small>2014</small> &nbsp;Single page mobile website</h1> <ul> <li>Routing implementation with Javascript and Apache</li><li>Leveraging/reusing existing desktop components</li><li>Google Maps API implementation (ATM locator)</li><li>Framework free (due to dependency limitations)</li></ul>'
       },
       {
+        id: 3,
+        path: '#!/about/resume/ally/bubbles/2',
+        text: 'Ember SPA<br>Migration & Launch',
+        size: 'medium',
+        description:'<h1 class="title is-5"><small>2015</small> &nbsp;Ember 1.X SPA</h1> <ul><li>-</li></ul>'
+      },
+      {
         id: 2,
         path: '#!/about/resume/ally/bubbles/2',
-        text: 'Homepage<br>Login Widget',
+        text: 'Homepage<br>Login Access',
         size: 'small',
         description:'<h1 class="title is-5"><small>2015</small> &nbsp;Homepage Login Widget</h1> <ul> <li>Authored Vanilla JS application micro-framework (due to dependency limitations)</li><li>Custom validation</li><li>Custom component state</li><li>Rudimentary Promise aware component rendering</li></ul>'
       },
       {
-        id: 3,
+        id: 4,
         path: '#!/about/resume/ally/bubbles/3',
         text: 'Authentication<br>Protocol Re-write',
         size: 'large',
         description: '<h1 class="title is-5"><small>2016</small> &nbsp;Authentication Protocol Re-write</h1> <ul> <li>Multi-factor flows (with dozens of edge cases)</li><li>Custom adapter, serializer (endpoints were too overloaded for ember-data)</li><li>Intelligent routing and redirects</li><li>Re-usable client micro-services to perform auth related tasks</li><li>Secure third-party post-authentication hand-off</li><li>Modularization (in progress)</li></ul>'
       },
       {
-        id: 4,
+        id: 5,
         path: '#!/about/resume/ally/bubbles/4',
         text: 'Open Source<br>UI Component<br>Library',
         size: 'medium',
         description:'<h1 class="title is-5"><small>2016</small> &nbsp;Open Source UI Component Library</h1> <ul> <li>Composable components</li><li>Stateless and logic-less (dumb)</li><li><a href="http://open-tux.github.io/ember-bulma/" target="_blank">Ember-Bulma</a></li></ul>'
       },
       {
-        id: 5,
+        id: 6,
         path: '#!/about/resume/ally/bubbles/5',
         text: 'Branded UI<br>Component Library',
         size: 'medium',
         description:'<h1 class="title is-5"><small>2016</small> &nbsp;Ally Branded UI Component Library</h1> <ul> <li>Extends open source version</li><li>State-less and State-full (smart) components</li><li>Implementation of living style guide</li></ul>'
       },
       {
-        id: 6,
+        id: 7,
         path: '#!/about/resume/ally/bubbles/6',
-        text: 'Dashboard<br>Architecture',
+        text: 'AOS Dashboard<br>Architecture',
         size: 'x-large',
         description:'<h1 class="title is-5"><small>2016</small> &nbsp;SSO Dashboard Architecture</h1> <ul> <li>Exponential scalability</li><li>Truly de-coupled micro-applications</li><li>Universal UI patterns</li><li>SSO for various lines of business</li><li>Third party services integration</li><li>Universal application metrics</li><li>Simultaneous Responsive and Adaptive designs</li><li>Legacy code integration</li><li>Upgrade and deprecation paths</li><li>Migration to Ember Data</li></ul>'
       },
       {
-        id: 7,
+        id: 8,
         path: '#!/about/resume/ally/bubbles/7',
         text: 'Ember Engines<br>Architecture',
         size: 'medium',
@@ -143,23 +154,30 @@ export const resume = [
       {
         id: 0,
         path: '#!/about/resume/ampm/bubbles/0',
-        text: 'Project Management<br>Web Application',
-        size: 'large',
-        description:'<h1 class="title is-5"><small>2012</small> &nbsp;Project Management Software</h1> <ul><li>Time tracking with stop-watch</li><li>Time sheets</li><li>Authentication</li><li>Gantt display</li><li>Email alerts</li><li>Semi-automated budget tracking</li><li>Internal messaging</li><li>Meeting scheduler</li><li>Automated reporting</li><li>Bug tracking</li></ul>'
-      },
-      {
-        id: 1,
-        path: '#!/about/resume/ampm/bubbles/1',
         text: 'Order Tracking<br>Application',
         size: 'small',
         description:'<h1 class="title is-5"><small>2009</small> &nbsp;Order generation for large sales team</h1> <ul> <li>Automated order form generation</li><li>UI Design/Development</li></ul>'
       },
       {
-        id: 2,
-        path: '#!/about/resume/ampm/bubbles/2',
+        id: 1,
+        path: '#!/about/resume/ampm/bubbles/1',
         text: 'Claims Management<br>Application',
         size: 'medium',
         description:'<h1 class="title is-5"><small>2010</small> &nbsp;Automation of claims for lost or stolen equipment</h1> <ul><li>Multi-tier Authentication</li><li>Email platform</li><li>Pre-populated claims forms</li><li>Automated inventory auditing</li><li>Automated reports</li></ul>'
+      },
+      {
+        id: 2,
+        path: '#!/about/resume/ampm/bubbles/3',
+        text: 'Project Management<br>Web Application',
+        size: 'large',
+        description:'<h1 class="title is-5"><small>2011</small> &nbsp;Project Management Software</h1> <ul><li>Time tracking with stop-watch</li><li>Time sheets</li><li>Authentication</li><li>Gantt display</li><li>Email alerts</li><li>Semi-automated budget tracking</li><li>Internal messaging</li><li>Meeting scheduler</li><li>Automated reporting</li><li>Bug tracking</li></ul>'
+      },
+      {
+        id: 3,
+        path: '#!/about/resume/ampm/bubbles/2',
+        text: 'Keppler Speakers<br>Search API',
+        size: 'x-large',
+        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Search API re-write to support large-scale database migration</h1><ul><li></li></ul>'
       }
     ]
   },

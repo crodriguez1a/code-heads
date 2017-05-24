@@ -2,7 +2,7 @@
   {{#if highlighted}}
     <div class="details content">
       <h2 class="subtitle is-6">
-        <a href="#" onclick={{action closeDetails}}>
+        <a href="#" onclick={{action shade}}>
           &lt; All projects
         </a>
       </h2>
@@ -15,7 +15,7 @@
       <ul>
         {{#each @list key="@index" as |bubble|}}
           <li class="bubble {{bubble.size}}">
-            <a href="#" onclick={{action toggleDetails bubble}}>
+            <a href="#" onclick={{action highlight bubble.path bubble}}>
               {{html-safe bubble.text}}
             </a>
           </li>

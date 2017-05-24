@@ -29,7 +29,10 @@ export default class Router {
         sendNameUpdate('about');
        },
       '/about/resume': () => {
-        sendNameUpdate('resume');
+        sendNameUpdate('about|resume');
+      },
+      '/about/resume/:employer/bubbles/:id': (params) => {
+        sendNameUpdate(`resume|${params.employer}|bubbles|${params.id}`);
       },
       '': () => {
         sendNameUpdate('');

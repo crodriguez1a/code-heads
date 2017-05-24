@@ -2,11 +2,14 @@
   <h1 class="title is-4">
     Carlos Rodriguez
   </h1>
-  <h2 class="subtitle is-5">
-    <a href="https://github.com/crodriguez1a" target="_blank">
-      <i class="icon fa fa-github" aria-hidden="true"></i>crodriguez
-    </a>
+  <h2 class="subtitle is-6">
+    Engineer + Father of 3 + Founder of the Code-Heads Club
   </h2>
+  <p>
+    <a href="https://github.com/crodriguez1a" target="_blank">
+      <i class="icon fa fa-github" aria-hidden="true"></i>crodriguez1a
+    </a>
+  </p>
   <p>
     <a target="_blank" href="mailto:crodriguez1a@gmail.com">crodriguez1a@gmail.com</a>
   </p>
@@ -15,18 +18,118 @@
   </p>
   <br>
 
+  <div class="columns">
+    <div class="column">
+      <h1 class="title is-4">Summary</h1>
+      <p class="content">
+        <ul>
+          <li>14 years of experience in Tech</li>
+          <li>9 years of experience building enterprise solutions</li>
+          <li>Open Source Author/Contributor</li>
+          <li>Senior Software Engineer</li>
+          <li>Application Architect</li>
+          <li>Senior Javascript Engineer</li>
+          <li>Full Stack Engineer</li>
+          <li>Team Lead</li>
+          <li>Project Lead</li>
+          <li>Consultant</li>
+          <li>Entrepreneur</li>
+          <li>Educator</li>
+          <li>Student</li>
+          <li>Nerd</li>
+          <li>Oh, and fluent/literate in Spanish</li>
+        </ul>
+      </p>
+    </div>
+    <div class="column">
+      <h1 class="title is-4">Preferred Languages, Frameworks, and Tools</h1>
+      <p class="content">
+        <ul>
+          <li>
+            JavaScript
+            <ul>
+              <li>Glimmer/Redux</li>
+              <li>React/Redux</li>
+              <li>Aurelia/Redux</li>
+              <li>Ember/Ember-Data</li>
+            </ul>
+          </li>
+          <li>
+            Mobile/Native
+            <ul>
+              <li>Swift</li>
+            </ul>
+          </li>
+          <li>
+            Version Control
+            <ul>
+              <li>Github</li>
+              <li>Bitbucket</li>
+            </ul>
+          </li>
+          <li>
+            Server
+            <ul>
+              <li>Node</li>
+              <li>Python</li>
+              <li>Scala</li>
+            </ul>
+          </li>
+          <li>
+            Testing/Dev-ops
+            <ul>
+              <li>Jasmine</li>
+              <li>QUnit</li>
+              <li>Travis</li>
+            </ul>
+          </li>
+          <li>
+            Communication
+            <ul>
+              <li>Slack</li>
+              <li>Trello</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </div>
+  </div>
+
+  <h1 class="title is-4">Experience</h1>
   {{#each @resume key="@index" as |resume|}}
     <div class="card">
       <div class="card-content">
         <p>
-          <strong class="title is-5">{{resume.employer}}</strong> <small>{{resume.tenure}}</small>
+          <span class="title is-5"><strong>{{resume.employer}}</strong></span> <small>{{resume.tenure}}</small>
         </p>
 
         <h2 class="title is-6">
           {{#each resume.titles key="@index" as |title|}}
-            {{title}}&nbsp;
+            {{title}}
           {{/each}}
         </h2>
+
+        <h2 class="title is-6"><strong>Technologies</strong></h2>
+        <p class="content">
+          <ul class="content">
+            {{#each resume.technologies key="@index" as |technology|}}
+              <li>{{technology}}</li>
+            {{/each}}
+          </ul>
+        </p>
+
+        <h2 class="title is-6"><strong>Overview</strong></h2>
+        <p>
+          {{resume.overview}}
+        </p>
+
+        <h2 class="title is-6"><strong>Leadership Experience</strong></h2>
+        <p class="content">
+          <ul>
+            <li>Daily live code reviews with off-shore contractors</li>
+          </ul>
+        </p>
+
 
         {{#if resume.bubbles}}
           <p>

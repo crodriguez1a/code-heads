@@ -19,22 +19,24 @@
     </div>
   </nav>
 
-  <section class="hero is-info no-backgound has-text-centered">
-    <div class="hero-body">
-      <h1 class="title">
-        <div class="hero--logo">
-          <img src="img/logo_single_color.svg" alt="Code-heads Club Logo" />
+  {{#if (equals routeName '')}}
+    <section class="hero is-info no-backgound has-text-centered">
+      <div class="hero-body">
+        <h1 class="title">
+          <div class="hero--logo">
+            <img src="img/logo_single_color.svg" alt="Code-heads Club Logo" />
+          </div>
+        </h1>
+        <div class="content subtitle">
+          <p>
+            The Code-Heads Club is partnership between Engineers and Students.
+            <br>
+            Our mission is to maintain a <strong>free</strong> curriculum for young adults learning to code.
+          </p>
         </div>
-      </h1>
-      <div class="content subtitle">
-        <p>
-          The Code-Heads Club is partnership between Engineers and Students.
-          <br>
-          Our mission is to maintain a <strong>free</strong> curriculum for young adults learning to code.
-        </p>
       </div>
-    </div>
-  </section>
+    </section>
+  {{/if}}
 </header>
 
 <main>
@@ -58,8 +60,8 @@
       {{/if}}
 
       {{! About/resume}}
-      {{#if (equals routeName 'resume')}}
-        <about-resume @resume={{resume}} />
+      {{#if (str-contains routeName 'resume')}}
+        <about-resume @resume={{resume}} @routeName={{routeName}} />
       {{/if}}
 
     </div>

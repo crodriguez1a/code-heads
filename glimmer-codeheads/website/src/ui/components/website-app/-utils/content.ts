@@ -152,14 +152,14 @@ export const resume = [
         path: '#!/about/resume/ampm/bubbles/1',
         text: 'Order Tracking<br>Application',
         size: 'small',
-        description:'<h1 class="title is-5"><small>2013</small> &nbsp;Order generation for large sales team</h1> <ul> <li>Automated order form generation</li><li>UI Design/Development</li></ul>'
+        description:'<h1 class="title is-5"><small>2009</small> &nbsp;Order generation for large sales team</h1> <ul> <li>Automated order form generation</li><li>UI Design/Development</li></ul>'
       },
       {
         id: 2,
         path: '#!/about/resume/ampm/bubbles/2',
         text: 'Claims Management<br>Application',
         size: 'medium',
-        description:'<h1 class="title is-5"><small>2013</small> &nbsp;Automation of claims for lost or stolen equipment</h1> <ul><li>Multi-tier Authentication</li><li>Email platform</li><li>Pre-populated claims forms</li><li>Automated inventory auditing</li><li>Automated reports</li></ul>'
+        description:'<h1 class="title is-5"><small>2010</small> &nbsp;Automation of claims for lost or stolen equipment</h1> <ul><li>Multi-tier Authentication</li><li>Email platform</li><li>Pre-populated claims forms</li><li>Automated inventory auditing</li><li>Automated reports</li></ul>'
       }
     ]
   },

@@ -716,6 +716,12 @@ if (HAS_TYPED_ARRAYS) {
 }
 var EMPTY_ARRAY = HAS_NATIVE_WEAKMAP ? Object.freeze([]) : [];
 
+/**
+ * Registers
+ *
+ * For the most part, these follows MIPS naming conventions, however the
+ * register numbers are different.
+ */
 var Register;
 (function (Register) {
     // $0 or $pc (program counter): pointer into `program` for the next insturction; -1 means exit
@@ -3879,6 +3885,7 @@ var OptimizedTrustingUpdateOpcode = function (_UpdateOpcode2) {
     return OptimizedTrustingUpdateOpcode;
 }(UpdateOpcode);
 
+/* tslint:disable */
 function debugCallback(context, get$$1) {
     console.info('Use `context`, and `get(<path>)` to debug this template.');
     // for example...
@@ -9703,6 +9710,130 @@ function installDevModeErrorInterceptor(obj, key, throwError) {
     }
 }
 
+/**
+ * The `Component` class defines an encapsulated UI element that is rendered to
+ * the DOM. A component is made up of a template and, optionally, this component
+ * object.
+ *
+ * ## Defining a Component
+ *
+ * To define a component, subclass `Component` and add your own properties,
+ * methods and lifecycle hooks:
+ *
+ * ```ts
+ * import Component from '@glimmer/component';
+ *
+ * export default class extends Component {
+ * }
+ * ```
+ *
+ * ## Lifecycle Hooks
+ *
+ * Lifecycle hooks allow you to respond to changes to a component, such as when
+ * it gets created, rendered, updated or destroyed. To add a lifecycle hook to a
+ * component, implement the hook as a method on your component subclass.
+ *
+ * For example, to be notified when Glimmer has rendered your component so you
+ * can attach a legacy jQuery plugin, implement the `didInsertElement()` method:
+ *
+ * ```ts
+ * import Component from '@glimmer/component';
+ *
+ * export default class extends Component {
+ *   didInsertElement() {
+ *     $(this.element).pickadate();
+ *   }
+ * }
+ * ```
+ *
+ * ## Data for Templates
+ *
+ * `Component`s have two different kinds of data, or state, that can be
+ * displayed in templates:
+ *
+ * 1. Arguments
+ * 2. Properties
+ *
+ * Arguments are data that is passed in to a component from its parent
+ * component. For example, if I have a `user-greeting` component, I can pass it
+ * a name and greeting to use:
+ *
+ * ```hbs
+ * <user-greeting @name="Ricardo" @greeting="Olá">
+ * ```
+ *
+ * Inside my `user-greeting` template, I can access the `@name` and `@greeting`
+ * arguments that I've been given:
+ *
+ * ```hbs
+ * {{@greeting}}, {{@name}}!
+ * ```
+ *
+ * Arguments are also available inside my component:
+ *
+ * ```ts
+ * console.log(this.args.greeting); // prints "Olá"
+ * ```
+ *
+ * Properties, on the other hand, are internal to the component and declared in
+ * the class. You can use properties to store data that you want to show in the
+ * template, or pass to another component as an argument.
+ *
+ * ```ts
+ * import Component from '@glimmer/component';
+ *
+ * export default class extends Component {
+ *   user = {
+ *     name: 'Robbie'
+ *   }
+ * }
+ * ```
+ *
+ * In the above example, we've defined a component with a `user` property that
+ * contains an object with its own `name` property.
+ *
+ * We can render that property in our template:
+ *
+ * ```hbs
+ * Hello, {{user.name}}!
+ * ```
+ *
+ * We can also take that property and pass it as an argument to the
+ * `user-greeting` component we defined above:
+ *
+ * ```hbs
+ * <user-greeting @greeting="Hello" @name={{user.name}} />
+ * ```
+ *
+ * ## Arguments vs. Properties
+ *
+ * Remember, arguments are data that was given to your component by its parent
+ * component, and properties are data your component has defined for itself.
+ *
+ * You can tell the difference between arguments and properties in templates
+ * because arguments always start with an `@` sign (think "A is for arguments"):
+ *
+ * ```hbs
+ * {{@firstName}}
+ * ```
+ *
+ * We know that `@firstName` came from the parent component, not the current
+ * component, because it starts with `@` and is therefore an argument.
+ *
+ * On the other hand, if we see:
+ *
+ * ```hbs
+ * {{name}}
+ * ```
+ *
+ * We know that `name` is a property on the component. If we want to know where
+ * the data is coming from, we can go look at our component class to find out.
+ *
+ * Inside the component itself, arguments always show up inside the component's
+ * `args` property. For example, if `{{@firstName}}` is `Tom` in the template,
+ * inside the component `this.args.firstName` would also be `Tom`.
+ */
+
 var Component = function () {
   /**
    * Constructs a new component and assigns itself the passed properties. You
@@ -9822,6 +9953,9 @@ var ComponentDefinition$1 = function (_GlimmerComponentDefi) {
     return ComponentDefinition$$1;
 }(ComponentDefinition);
 
+/**
+ * The base PathReference.
+ */
 var ComponentPathReference = function () {
     function ComponentPathReference() {
         classCallCheck(this, ComponentPathReference);
@@ -10128,7 +10262,7 @@ var AboutOverview = function (_Component) {
   return AboutOverview;
 }(Component);
 
-var __ui_components_about_overview_template__ = { "id": "Y29LHKL+", "block": "{\"symbols\":[],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"About Code-Heads\"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    The Code-Heads Club is partnership between Engineers and Students.\\n    Our mission is to maintain a free curriculum for young adults learning to code.\\n\\n    Lorem ipsum\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"media\"],[7],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-left\"],[7],[0,\"\\n          \"],[6,\"figure\"],[9,\"class\",\"image is-64x64\"],[7],[0,\"\\n            \"],[6,\"img\"],[9,\"src\",\"https://lh3.googleusercontent.com/-ztm7wZFUgrU/VWdSIgKmMGI/AAAAAAAABIA/xfI_6KKPOQQXtZnnkdApDETUaUyd-W8MgCEw/w280-h280-p/profile_google.jpg\"],[9,\"alt\",\"Github avatar image\"],[7],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-content\"],[7],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"title is-4\"],[7],[0,\"Carlos Rodriguez\"],[8],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n            \"],[6,\"i\"],[9,\"class\",\"fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n            \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n              \"],[6,\"strong\"],[7],[0,\"crodriguez\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n\\n      \"],[6,\"div\"],[9,\"class\",\"content\"],[7],[0,\"\\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\n        Phasellus nec iaculis mauris.\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"footer\"],[9,\"class\",\"card-footer\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"#!/about/resume\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-paper-plane-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n        Resume\\n      \"],[8],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-envelope-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n        Email\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-overview" } };
+var __ui_components_about_overview_template__ = { "id": "UEpXrXtC", "block": "{\"symbols\":[],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"About Code-Heads\"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    The Code-Heads Club is partnership between Engineers and Students.\\n    Our mission is to maintain a free curriculum for young adults learning to code.\\n\\n    Lorem ipsum\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"media\"],[7],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-left\"],[7],[0,\"\\n          \"],[6,\"figure\"],[9,\"class\",\"image is-64x64\"],[7],[0,\"\\n            \"],[6,\"img\"],[9,\"src\",\"https://lh3.googleusercontent.com/-ztm7wZFUgrU/VWdSIgKmMGI/AAAAAAAABIA/xfI_6KKPOQQXtZnnkdApDETUaUyd-W8MgCEw/w280-h280-p/profile_google.jpg\"],[9,\"alt\",\"Github avatar image\"],[7],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-content\"],[7],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"title is-4\"],[7],[0,\"Carlos Rodriguez\"],[8],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n            \"],[6,\"i\"],[9,\"class\",\"fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n            \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n              \"],[6,\"strong\"],[7],[0,\"crodriguez\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n\\n      \"],[6,\"div\"],[9,\"class\",\"content\"],[7],[0,\"\\n        Lorem ipsum dolor sit amet, consectetur adipiscing elit.\\n        Phasellus nec iaculis mauris.\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"footer\"],[9,\"class\",\"card-footer\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"#!/about/resume\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-paper-plane-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n         Resume\\n      \"],[8],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-envelope-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n         Email\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-overview" } };
 
 var AboutResume = function (_Component) {
   inherits(AboutResume, _Component);
@@ -10141,7 +10275,7 @@ var AboutResume = function (_Component) {
   return AboutResume;
 }(Component);
 
-var __ui_components_about_resume_template__ = { "id": "l0b3A4N6", "block": "{\"symbols\":[],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column resume\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"\\n    Carlos Rodriguez\\n  \"],[8],[0,\"\\n  \"],[6,\"h2\"],[9,\"class\",\"subtitle is-5\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n      \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"crodriguez\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n      \"],[6,\"strong\"],[9,\"class\",\"title is-5\"],[7],[0,\"Ally Financial\"],[8],[0,\" \"],[6,\"small\"],[7],[0,\"2013 - Present\"],[8],[0,\"\\n      \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[0,\"Senior Software Engineer + Application Architect\"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"hr\"],[7],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-resume" } };
+var __ui_components_about_resume_template__ = { "id": "6O9a80bm", "block": "{\"symbols\":[\"resume\",\"technology\",\"title\",\"@resume\"],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column resume\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"\\n    Carlos Rodriguez\\n  \"],[8],[0,\"\\n  \"],[6,\"h2\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n    Engineer + Father of 3 + Founder of the Code-Heads Club\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n      \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"crodriguez1a\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"target\",\"_blank\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[7],[0,\"crodriguez1a@gmail.com\"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"href\",\"tel:(980)267-4467\"],[7],[0,\"980-267-4467\"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"br\"],[7],[8],[0,\"\\n\\n  \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Summary\"],[8],[0,\"\\n      \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n        \"],[6,\"ul\"],[7],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"14 years of experience in Tech\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"9 years of experience building enterprise solutions\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Open Source Author/Contributor\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Senior Software Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Application Architect\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Senior Javascript Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Full Stack Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Team Lead\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Project Lead\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Consultant\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Entrepreneur\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Educator\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Student\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Nerd\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Oh, and fluent/literate in Spanish\"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Preferred Languages, Frameworks, and Tools\"],[8],[0,\"\\n      \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n        \"],[6,\"ul\"],[7],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            JavaScript\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Glimmer/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"React/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Aurelia/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Ember/Ember-Data\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Mobile/Native\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Swift\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Version Control\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Github\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Bitbucket\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Server\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Node\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Python\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Scala\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Testing/Dev-ops\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Jasmine\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"QUnit\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Travis\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Communication\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Slack\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Trello\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Experience\"],[8],[0,\"\\n\"],[4,\"each\",[[19,4,[]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n        \"],[6,\"p\"],[7],[0,\"\\n          \"],[6,\"span\"],[9,\"class\",\"title is-5\"],[7],[6,\"strong\"],[7],[1,[19,1,[\"employer\"]],false],[8],[8],[0,\" \"],[6,\"small\"],[7],[1,[19,1,[\"tenure\"]],false],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"titles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"            \"],[1,[19,3,[]],false],[0,\"\\n\"]],\"parameters\":[3]},null],[0,\"        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Technologies\"],[8],[8],[0,\"\\n          \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"technologies\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"              \"],[6,\"li\"],[7],[1,[19,2,[]],false],[8],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Company\"],[8],[8],[0,\"\\n          {resume.snapshot 1 million users}\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Overview\"],[8],[8],[0,\"\\n          \"],[1,[19,1,[\"overview\"]],false],[0,\"\\n        \"],[8],[0,\"\\n\\n\"],[0,\"        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Leadership Experience\"],[8],[8],[0,\"\\n          \"],[6,\"ul\"],[7],[0,\"\\n            \"],[6,\"li\"],[7],[0,\"{resume.leadership}\"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n\\n\"],[4,\"if\",[[19,1,[\"bubbles\"]]],null,{\"statements\":[[0,\"          \"],[6,\"p\"],[7],[0,\"\\n            \"],[6,\"hr\"],[7],[8],[0,\"\\n            \"],[6,\"h1\"],[9,\"class\",\"title is-6\"],[7],[1,[19,1,[\"bubblesTitle\"]],false],[8],[0,\"\\n            \"],[5,\"bubble-chart\",[],[[\"@list\"],[[19,1,[\"bubbles\"]]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"hr\"],[7],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-resume" } };
 
 var ArticleCard = function (_Component) {
   inherits(ArticleCard, _Component);
@@ -10169,16 +10303,118 @@ var ArticleModal = function (_Component) {
 
 var __ui_components_article_modal_template__ = { "id": "BRvguZhl", "block": "{\"symbols\":[\"@content\"],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"modal\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"modal-background\"],[7],[8],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"modal-content\"],[7],[0,\"\\n    \"],[1,[19,1,[]],false],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"button\"],[9,\"class\",\"modal-close\"],[7],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/article-modal" } };
 
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var BubbleChart = function (_Component) {
+    inherits(BubbleChart, _Component);
+
+    function BubbleChart() {
+        classCallCheck(this, BubbleChart);
+
+        var _this = possibleConstructorReturn(this, _Component.apply(this, arguments));
+        // TODO make these routable
+
+
+        _this.highlighted = null;
+        return _this;
+    }
+
+    BubbleChart.prototype.shade = function shade(e) {
+        e.preventDefault();
+        this.highlighted = null;
+    };
+
+    BubbleChart.prototype.highlight = function highlight(path, bubble, e) {
+        e.preventDefault();
+        this.highlighted = bubble;
+    };
+
+    return BubbleChart;
+}(Component);
+
+__decorate([tracked], BubbleChart.prototype, "highlighted", void 0);
+
+var __ui_components_bubble_chart_template__ = { "id": "zhK5534b", "block": "{\"symbols\":[\"bubble\",\"@list\"],\"prelude\":[[6,\"div\"]],\"head\":[[7]],\"statements\":[[0,\"\\n\"],[4,\"if\",[[19,0,[\"highlighted\"]]],null,{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"details content\"],[7],[0,\"\\n      \"],[6,\"h2\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"shade\"]]],null],null],[7],[0,\"\\n          < All projects\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"p\"],[7],[0,\"\\n        \"],[1,[25,\"html-safe\",[[19,0,[\"highlighted\",\"description\"]]],null],false],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"bubble-chart\"],[7],[0,\"\\n      \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,2,[]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"          \"],[6,\"li\"],[10,\"class\",[26,[\"bubble \",[19,1,[\"size\"]]]]],[7],[0,\"\\n            \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"highlight\"]],[19,1,[\"path\"]],[19,1,[]]],null],null],[7],[0,\"\\n              \"],[1,[25,\"html-safe\",[[19,1,[\"text\"]]],null],false],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]}],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/bubble-chart" } };
+
+function equals(params) {
+    return params[0] === params[1];
+}
+
+/**
+@module ember
+@submodule ember-glimmer
+https://github.com/emberjs/ember.js/blob/v2.12.0/packages/ember-glimmer/lib/utils/string.js#L100
+*/
+var SafeString = function () {
+    function SafeString(string) {
+        classCallCheck(this, SafeString);
+
+        this.string = '';
+        this.string = string;
+    }
+
+    SafeString.prototype.toString = function toString() {
+        return '' + this.string;
+    };
+
+    SafeString.prototype.toHTML = function toHTML() {
+        return this.toString();
+    };
+
+    return SafeString;
+}();
+
+/**
+  Mark a string as safe for unescaped output with Ember templates. If you
+  return HTML from a helper, use this function to
+  ensure Ember's rendering layer does not escape the HTML.
+
+  ```javascript
+  Ember.String.htmlSafe('<div>someString</div>')
+  ```
+
+  @method htmlSafe
+  @for Ember.String
+  @static
+  @return {Handlebars.SafeString} A string that will not be HTML escaped by Handlebars.
+  @public
+*/
+function htmlSafe(params) {
+    var str = params[0];
+    if (str === null || str === undefined) {
+        str = '';
+    } else if (typeof str !== 'string') {
+        str = '' + str;
+    }
+    return new SafeString(str);
+}
+
+function strContains(params) {
+    // REVIEW consider indexOf
+    var a = params[0].toString();
+    var b = params[1].toString();
+    return new RegExp(a, 'ig').test(b);
+}
+
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
 
+/** Detect free variable `self`. */
 var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
 
 /** Used as a reference to the global object. */
 var root = freeGlobal || freeSelf || Function('return this')();
 
+/** Built-in value references. */
 var _Symbol = root.Symbol;
 
+/** Used for built-in method references. */
 var objectProto$1 = Object.prototype;
 
 /** Used to check objects for own properties. */
@@ -10242,6 +10478,7 @@ function objectToString(value) {
   return nativeObjectToString$1.call(value);
 }
 
+/** `Object#toString` result references. */
 var nullTag = '[object Null]';
 var undefinedTag = '[object Undefined]';
 
@@ -10276,6 +10513,7 @@ function overArg(func, transform) {
   };
 }
 
+/** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
 
 /**
@@ -10306,6 +10544,7 @@ function isObjectLike(value) {
   return value != null && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'object';
 }
 
+/** `Object#toString` result references. */
 var objectTag = '[object Object]';
 
 /** Used for built-in method references. */
@@ -10396,6 +10635,12 @@ if (typeof self !== 'undefined') {
 
 var result = symbolObservablePonyfill(root$2);
 
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
 var ActionTypes = {
   INIT: '@@redux/INIT'
 };
@@ -10669,46 +10914,174 @@ function warning(message) {
  * (...args) => f(g(h(...args))).
  */
 
+/*
+* This is a dummy function to check if the function name has been altered by minification.
+* If the function has been minified and NODE_ENV !== 'production', warn the user.
+*/
 function isCrushed() {}
 
 if ("production" !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
   warning('You are currently using minified code outside of NODE_ENV === \'production\'. ' + 'This means that you are running a slower development build of Redux. ' + 'You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify ' + 'or DefinePlugin for webpack (http://stackoverflow.com/questions/30030031) ' + 'to ensure you have the correct code for your production build.');
 }
 
+// TODO fetch this lazily when async await is ready
+// TODO fetch this lazily when async await is ready
 var articles = [{
+    id: 0,
+    type: 'article',
     title: 'A Practical Approach',
     description: 'Hello glimmer-redux',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
 }, {
+    id: 1,
+    type: 'article',
     title: 'Keep Learning Free',
     description: 'Hello glimmer-redux',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
 }, {
+    id: 2,
+    type: 'article',
     title: 'Contributors & Curators',
     description: 'Hello glimmer-redux',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
 }, {
+    id: 3,
+    type: 'article',
     title: 'Start Learning on Your Own',
     description: 'Hello glimmer-redux',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
 }];
+var resume = [{
+    id: 4,
+    type: 'resume',
+    employer: 'Ally Financial',
+    tenure: '2013 - Present',
+    titles: ['Senior Software Engineer', '+ Application Architect'],
+    technologies: ['Vanilla JavaScript ES5/6/7', 'Node', 'Ember/Ember-Data/Ember-Engines', 'QUnit', 'REST API', 'Handlebars', 'Sass', 'Git CLI', 'Github Enterprise', 'Bitbucket Enterprise'],
+    overview: 'Architecting and engineering software infrastructure for various enterprise web applications. Project Lead responsible for oversight and code-review of first party, third party, and off-shore engineers and developers. Teaching repeatable patterns, intelligent abstractions, and best practices. Responsibilities for overall applications stability, maintainability, and scalability.',
+    bubblesTitle: 'Core contributor on:',
+    bubbles: [{
+        id: 0,
+        path: '#!/about/resume/ally/bubbles/0',
+        text: 'Custom<br>Charts',
+        size: 'small',
+        description: '<h1 class="title is-5"><small>2013</small> &nbsp;Custom charts and graphs with real-time feedback</h1> <ul> <li>Two way binding with the burgeoning Ember 0.X</li><li>An island implementation of Ember (pre ember-islands)</li><li>Pure CSS bar charts</li><li>Vanilla JS line graphs (due to dependency limitations)</li></ul>'
+    }, {
+        id: 1,
+        path: '#!/about/resume/ally/bubbles/1',
+        text: 'Single Page<br>Mobile Site',
+        size: 'medium',
+        description: '<h1 class="title is-5"><small>2014</small> &nbsp;Single page mobile website</h1> <ul> <li>Routing implementation with Javascript and Apache</li><li>Leveraging/reusing existing desktop components</li><li>Google Maps API implementation (ATM locator)</li><li>Framework free (due to dependency limitations)</li></ul>'
+    }, {
+        id: 2,
+        path: '#!/about/resume/ally/bubbles/2',
+        text: 'Homepage<br>Login Widget',
+        size: 'small',
+        description: '<h1 class="title is-5"><small>2015</small> &nbsp;Homepage Login Widget</h1> <ul> <li>Authored Vanilla JS application micro-framework (due to dependency limitations)</li><li>Custom validation</li><li>Custom component state</li><li>Rudimentary Promise aware component rendering</li></ul>'
+    }, {
+        id: 3,
+        path: '#!/about/resume/ally/bubbles/3',
+        text: 'Authentication<br>Protocol Re-write',
+        size: 'large',
+        description: '<h1 class="title is-5"><small>2016</small> &nbsp;Authentication Protocol Re-write</h1> <ul> <li>Multi-factor flows (with dozens of edge cases)</li><li>Custom adapter, serializer (endpoints were too overloaded for ember-data)</li><li>Intelligent routing and redirects</li><li>Re-usable client micro-services to perform auth related tasks</li><li>Secure third-party post-authentication hand-off</li><li>Modularization (in progress)</li></ul>'
+    }, {
+        id: 4,
+        path: '#!/about/resume/ally/bubbles/4',
+        text: 'Open Source<br>UI Component<br>Library',
+        size: 'medium',
+        description: '<h1 class="title is-5"><small>2016</small> &nbsp;Open Source UI Component Library</h1> <ul> <li>Composable components</li><li>Stateless and logic-less (dumb)</li><li><a href="http://open-tux.github.io/ember-bulma/" target="_blank">Ember-Bulma</a></li></ul>'
+    }, {
+        id: 5,
+        path: '#!/about/resume/ally/bubbles/5',
+        text: 'Branded UI<br>Component Library',
+        size: 'medium',
+        description: '<h1 class="title is-5"><small>2016</small> &nbsp;Ally Branded UI Component Library</h1> <ul> <li>Extends open source version</li><li>State-less and State-full (smart) components</li><li>Implementation of living style guide</li></ul>'
+    }, {
+        id: 6,
+        path: '#!/about/resume/ally/bubbles/6',
+        text: 'Dashboard<br>Architecture',
+        size: 'x-large',
+        description: '<h1 class="title is-5"><small>2016</small> &nbsp;SSO Dashboard Architecture</h1> <ul> <li>Exponential scalability</li><li>Truly de-coupled micro-applications</li><li>Universal UI patterns</li><li>SSO for various lines of business</li><li>Third party services integration</li><li>Universal application metrics</li><li>Simultaneous Responsive and Adaptive designs</li><li>Legacy code integration</li><li>Upgrade and deprecation paths</li><li>Migration to Ember Data</li></ul>'
+    }, {
+        id: 7,
+        path: '#!/about/resume/ally/bubbles/7',
+        text: 'Ember Engines<br>Architecture',
+        size: 'medium',
+        description: '<h1 class="title is-5"><small>2017</small> &nbspEmber Engines Architecture</h1> <ul> <li>Ember 2.13 compatibility strategy (glimmer rendering)</li><li>Shared dependency audit</li><li>Shared services audit</li></ul>'
+    }]
+}, {
+    id: 5,
+    type: 'resume',
+    employer: 'AM-to-PM Creative',
+    tenure: '2008 - 2013',
+    titles: ['Founder', '+ Full Stack Engineer', '+ Consultant'],
+    technologies: ['JavaScript', 'Node', 'PHP', 'Linux', 'Apache', 'Microsoft SQL', 'Oracle', 'YUI', 'ActionScript', 'AWS', 'MySQL'],
+    overview: 'Engineering and consulting with a focus on data driven web applications, platform migrations, intranet/operations applications. Responsible for architectural and strategic consulting, API design/implementation, UX design/development.',
+    bubblesTitle: 'Projects of Note:',
+    bubbles: [{
+        id: 0,
+        path: '#!/about/resume/ampm/bubbles/0',
+        text: 'Project Management<br>Web Application',
+        size: 'large',
+        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Project Management Software</h1> <ul><li>Time tracking with stop-watch</li><li>Time sheets</li><li>Authentication</li><li>Gantt display</li><li>Email alerts</li><li>Semi-automated budget tracking</li><li>Internal messaging</li><li>Meeting scheduler</li><li>Automated reporting</li><li>Bug tracking</li></ul>'
+    }, {
+        id: 1,
+        path: '#!/about/resume/ampm/bubbles/1',
+        text: 'Order Tracking<br>Application',
+        size: 'small',
+        description: '<h1 class="title is-5"><small>2009</small> &nbsp;Order generation for large sales team</h1> <ul> <li>Automated order form generation</li><li>UI Design/Development</li></ul>'
+    }, {
+        id: 2,
+        path: '#!/about/resume/ampm/bubbles/2',
+        text: 'Claims Management<br>Application',
+        size: 'medium',
+        description: '<h1 class="title is-5"><small>2010</small> &nbsp;Automation of claims for lost or stolen equipment</h1> <ul><li>Multi-tier Authentication</li><li>Email platform</li><li>Pre-populated claims forms</li><li>Automated inventory auditing</li><li>Automated reports</li></ul>'
+    }]
+}, {
+    id: 5,
+    type: 'resume',
+    employer: 'Dakota Group',
+    tenure: '2007 - 2008',
+    titles: ['Senior UI Developer'],
+    overview: 'Lead Developer primarily focused on intranet portals, web-based applications, and kiosk applications.',
+    technologies: ['JavaScript', 'HTML', 'CSS', 'ActionScript', 'PHP']
+}, {
+    id: 5,
+    type: 'resume',
+    employer: 'Starwood Hotels',
+    tenure: '2005 - 2007',
+    titles: ['ActionScript Developer'],
+    overview: 'Developed interactive data-driven Flash applications',
+    technologies: ['ActionScript', 'JavaScript', 'XML']
+}, {
+    id: 5,
+    type: 'resume',
+    employer: 'Worx Group',
+    tenure: '2004 - 2005',
+    titles: ['UI Designer'],
+    overview: 'Website, e-commerce and intranet/portal design',
+    technologies: ['Photoshop', 'Dreamweaver', 'Fireworks', 'Illustrator']
+}];
+var content = [].concat(articles, resume);
+
+// TODO import all the content as the state
 function ArticlesReducer() {
-    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : articles;
+    var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : content;
     var action = arguments[1];
 
     // TODO where would an async fetch belong?
     switch (action.type) {
         case 'MARK_AS_READ':
             return state.map(function (article, index) {
-                if (index === action.index) {
+                if (index === action.index && article.hasOwnProperty('read')) {
                     return Object.assign({}, article, { read: true });
                 }
                 return article;
@@ -11236,7 +11609,10 @@ var Router = function () {
                 sendNameUpdate('about');
             },
             '/about/resume': function aboutResume() {
-                sendNameUpdate('resume');
+                sendNameUpdate('about|resume');
+            },
+            '/about/resume/:employer/bubbles/:id': function aboutResumeEmployerBubblesId(params) {
+                sendNameUpdate('resume|' + params.employer + '|bubbles|' + params.id);
             },
             '': function _() {
                 sendNameUpdate('');
@@ -11247,7 +11623,7 @@ var Router = function () {
     return Router;
 }();
 
-var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+var __decorate$1 = undefined && undefined.__decorate || function (decorators, target, key, desc) {
     var c = arguments.length,
         r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
         d;
@@ -11279,34 +11655,34 @@ var Website = function (_Component) {
 
         _this.store = createStore(ArticlesReducer);
         /**
-          Get the current state of the articles model from the store
+          Get the current state of the model from the store
                  @property articles
         */
-        _this.articles = _this.store.getState();
+        _this.state = _this.store.getState();
         // this.loadMarkdown();
         // subscribe to router listener
         router.listen(_this.routeNameUpdate.bind(_this));
         return _this;
     }
     /**
-      Signal route is home
-         @property atHome
-    */
-
-
-    /**
       Call back for route listener
          @method routeUpdate
     */
+
+
     Website.prototype.routeNameUpdate = function routeNameUpdate(name) {
         this.routeName = name;
     };
     /**
-      Proxy the store.dispatch function
-         @method dispatch
+      An array of articles
+         @property articles
     */
 
 
+    /**
+      Proxy the store.dispatch function
+         @method dispatch
+    */
     Website.prototype.dispatch = function dispatch() {
         var action = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
@@ -11326,47 +11702,40 @@ var Website = function (_Component) {
             index: index
         });
         // update glimmer tracked prop
-        this.articles = this.store.getState();
+        this.state = this.store.getState();
     };
 
     createClass(Website, [{
-        key: "atHome",
+        key: "articles",
         get: function get$$1() {
-            return this.routeName === '';
+            return this.state.filter(function (item) {
+                return item.type === 'article';
+            });
         }
         /**
-          Signal route is home
-             @property atAbout
+          An array of resume parts
+             @property resume
         */
 
     }, {
-        key: "atAbout",
+        key: "resume",
         get: function get$$1() {
-            return this.routeName === 'about';
-        }
-        /**
-          Signal route is home
-             @property atAbout
-        */
-
-    }, {
-        key: "atResume",
-        get: function get$$1() {
-            return this.routeName === 'resume';
+            return this.state.filter(function (item) {
+                return item.type === 'resume';
+            });
         }
     }]);
     return Website;
 }(Component);
 
-__decorate([tracked], Website.prototype, "routeName", void 0);
-__decorate([tracked('routeName')], Website.prototype, "atHome", null);
-__decorate([tracked('routeName')], Website.prototype, "atAbout", null);
-__decorate([tracked('routeName')], Website.prototype, "atResume", null);
-__decorate([tracked], Website.prototype, "articles", void 0);
+__decorate$1([tracked], Website.prototype, "routeName", void 0);
+__decorate$1([tracked], Website.prototype, "state", void 0);
+__decorate$1([tracked('state')], Website.prototype, "articles", null);
+__decorate$1([tracked('state')], Website.prototype, "resume", null);
 
-var __ui_components_website_app_template__ = { "id": "soYoaFix", "block": "{\"symbols\":[\"article\",\"index\"],\"prelude\":[[6,\"header\"]],\"head\":[[7]],\"statements\":[[0,\"\\n  \"],[6,\"nav\"],[9,\"class\",\"nav no-backgound\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-left\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"nav--logo nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[7],[0,\"\\n          \"],[6,\"span\"],[9,\"class\",\"icon\"],[7],[0,\"{ \"],[6,\"span\"],[9,\"class\",\"upsidedown\"],[7],[0,\";\"],[8],[0,\" }\"],[8],[0,\" Code-Heads Club\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-right\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"class\",\"nav-item\"],[9,\"href\",\"#!/about\"],[7],[0,\"\\n        About\\n      \"],[8],[0,\"\\n      \"],[6,\"span\"],[9,\"class\",\"nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a/code-heads\"],[9,\"target\",\"_blank\"],[9,\"class\",\"nav-item button is-info is-outlined\"],[7],[0,\"\\n          \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[7],[8],[0,\" GitHub\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"section\"],[9,\"class\",\"hero is-info no-backgound has-text-centered\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"hero-body\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title\"],[7],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"hero--logo\"],[7],[0,\"\\n          \"],[6,\"img\"],[9,\"src\",\"img/logo_single_color.svg\"],[9,\"alt\",\"Code-heads Club Logo\"],[7],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"content subtitle\"],[7],[0,\"\\n        \"],[6,\"p\"],[7],[0,\"\\n          The Code-Heads Club is partnership between Engineers and Students.\\n          \"],[6,\"br\"],[7],[8],[0,\"\\n          Our mission is to maintain a \"],[6,\"strong\"],[7],[0,\"free\"],[8],[0,\" curriculum for young adults learning to code.\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\\n\"],[6,\"main\"],[7],[0,\"\\n  \"],[6,\"section\"],[9,\"class\",\"section\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n\\n\"],[4,\"if\",[[19,0,[\"atHome\"]]],null,{\"statements\":[[4,\"each\",[[19,0,[\"articles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"          \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n            \"],[6,\"div\"],[9,\"class\",\"box\"],[7],[0,\"\\n              \"],[5,\"article-card\",[],[[\"@article\",\"@didRead\"],[[19,1,[]],[25,\"action\",[[19,0,[\"markAsRead\"]],[19,2,[]]],null]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[1,2]},null]],\"parameters\":[]},null],[0,\"\\n\"],[4,\"if\",[[19,0,[\"atAbout\"]]],null,{\"statements\":[[0,\"        \"],[5,\"about-overview\",[],[[],[]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\"],[4,\"if\",[[19,0,[\"atResume\"]]],null,{\"statements\":[[0,\"        \"],[5,\"about-resume\",[],[[],[]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\\n\"],[5,\"article-modal\",[],[[\"@content\"],[[18,\"content\"]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/website-app" } };
+var __ui_components_website_app_template__ = { "id": "wLcEdY5o", "block": "{\"symbols\":[\"article\",\"index\"],\"prelude\":[[6,\"header\"]],\"head\":[[7]],\"statements\":[[0,\"\\n  \"],[6,\"nav\"],[9,\"class\",\"nav no-backgound\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-left\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"nav--logo nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[7],[0,\"\\n          \"],[6,\"span\"],[9,\"class\",\"icon\"],[7],[0,\"{ \"],[6,\"span\"],[9,\"class\",\"upsidedown\"],[7],[0,\";\"],[8],[0,\" }\"],[8],[0,\" Code-Heads Club\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-right\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"class\",\"nav-item\"],[9,\"href\",\"#!/about\"],[7],[0,\"\\n        About\\n      \"],[8],[0,\"\\n      \"],[6,\"span\"],[9,\"class\",\"nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a/code-heads\"],[9,\"target\",\"_blank\"],[9,\"class\",\"nav-item button is-info is-outlined\"],[7],[0,\"\\n          \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[7],[8],[0,\" GitHub\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n\"],[4,\"if\",[[25,\"equals\",[[19,0,[\"routeName\"]],\"\"],null]],null,{\"statements\":[[0,\"    \"],[6,\"section\"],[9,\"class\",\"hero is-info no-backgound has-text-centered\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"hero-body\"],[7],[0,\"\\n        \"],[6,\"h1\"],[9,\"class\",\"title\"],[7],[0,\"\\n          \"],[6,\"div\"],[9,\"class\",\"hero--logo\"],[7],[0,\"\\n            \"],[6,\"img\"],[9,\"src\",\"img/logo_single_color.svg\"],[9,\"alt\",\"Code-heads Club Logo\"],[7],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"content subtitle\"],[7],[0,\"\\n          \"],[6,\"p\"],[7],[0,\"\\n            The Code-Heads Club is partnership between Engineers and Students.\\n            \"],[6,\"br\"],[7],[8],[0,\"\\n            Our mission is to maintain a \"],[6,\"strong\"],[7],[0,\"free\"],[8],[0,\" curriculum for young adults learning to code.\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[8],[0,\"\\n\\n\"],[6,\"main\"],[7],[0,\"\\n  \"],[6,\"section\"],[9,\"class\",\"section\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n\\n\"],[4,\"if\",[[25,\"equals\",[[19,0,[\"routeName\"]],\"\"],null]],null,{\"statements\":[[4,\"each\",[[19,0,[\"articles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"          \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n            \"],[6,\"div\"],[9,\"class\",\"box\"],[7],[0,\"\\n              \"],[5,\"article-card\",[],[[\"@article\",\"@didRead\"],[[19,1,[]],[25,\"action\",[[19,0,[\"markAsRead\"]],[19,2,[]]],null]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[1,2]},null]],\"parameters\":[]},null],[0,\"\\n\"],[4,\"if\",[[25,\"equals\",[[19,0,[\"routeName\"]],\"about\"],null]],null,{\"statements\":[[0,\"        \"],[5,\"about-overview\",[],[[],[]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\"],[4,\"if\",[[25,\"str-contains\",[[19,0,[\"routeName\"]],\"resume\"],null]],null,{\"statements\":[[0,\"        \"],[5,\"about-resume\",[],[[\"@resume\",\"@routeName\"],[[18,\"resume\"],[18,\"routeName\"]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\\n\"],[5,\"article-modal\",[],[[\"@content\"],[[18,\"content\"]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/website-app" } };
 
-var moduleMap = { 'component:/website-app/components/about-overview': AboutOverview, 'template:/website-app/components/about-overview': __ui_components_about_overview_template__, 'component:/website-app/components/about-resume': AboutResume, 'template:/website-app/components/about-resume': __ui_components_about_resume_template__, 'component:/website-app/components/article-card': ArticleCard, 'template:/website-app/components/article-card': __ui_components_article_card_template__, 'component:/website-app/components/article-modal': ArticleModal, 'template:/website-app/components/article-modal': __ui_components_article_modal_template__, 'component:/website-app/components/website-app': Website, 'template:/website-app/components/website-app': __ui_components_website_app_template__ };
+var moduleMap = { 'component:/website-app/components/about-overview': AboutOverview, 'template:/website-app/components/about-overview': __ui_components_about_overview_template__, 'component:/website-app/components/about-resume': AboutResume, 'template:/website-app/components/about-resume': __ui_components_about_resume_template__, 'component:/website-app/components/article-card': ArticleCard, 'template:/website-app/components/article-card': __ui_components_article_card_template__, 'component:/website-app/components/article-modal': ArticleModal, 'template:/website-app/components/article-modal': __ui_components_article_modal_template__, 'component:/website-app/components/bubble-chart': BubbleChart, 'template:/website-app/components/bubble-chart': __ui_components_bubble_chart_template__, 'helper:/website-app/components/equals': equals, 'helper:/website-app/components/html-safe': htmlSafe, 'helper:/website-app/components/str-contains': strContains, 'component:/website-app/components/website-app': Website, 'template:/website-app/components/website-app': __ui_components_website_app_template__ };
 
 var resolverConfiguration = { "app": { "name": "website-app", "rootName": "website-app" }, "types": { "application": { "definitiveCollection": "main" }, "component": { "definitiveCollection": "components" }, "helper": { "definitiveCollection": "components" }, "renderer": { "definitiveCollection": "main" }, "template": { "definitiveCollection": "components" } }, "collections": { "main": { "types": ["application", "renderer"] }, "components": { "group": "ui", "types": ["component", "template", "helper"], "defaultType": "component", "privateCollections": ["utils"] }, "styles": { "group": "ui", "unresolvable": true }, "utils": { "unresolvable": true } } };
 

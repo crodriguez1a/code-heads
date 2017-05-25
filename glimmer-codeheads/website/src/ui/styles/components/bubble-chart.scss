@@ -1,3 +1,16 @@
+/* RGB */
+$flirt: #A4036F;
+$smashed-pumpkin: #FF6B35;
+$kiwi: #81D83E;
+$carmine-pink: #E54B4B;
+$cyan: #01BAEF;
+$munsell: #048BA8;
+$caribbean-green: #16DB93;
+$carrot: #F29E4C;
+
+$colors: $flirt, $cyan, $kiwi, $carmine-pink, $smashed-pumpkin, $munsell, $caribbean-green, $carrot;
+$repeat: 15;
+
 .bubble-chart {
   text-align: center;
   line-height: 0;
@@ -7,6 +20,7 @@
   }
 
   .bubble {
+    position: relative;
     border: 1px dashed;
     border-radius: 100%;
     width: auto;
@@ -19,7 +33,13 @@
     font-size: 1em;
     padding: 1rem;
     line-height: 1.25;
-    margin: 0.05rem;
+    margin: 0.05rem 0.05rem 0.5rem 0.05rem;
+
+    @for $i from 1 through $repeat {
+      &:nth-child(#{length($colors)}n+#{$i}) {
+        border-color: lighten(nth($colors, random(length($colors))), 5%);
+      }
+    }
 
     a {
       color: $black;

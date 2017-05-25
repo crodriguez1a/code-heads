@@ -4,7 +4,7 @@ export const articles = [
     id: 0,
     type: 'article',
     title: 'A Practical Approach',
-    description: 'Hello glimmer-redux',
+    description: 'Content coming soon',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
@@ -13,7 +13,7 @@ export const articles = [
     id: 1,
     type: 'article',
     title: 'Keep Learning Free',
-    description: 'Hello glimmer-redux',
+    description: 'Content coming soon',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
@@ -22,7 +22,7 @@ export const articles = [
     id: 2,
     type: 'article',
     title: 'Contributors & Curators',
-    description: 'Hello glimmer-redux',
+    description: 'Content coming soon',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
@@ -31,7 +31,7 @@ export const articles = [
     id: 3,
     type: 'article',
     title: 'Start Learning on Your Own',
-    description: 'Hello glimmer-redux',
+    description: 'Content coming soon',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
@@ -57,7 +57,7 @@ export const resume = [
       'Github Enterprise',
       'Bitbucket Enterprise'
     ],
-    company: 'A Leader in Digital Financial Services. The Ally Online Services software platform has over 1 million active users',
+    company: 'A Leader in Digital Financial Services. The Ally Online Services web application has over 1 million active users',
     overview: 'Architecting and engineering software infrastructure for various enterprise web applications that make up Ally Online Services. Project Lead responsible for oversight and code-review of first party, third party, and off-shore engineers and developers. Teaching repeatable patterns, intelligent abstractions, and best practices. Responsibilities for overall applications stability, maintainability, and scalability.',
     leadership: [
       'Project leadership',
@@ -84,13 +84,6 @@ export const resume = [
         text: 'Single Page<br>Mobile Site',
         size: 'medium',
         description:'<h1 class="title is-5"><small>2014</small> &nbsp;Single page mobile website</h1> <ul> <li>Routing implementation with Javascript and Apache</li><li>Leveraging/reusing existing desktop components</li><li>Google Maps API implementation (ATM locator)</li><li>Framework free (due to dependency limitations)</li></ul>'
-      },
-      {
-        id: 3,
-        path: '#!/about/resume/ally/bubbles/2',
-        text: 'Ember SPA<br>Migration & Launch',
-        size: 'medium',
-        description:'<h1 class="title is-5"><small>2015</small> &nbsp;Ember 1.X SPA</h1> <ul><li>-</li></ul>'
       },
       {
         id: 2,
@@ -156,6 +149,13 @@ export const resume = [
       'MySQL'
     ],
     overview: 'Engineering and consulting with a focus on data driven web applications, platform migrations, intranet/operations applications. Responsible for architectural and strategic consulting, API design/implementation, UX design/development.',
+    company: 'Whether it is a start up or a business re-inventing itself, AM-to-PM delivers big agency quality without the bloat.',
+    leadership: [
+      'Technical Sales',
+      'Resource Management',
+      'Estimates and Budgeting',
+      'Platform training and education'
+    ],
     bubblesTitle: 'Projects of Note:',
     bubbles: [
       {
@@ -174,17 +174,24 @@ export const resume = [
       },
       {
         id: 2,
-        path: '#!/about/resume/ampm/bubbles/3',
+        path: '#!/about/resume/ampm/bubbles/2',
         text: 'Project Management<br>Web Application',
         size: 'large',
         description:'<h1 class="title is-5"><small>2011</small> &nbsp;Project Management Software</h1> <ul><li>Time tracking with stop-watch</li><li>Time sheets</li><li>Authentication</li><li>Gantt display</li><li>Email alerts</li><li>Semi-automated budget tracking</li><li>Internal messaging</li><li>Meeting scheduler</li><li>Automated reporting</li><li>Bug tracking</li></ul>'
       },
       {
         id: 3,
-        path: '#!/about/resume/ampm/bubbles/2',
+        path: '#!/about/resume/ampm/bubbles/3',
         text: 'Keppler Speakers<br>Search API',
         size: 'x-large',
-        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Search API re-write to support large-scale database migration</h1><ul><li></li></ul>'
+        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Search API re-write to support large-scale database and platform migration</h1><ul><li>Migration of platform from ASP to PHP</li><li>Aggregation middleware cross-referencing across Microsoft SQL Server and Oracle databases</li><li>Asynchrounous Results and Pagination</li><li>Mobile web implementation</li></li></ul>'
+      },
+      {
+        id: 4,
+        path: '#!/about/resume/ampm/bubbles/4',
+        text: 'Ecommerce<br>Application',
+        size: 'x-large',
+        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Etsy clone Ecommerce platform</h1><ul><li>Facebook Auth API</li><li>Custom page and content creation</li><li>Internal messaging</li><li>Search API</li><li>Payment Gateway Implementation</li><li>UX Design</li></ul>'
       }
     ]
   },
@@ -195,6 +202,7 @@ export const resume = [
     tenure: '2007 - 2008',
     titles: ['Senior UI Developer'],
     overview: 'Lead Developer primarily focused on intranet portals, web-based applications, and kiosk applications.',
+    company: 'The Dakota Group is a marketing communications firm, specializing in print and web communications.',
     technologies: [
       'JavaScript',
       'HTML',
@@ -210,6 +218,7 @@ export const resume = [
     tenure: '2005 - 2007',
     titles: ['ActionScript Developer'],
     overview: 'Developed interactive data-driven Flash applications',
+    company: 'Starwood Hotels & Resorts and Marriott International are now one company. Marriott International is the world’s leading global hospitality company, with more brands, more hotels and more opportunities for associates to grow and succeed.',
     technologies: [
       'ActionScript',
       'JavaScript',
@@ -223,6 +232,7 @@ export const resume = [
     tenure: '2004 - 2005',
     titles: ['UI Designer'],
     overview: 'Website, e-commerce and intranet/portal design',
+    company: 'The Worx Group is a nationally-recognized brand communications firm, named for a group of marketers who do what worx.',
     technologies: [
       'Photoshop',
       'Dreamweaver',

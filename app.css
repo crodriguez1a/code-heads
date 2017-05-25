@@ -4306,6 +4306,14 @@ html {
     display: inline-block;
     margin: 14px 0 0 10px; }
 
+@media print {
+  * {
+    font-size: 14px !important; }
+    * .no-print {
+      display: none; }
+    * .page-break {
+      page-break-after: always; } }
+
 /* RGB */
 .bubble-chart {
   text-align: center;
@@ -4328,35 +4336,35 @@ html {
     line-height: 1.25;
     margin: 0.05rem 0.05rem 0.5rem 0.05rem; }
     .bubble-chart .bubble:nth-child(8n+1) {
-      border-color: #e86161; }
+      border-color: #05a0c1; }
     .bubble-chart .bubble:nth-child(8n+2) {
-      border-color: #f4ab64; }
+      border-color: #0cc8fe; }
     .bubble-chart .bubble:nth-child(8n+3) {
-      border-color: #0cc8fe; }
+      border-color: #05a0c1; }
     .bubble-chart .bubble:nth-child(8n+4) {
-      border-color: #0cc8fe; }
+      border-color: #05a0c1; }
     .bubble-chart .bubble:nth-child(8n+5) {
-      border-color: #8fdc53; }
+      border-color: #e86161; }
     .bubble-chart .bubble:nth-child(8n+6) {
-      border-color: #8fdc53; }
-    .bubble-chart .bubble:nth-child(8n+7) {
-      border-color: #8fdc53; }
-    .bubble-chart .bubble:nth-child(8n+8) {
       border-color: #ff7e4f; }
+    .bubble-chart .bubble:nth-child(8n+7) {
+      border-color: #ff7e4f; }
+    .bubble-chart .bubble:nth-child(8n+8) {
+      border-color: #05a0c1; }
     .bubble-chart .bubble:nth-child(8n+9) {
       border-color: #bd0380; }
     .bubble-chart .bubble:nth-child(8n+10) {
-      border-color: #e86161; }
+      border-color: #ff7e4f; }
     .bubble-chart .bubble:nth-child(8n+11) {
-      border-color: #f4ab64; }
+      border-color: #22e9a0; }
     .bubble-chart .bubble:nth-child(8n+12) {
-      border-color: #bd0380; }
-    .bubble-chart .bubble:nth-child(8n+13) {
       border-color: #8fdc53; }
+    .bubble-chart .bubble:nth-child(8n+13) {
+      border-color: #ff7e4f; }
     .bubble-chart .bubble:nth-child(8n+14) {
-      border-color: #f4ab64; }
+      border-color: #0cc8fe; }
     .bubble-chart .bubble:nth-child(8n+15) {
-      border-color: #e86161; }
+      border-color: #0cc8fe; }
     .bubble-chart .bubble a {
       color: #0a0a0a; }
       .bubble-chart .bubble a:hover {

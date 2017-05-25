@@ -138,15 +138,15 @@ export const resume = [
     technologies: [
       'JavaScript',
       'Node',
-      'PHP',
-      'Linux',
-      'Apache',
-      'Microsoft SQL',
-      'Oracle',
       'YUI',
       'ActionScript',
+      'PHP',
+      'MySQL',
       'AWS',
-      'MySQL'
+      'Microsoft SQL',
+      'Oracle',
+      'Apache',
+      'Linux'
     ],
     overview: 'Engineering and consulting with a focus on data driven web applications, platform migrations, intranet/operations applications. Responsible for architectural and strategic consulting, API design/implementation, UX design/development.',
     company: 'Whether it is a start up or a business re-inventing itself, AM-to-PM delivers big agency quality without the bloat.',

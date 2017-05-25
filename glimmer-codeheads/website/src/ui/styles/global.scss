@@ -43,3 +43,17 @@ html {
     }
   }
 }
+
+@media print {
+  * {
+      font-size: 14px !important;
+
+      .no-print {
+        display: none;
+      }
+
+      .page-break {
+        page-break-after: always;
+      }
+    }
+}

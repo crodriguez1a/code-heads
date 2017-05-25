@@ -10141,7 +10141,7 @@ var AboutResume = function (_Component) {
   return AboutResume;
 }(Component);
 
-var __ui_components_about_resume_template__ = { "id": "6Lfko1+v", "block": "{\"symbols\":[\"resume\",\"activity\",\"technology\",\"title\",\"@resume\"],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column resume\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"\\n    Carlos Rodriguez\\n  \"],[8],[0,\"\\n  \"],[6,\"h2\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n    Engineer + Father of 3 + Founder of the Code-Heads Club\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n      \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"crodriguez1a\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"target\",\"_blank\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[7],[0,\"crodriguez1a@gmail.com\"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"href\",\"tel:(980)267-4467\"],[7],[0,\"980-267-4467\"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"br\"],[7],[8],[0,\"\\n\\n  \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Summary\"],[8],[0,\"\\n      \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n        \"],[6,\"ul\"],[7],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"14 years of experience in Tech\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"9 years of experience building enterprise solutions\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Open Source Author/Contributor\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Senior Software Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Application Architect\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Senior Javascript Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Full Stack Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Team Lead\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Project Lead\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Consultant\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Entrepreneur\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Educator\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Student\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Nerd\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Oh, and fluent/literate in Spanish\"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Preferred Languages, Frameworks, and Tools\"],[8],[0,\"\\n      \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n        \"],[6,\"ul\"],[7],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            JavaScript\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Glimmer/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"React/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Aurelia/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Ember/Ember-Data\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Mobile/Native\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Swift\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Version Control\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Github\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Bitbucket\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Server\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Node\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Python\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Scala\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Testing/Dev-ops\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Jasmine\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"QUnit\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Travis\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Communication\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Slack\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Trello\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Experience\"],[8],[0,\"\\n\"],[4,\"each\",[[19,5,[]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n        \"],[6,\"p\"],[7],[0,\"\\n          \"],[6,\"span\"],[9,\"class\",\"title is-5\"],[7],[6,\"strong\"],[7],[1,[19,1,[\"employer\"]],false],[8],[8],[0,\" \"],[6,\"small\"],[7],[1,[19,1,[\"tenure\"]],false],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"titles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"            \"],[1,[19,4,[]],false],[0,\"\\n\"]],\"parameters\":[4]},null],[0,\"        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Technologies\"],[8],[8],[0,\"\\n          \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"technologies\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"              \"],[6,\"li\"],[7],[1,[19,3,[]],false],[8],[0,\"\\n\"]],\"parameters\":[3]},null],[0,\"          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Company\"],[8],[8],[0,\"\\n          \"],[1,[19,1,[\"company\"]],false],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Overview\"],[8],[8],[0,\"\\n          \"],[1,[19,1,[\"overview\"]],false],[0,\"\\n        \"],[8],[0,\"\\n\\n\"],[4,\"if\",[[19,1,[\"leadership\"]]],null,{\"statements\":[[0,\"          \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n            \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Leadership Experience\"],[8],[8],[0,\"\\n            \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"leadership\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"                \"],[6,\"li\"],[7],[1,[19,2,[]],false],[8],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\\n\"],[4,\"if\",[[19,1,[\"bubbles\"]]],null,{\"statements\":[[0,\"          \"],[6,\"p\"],[7],[0,\"\\n            \"],[6,\"hr\"],[7],[8],[0,\"\\n            \"],[6,\"h1\"],[9,\"class\",\"title is-6\"],[7],[1,[19,1,[\"bubblesTitle\"]],false],[8],[0,\"\\n            \"],[5,\"bubble-chart\",[],[[\"@list\"],[[19,1,[\"bubbles\"]]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"hr\"],[7],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-resume" } };
+var __ui_components_about_resume_template__ = { "id": "8exOQK1w", "block": "{\"symbols\":[\"resume\",\"activity\",\"technology\",\"title\",\"@resume\"],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column resume\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"\\n    Carlos Rodriguez\\n  \"],[8],[0,\"\\n  \"],[6,\"h2\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n    Engineer + Father of 3 + Founder of the Code-Heads Club\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n      \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"crodriguez1a\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"target\",\"_blank\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[7],[0,\"crodriguez1a@gmail.com\"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[6,\"a\"],[9,\"href\",\"tel:(980)267-4467\"],[7],[0,\"980-267-4467\"],[8],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"br\"],[7],[8],[0,\"\\n\\n  \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Summary\"],[8],[0,\"\\n      \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n        \"],[6,\"ul\"],[7],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"14 years of experience in Tech\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"9 years of experience building enterprise solutions\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Open Source Author/Contributor\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Senior Software Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Application Architect\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Senior Javascript Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Full Stack Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Team Lead\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Project Lead\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Consultant\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Entrepreneur\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Educator\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Student\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Nerd\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Fluency/literacy in Spanish\"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Preferred Languages, Frameworks, and Tools\"],[8],[0,\"\\n      \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n        \"],[6,\"ul\"],[7],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            JavaScript\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Glimmer/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"React/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Aurelia/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Ember/Ember-Data\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Mobile/Native\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Swift\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Version Control\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Github\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Bitbucket\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Server\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Node\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Python\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Testing/Dev-ops\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Jasmine\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"QUnit\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Travis\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Communication\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Slack\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Trello\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Experience\"],[8],[0,\"\\n\"],[4,\"each\",[[19,5,[]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n        \"],[6,\"p\"],[7],[0,\"\\n          \"],[6,\"span\"],[9,\"class\",\"title is-5\"],[7],[6,\"strong\"],[7],[1,[19,1,[\"employer\"]],false],[8],[8],[0,\" \"],[6,\"small\"],[7],[1,[19,1,[\"tenure\"]],false],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"titles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"            \"],[1,[19,4,[]],false],[0,\"\\n\"]],\"parameters\":[4]},null],[0,\"        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Technologies\"],[8],[8],[0,\"\\n          \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"technologies\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"              \"],[6,\"li\"],[7],[1,[19,3,[]],false],[8],[0,\"\\n\"]],\"parameters\":[3]},null],[0,\"          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Company\"],[8],[8],[0,\"\\n          \"],[1,[19,1,[\"company\"]],false],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Overview\"],[8],[8],[0,\"\\n          \"],[1,[19,1,[\"overview\"]],false],[0,\"\\n        \"],[8],[0,\"\\n\\n\"],[4,\"if\",[[19,1,[\"leadership\"]]],null,{\"statements\":[[0,\"          \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n            \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Leadership Experience\"],[8],[8],[0,\"\\n            \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"leadership\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"                \"],[6,\"li\"],[7],[1,[19,2,[]],false],[8],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\\n\"],[4,\"if\",[[19,1,[\"bubbles\"]]],null,{\"statements\":[[0,\"          \"],[6,\"p\"],[7],[0,\"\\n            \"],[6,\"hr\"],[7],[8],[0,\"\\n            \"],[6,\"h1\"],[9,\"class\",\"title is-6\"],[7],[1,[19,1,[\"bubblesTitle\"]],false],[8],[0,\"\\n            \"],[5,\"bubble-chart\",[],[[\"@list\"],[[19,1,[\"bubbles\"]]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"hr\"],[7],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-resume" } };
 
 var ArticleCard = function (_Component) {
   inherits(ArticleCard, _Component);
@@ -10765,7 +10765,7 @@ var articles = [{
     id: 0,
     type: 'article',
     title: 'A Practical Approach',
-    description: 'Hello glimmer-redux',
+    description: 'Content coming soon',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
@@ -10773,7 +10773,7 @@ var articles = [{
     id: 1,
     type: 'article',
     title: 'Keep Learning Free',
-    description: 'Hello glimmer-redux',
+    description: 'Content coming soon',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
@@ -10781,7 +10781,7 @@ var articles = [{
     id: 2,
     type: 'article',
     title: 'Contributors & Curators',
-    description: 'Hello glimmer-redux',
+    description: 'Content coming soon',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
@@ -10789,7 +10789,7 @@ var articles = [{
     id: 3,
     type: 'article',
     title: 'Start Learning on Your Own',
-    description: 'Hello glimmer-redux',
+    description: 'Content coming soon',
     teaser: 'read more',
     read: false,
     markdown: './-utils/md/articles/foo.md'
@@ -10801,7 +10801,7 @@ var resume = [{
     tenure: '2013 - Present',
     titles: ['Senior Software Engineer', '+ Application Architect'],
     technologies: ['Vanilla JavaScript ES5/6/7', 'Node', 'Ember/Ember-Data/Ember-Engines', 'QUnit', 'REST API', 'Handlebars', 'Sass', 'Git CLI', 'Github Enterprise', 'Bitbucket Enterprise'],
-    company: 'A Leader in Digital Financial Services. The Ally Online Services software platform has over 1 million active users',
+    company: 'A Leader in Digital Financial Services. The Ally Online Services web application has over 1 million active users',
     overview: 'Architecting and engineering software infrastructure for various enterprise web applications that make up Ally Online Services. Project Lead responsible for oversight and code-review of first party, third party, and off-shore engineers and developers. Teaching repeatable patterns, intelligent abstractions, and best practices. Responsibilities for overall applications stability, maintainability, and scalability.',
     leadership: ['Project leadership', 'Architecting and Solutioning', 'Project and Timeline Management', 'Live coding reviews with off-shore teams, and staff augmentation teams', 'Oversight and live code review of third party feature contributors', 'Peer code review', 'Mentoring and Education', 'Spearheading Open Source Initiatives'],
     bubblesTitle: 'Core contributor on:',
@@ -10817,12 +10817,6 @@ var resume = [{
         text: 'Single Page<br>Mobile Site',
         size: 'medium',
         description: '<h1 class="title is-5"><small>2014</small> &nbsp;Single page mobile website</h1> <ul> <li>Routing implementation with Javascript and Apache</li><li>Leveraging/reusing existing desktop components</li><li>Google Maps API implementation (ATM locator)</li><li>Framework free (due to dependency limitations)</li></ul>'
-    }, {
-        id: 3,
-        path: '#!/about/resume/ally/bubbles/2',
-        text: 'Ember SPA<br>Migration & Launch',
-        size: 'medium',
-        description: '<h1 class="title is-5"><small>2015</small> &nbsp;Ember 1.X SPA</h1> <ul><li>-</li></ul>'
     }, {
         id: 2,
         path: '#!/about/resume/ally/bubbles/2',
@@ -10868,6 +10862,8 @@ var resume = [{
     titles: ['Founder', '+ Full Stack Engineer', '+ Consultant'],
     technologies: ['JavaScript', 'Node', 'PHP', 'Linux', 'Apache', 'Microsoft SQL', 'Oracle', 'YUI', 'ActionScript', 'AWS', 'MySQL'],
     overview: 'Engineering and consulting with a focus on data driven web applications, platform migrations, intranet/operations applications. Responsible for architectural and strategic consulting, API design/implementation, UX design/development.',
+    company: 'Whether it is a start up or a business re-inventing itself, AM-to-PM delivers big agency quality without the bloat.',
+    leadership: ['Technical Sales', 'Resource Management', 'Estimates and Budgeting', 'Platform training and education'],
     bubblesTitle: 'Projects of Note:',
     bubbles: [{
         id: 0,
@@ -10883,16 +10879,22 @@ var resume = [{
         description: '<h1 class="title is-5"><small>2010</small> &nbsp;Automation of claims for lost or stolen equipment</h1> <ul><li>Multi-tier Authentication</li><li>Email platform</li><li>Pre-populated claims forms</li><li>Automated inventory auditing</li><li>Automated reports</li></ul>'
     }, {
         id: 2,
-        path: '#!/about/resume/ampm/bubbles/3',
+        path: '#!/about/resume/ampm/bubbles/2',
         text: 'Project Management<br>Web Application',
         size: 'large',
         description: '<h1 class="title is-5"><small>2011</small> &nbsp;Project Management Software</h1> <ul><li>Time tracking with stop-watch</li><li>Time sheets</li><li>Authentication</li><li>Gantt display</li><li>Email alerts</li><li>Semi-automated budget tracking</li><li>Internal messaging</li><li>Meeting scheduler</li><li>Automated reporting</li><li>Bug tracking</li></ul>'
     }, {
         id: 3,
-        path: '#!/about/resume/ampm/bubbles/2',
+        path: '#!/about/resume/ampm/bubbles/3',
         text: 'Keppler Speakers<br>Search API',
         size: 'x-large',
-        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Search API re-write to support large-scale database migration</h1><ul><li></li></ul>'
+        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Search API re-write to support large-scale database and platform migration</h1><ul><li>Migration of platform from ASP to PHP</li><li>Aggregation middleware cross-referencing across Microsoft SQL Server and Oracle databases</li><li>Asynchrounous Results and Pagination</li><li>Mobile web implementation</li></li></ul>'
+    }, {
+        id: 4,
+        path: '#!/about/resume/ampm/bubbles/4',
+        text: 'Ecommerce<br>Application',
+        size: 'x-large',
+        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Etsy clone Ecommerce platform</h1><ul><li>Facebook Auth API</li><li>Custom page and content creation</li><li>Internal messaging</li><li>Search API</li><li>Payment Gateway Implementation</li><li>UX Design</li></ul>'
     }]
 }, {
     id: 5,
@@ -10901,6 +10903,7 @@ var resume = [{
     tenure: '2007 - 2008',
     titles: ['Senior UI Developer'],
     overview: 'Lead Developer primarily focused on intranet portals, web-based applications, and kiosk applications.',
+    company: 'The Dakota Group is a marketing communications firm, specializing in print and web communications.',
     technologies: ['JavaScript', 'HTML', 'CSS', 'ActionScript', 'PHP']
 }, {
     id: 5,
@@ -10909,6 +10912,7 @@ var resume = [{
     tenure: '2005 - 2007',
     titles: ['ActionScript Developer'],
     overview: 'Developed interactive data-driven Flash applications',
+    company: 'Starwood Hotels & Resorts and Marriott International are now one company. Marriott International is the world’s leading global hospitality company, with more brands, more hotels and more opportunities for associates to grow and succeed.',
     technologies: ['ActionScript', 'JavaScript', 'XML']
 }, {
     id: 5,
@@ -10917,6 +10921,7 @@ var resume = [{
     tenure: '2004 - 2005',
     titles: ['UI Designer'],
     overview: 'Website, e-commerce and intranet/portal design',
+    company: 'The Worx Group is a nationally-recognized brand communications firm, named for a group of marketers who do what worx.',
     technologies: ['Photoshop', 'Dreamweaver', 'Fireworks', 'Illustrator']
 }];
 var content = [].concat(articles, resume);

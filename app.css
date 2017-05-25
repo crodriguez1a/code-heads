@@ -4306,12 +4306,14 @@ html {
     display: inline-block;
     margin: 14px 0 0 10px; }
 
+/* RGB */
 .bubble-chart {
   text-align: center;
   line-height: 0; }
   .bubble-chart .details {
     text-align: left; }
   .bubble-chart .bubble {
+    position: relative;
     border: 1px dashed;
     border-radius: 100%;
     width: auto;
@@ -4324,7 +4326,37 @@ html {
     font-size: 1em;
     padding: 1rem;
     line-height: 1.25;
-    margin: 0.05rem; }
+    margin: 0.05rem 0.05rem 0.5rem 0.05rem; }
+    .bubble-chart .bubble:nth-child(8n+1) {
+      border-color: #22e9a0; }
+    .bubble-chart .bubble:nth-child(8n+2) {
+      border-color: #0cc8fe; }
+    .bubble-chart .bubble:nth-child(8n+3) {
+      border-color: #f4ab64; }
+    .bubble-chart .bubble:nth-child(8n+4) {
+      border-color: #8fdc53; }
+    .bubble-chart .bubble:nth-child(8n+5) {
+      border-color: #8fdc53; }
+    .bubble-chart .bubble:nth-child(8n+6) {
+      border-color: #e86161; }
+    .bubble-chart .bubble:nth-child(8n+7) {
+      border-color: #22e9a0; }
+    .bubble-chart .bubble:nth-child(8n+8) {
+      border-color: #8fdc53; }
+    .bubble-chart .bubble:nth-child(8n+9) {
+      border-color: #22e9a0; }
+    .bubble-chart .bubble:nth-child(8n+10) {
+      border-color: #e86161; }
+    .bubble-chart .bubble:nth-child(8n+11) {
+      border-color: #f4ab64; }
+    .bubble-chart .bubble:nth-child(8n+12) {
+      border-color: #bd0380; }
+    .bubble-chart .bubble:nth-child(8n+13) {
+      border-color: #05a0c1; }
+    .bubble-chart .bubble:nth-child(8n+14) {
+      border-color: #f4ab64; }
+    .bubble-chart .bubble:nth-child(8n+15) {
+      border-color: #0cc8fe; }
     .bubble-chart .bubble a {
       color: #0a0a0a; }
       .bubble-chart .bubble a:hover {

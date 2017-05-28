@@ -2,7 +2,9 @@
 
 # Python
 
-`brew install python`
+`brew install python` 
+
+*Note: macs come with python installed, but to avoid conflicts, use brew installation <https://github.com/pypa/pip/issues/3165>. Also, after installing any other version of python run `hash -r python` to tell bash to reset the location of python*
 
 # Pip
 A package manager for Python

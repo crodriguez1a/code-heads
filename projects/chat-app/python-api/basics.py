@@ -1,4 +1,5 @@
 from flask import Flask, request, json, jsonify
+import graphene
 
 app = Flask(__name__)
 
@@ -33,12 +34,31 @@ def helloJson():
 
     return jsonify(Members=jsonStr)
 
-
+# REST
 @app.route("/hello-rest", methods=['GET', 'POST'])
 def rest():
     if request.method == 'GET':
       return "Look I'm doing REST in Python"
 
+# Graphene (GraphQL)
+# TODO http://docs.graphene-python.org/projects/sqlalchemy/en/latest/tutorial/
+@app.route("/hello-graphql")
+def graphQl():
+    # create class
+    class Query(graphene.ObjectType):
+      hello = graphene.String()
+
+      def resolve_hello(self, args, context, info):
+        print('args', args);
+        return 'Look I\'m doing GraphQl with Python!'
+
+    # assign schema
+    schema = graphene.Schema(query=Query)
+
+    # execute schema
+    result = schema.execute('{ hello }')
+
+    return result.data['hello']
 
 
 # run app

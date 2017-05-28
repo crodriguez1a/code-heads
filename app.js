@@ -716,6 +716,12 @@ if (HAS_TYPED_ARRAYS) {
 }
 var EMPTY_ARRAY = HAS_NATIVE_WEAKMAP ? Object.freeze([]) : [];
 
+/**
+ * Registers
+ *
+ * For the most part, these follows MIPS naming conventions, however the
+ * register numbers are different.
+ */
 var Register;
 (function (Register) {
     // $0 or $pc (program counter): pointer into `program` for the next insturction; -1 means exit
@@ -3879,6 +3885,7 @@ var OptimizedTrustingUpdateOpcode = function (_UpdateOpcode2) {
     return OptimizedTrustingUpdateOpcode;
 }(UpdateOpcode);
 
+/* tslint:disable */
 function debugCallback(context, get$$1) {
     console.info('Use `context`, and `get(<path>)` to debug this template.');
     // for example...
@@ -9703,6 +9710,130 @@ function installDevModeErrorInterceptor(obj, key, throwError) {
     }
 }
 
+/**
+ * The `Component` class defines an encapsulated UI element that is rendered to
+ * the DOM. A component is made up of a template and, optionally, this component
+ * object.
+ *
+ * ## Defining a Component
+ *
+ * To define a component, subclass `Component` and add your own properties,
+ * methods and lifecycle hooks:
+ *
+ * ```ts
+ * import Component from '@glimmer/component';
+ *
+ * export default class extends Component {
+ * }
+ * ```
+ *
+ * ## Lifecycle Hooks
+ *
+ * Lifecycle hooks allow you to respond to changes to a component, such as when
+ * it gets created, rendered, updated or destroyed. To add a lifecycle hook to a
+ * component, implement the hook as a method on your component subclass.
+ *
+ * For example, to be notified when Glimmer has rendered your component so you
+ * can attach a legacy jQuery plugin, implement the `didInsertElement()` method:
+ *
+ * ```ts
+ * import Component from '@glimmer/component';
+ *
+ * export default class extends Component {
+ *   didInsertElement() {
+ *     $(this.element).pickadate();
+ *   }
+ * }
+ * ```
+ *
+ * ## Data for Templates
+ *
+ * `Component`s have two different kinds of data, or state, that can be
+ * displayed in templates:
+ *
+ * 1. Arguments
+ * 2. Properties
+ *
+ * Arguments are data that is passed in to a component from its parent
+ * component. For example, if I have a `user-greeting` component, I can pass it
+ * a name and greeting to use:
+ *
+ * ```hbs
+ * <user-greeting @name="Ricardo" @greeting="Olá">
+ * ```
+ *
+ * Inside my `user-greeting` template, I can access the `@name` and `@greeting`
+ * arguments that I've been given:
+ *
+ * ```hbs
+ * {{@greeting}}, {{@name}}!
+ * ```
+ *
+ * Arguments are also available inside my component:
+ *
+ * ```ts
+ * console.log(this.args.greeting); // prints "Olá"
+ * ```
+ *
+ * Properties, on the other hand, are internal to the component and declared in
+ * the class. You can use properties to store data that you want to show in the
+ * template, or pass to another component as an argument.
+ *
+ * ```ts
+ * import Component from '@glimmer/component';
+ *
+ * export default class extends Component {
+ *   user = {
+ *     name: 'Robbie'
+ *   }
+ * }
+ * ```
+ *
+ * In the above example, we've defined a component with a `user` property that
+ * contains an object with its own `name` property.
+ *
+ * We can render that property in our template:
+ *
+ * ```hbs
+ * Hello, {{user.name}}!
+ * ```
+ *
+ * We can also take that property and pass it as an argument to the
+ * `user-greeting` component we defined above:
+ *
+ * ```hbs
+ * <user-greeting @greeting="Hello" @name={{user.name}} />
+ * ```
+ *
+ * ## Arguments vs. Properties
+ *
+ * Remember, arguments are data that was given to your component by its parent
+ * component, and properties are data your component has defined for itself.
+ *
+ * You can tell the difference between arguments and properties in templates
+ * because arguments always start with an `@` sign (think "A is for arguments"):
+ *
+ * ```hbs
+ * {{@firstName}}
+ * ```
+ *
+ * We know that `@firstName` came from the parent component, not the current
+ * component, because it starts with `@` and is therefore an argument.
+ *
+ * On the other hand, if we see:
+ *
+ * ```hbs
+ * {{name}}
+ * ```
+ *
+ * We know that `name` is a property on the component. If we want to know where
+ * the data is coming from, we can go look at our component class to find out.
+ *
+ * Inside the component itself, arguments always show up inside the component's
+ * `args` property. For example, if `{{@firstName}}` is `Tom` in the template,
+ * inside the component `this.args.firstName` would also be `Tom`.
+ */
+
 var Component = function () {
   /**
    * Constructs a new component and assigns itself the passed properties. You
@@ -9822,6 +9953,9 @@ var ComponentDefinition$1 = function (_GlimmerComponentDefi) {
     return ComponentDefinition$$1;
 }(ComponentDefinition);
 
+/**
+ * The base PathReference.
+ */
 var ComponentPathReference = function () {
     function ComponentPathReference() {
         classCallCheck(this, ComponentPathReference);
@@ -10128,7 +10262,7 @@ var AboutOverview = function (_Component) {
   return AboutOverview;
 }(Component);
 
-var __ui_components_about_overview_template__ = { "id": "8FCf1ZCd", "block": "{\"symbols\":[],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"About Code-Heads\"],[8],[0,\"\\n  \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n    The Code-Heads Club is partnership between Engineers and Students.\\n    Our mission is to maintain a free curriculum for young adults learning to code.\\n\\n    The partnership's primary focus is to ensure that students who want to become engineers\\n    have a practical and relevant foundation for their career trajectory. To support this focus,\\n    we've established the follwing principles:\\n\\n    \"],[6,\"ul\"],[7],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Theory is meaningless without practical application\"],[8],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"The future of technology is in a more declarative (and human) approach to coding. We should code the way we speak.\"],[8],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Learning should always involve teaching, because sharing knowledge almost always leads to new ideas innovation\"],[8],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Technology as a career must remain attainable for anyone willing to learn to do it\"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"media\"],[7],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-left\"],[7],[0,\"\\n          \"],[6,\"figure\"],[9,\"class\",\"image is-64x64\"],[7],[0,\"\\n            \"],[6,\"img\"],[9,\"src\",\"https://lh3.googleusercontent.com/-ztm7wZFUgrU/VWdSIgKmMGI/AAAAAAAABIA/xfI_6KKPOQQXtZnnkdApDETUaUyd-W8MgCEw/w280-h280-p/profile_google.jpg\"],[9,\"alt\",\"Github avatar image\"],[7],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-content\"],[7],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"title is-4\"],[7],[0,\"Carlos Rodriguez\"],[8],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n            \"],[6,\"i\"],[9,\"class\",\"fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n            \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n              \"],[6,\"strong\"],[7],[0,\"crodriguez\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n\\n      \"],[6,\"div\"],[9,\"class\",\"content\"],[7],[0,\"\\n        Code-Heads was founded by Carlos Rodriguez.\\n        He's a Charlotte-based software engineer, husband, and father of three\\n        children who are also proud of their nerdom.\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"footer\"],[9,\"class\",\"card-footer\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"#!/about/resume\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-paper-plane-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n         Resume\\n      \"],[8],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-envelope-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n         Email\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-overview" } };
+var __ui_components_about_overview_template__ = { "id": "+7VzPRf6", "block": "{\"symbols\":[],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"About Code-Heads\"],[8],[0,\"\\n  \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n    The Code-Heads Club is partnership between Engineers and Students.\\n    Our mission is to maintain a free curriculum for young adults learning to code.\\n\\n    The partnership's primary focus is to ensure that students who want to become engineers\\n    have a practical and relevant foundation for their career trajectory. To support this focus,\\n    we've established the following principles:\\n\\n    \"],[6,\"ul\"],[7],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Theory is meaningless without practical application\"],[8],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"The future of technology is in a more declarative (and human) approach to coding. We should code the way we speak.\"],[8],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Learning should always involve teaching, because sharing knowledge almost always leads to new ideas and innovation\"],[8],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Technology as a career must remain attainable for anyone willing to learn to do it\"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"media\"],[7],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-left\"],[7],[0,\"\\n          \"],[6,\"figure\"],[9,\"class\",\"image is-64x64\"],[7],[0,\"\\n            \"],[6,\"img\"],[9,\"src\",\"https://lh3.googleusercontent.com/-ztm7wZFUgrU/VWdSIgKmMGI/AAAAAAAABIA/xfI_6KKPOQQXtZnnkdApDETUaUyd-W8MgCEw/w280-h280-p/profile_google.jpg\"],[9,\"alt\",\"Github avatar image\"],[7],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"media-content\"],[7],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"title is-4\"],[7],[0,\"Carlos Rodriguez\"],[8],[0,\"\\n          \"],[6,\"p\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n            \"],[6,\"i\"],[9,\"class\",\"fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n            \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n              \"],[6,\"strong\"],[7],[0,\"crodriguez\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n\\n      \"],[6,\"div\"],[9,\"class\",\"content\"],[7],[0,\"\\n        Code-Heads was founded by Carlos Rodriguez.\\n        He's a Charlotte-based software engineer, husband, and father of three\\n        children who are also proud of their nerdom.\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"footer\"],[9,\"class\",\"card-footer\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"#!/about/resume\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-paper-plane-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n         Resume\\n      \"],[8],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[9,\"class\",\"card-footer-item\"],[7],[0,\"\\n        \"],[6,\"i\"],[9,\"class\",\"icon fa fa-icon fa-envelope-o\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"\\n         Email\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-overview" } };
 
 var AboutResume = function (_Component) {
     inherits(AboutResume, _Component);
@@ -10148,18 +10282,46 @@ var AboutResume = function (_Component) {
 
 var __ui_components_about_resume_template__ = { "id": "NTAO+IxS", "block": "{\"symbols\":[\"resume\",\"activity\",\"technology\",\"title\",\"@resume\"],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"column resume\"],[7]],\"statements\":[[0,\"\\n\\n  \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"\\n        Carlos Rodriguez\\n      \"],[8],[0,\"\\n      \"],[6,\"h2\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n        Engineer + Father of 3 + Founder of the Code-Heads Club\\n      \"],[8],[0,\"\\n      \"],[6,\"p\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a\"],[9,\"target\",\"_blank\"],[7],[0,\"\\n          \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[9,\"aria-hidden\",\"true\"],[7],[8],[0,\"crodriguez1a\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"p\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"target\",\"_blank\"],[9,\"href\",\"mailto:crodriguez1a@gmail.com\"],[7],[0,\"crodriguez1a@gmail.com\"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"p\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"tel:(980)267-4467\"],[7],[0,\"980-267-4467\"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"br\"],[7],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column is-2 has-text-right no-print is-hidden-mobile\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"print\"]]],null],null],[7],[6,\"i\"],[9,\"class\",\"fa fa-icon fa-print\"],[7],[8],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"div\"],[9,\"class\",\"columns page-break\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n        \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Summary\"],[8],[0,\"\\n        \"],[6,\"ul\"],[7],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"14 years of experience in Tech\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"9 years of experience building enterprise solutions\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Open Source Author/Contributor\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Senior Software Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Application Architect\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Senior Javascript Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Full Stack Engineer\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Team Lead\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Project Lead\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Consultant\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Entrepreneur\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Educator\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Student\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Nerd\"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"Fluency/literacy in Spanish\"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Preferred Languages, Frameworks, and Tools\"],[8],[0,\"\\n      \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n        \"],[6,\"ul\"],[7],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            JavaScript\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"TypeScript\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Glimmer/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"React/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Aurelia/Redux\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Ember/Ember-Data\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Mobile/Native\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Swift\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"React Native\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Version Control\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Github\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Bitbucket\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Server\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Node/Express\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Python/Flask\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Ruby/Rails\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Testing/Dev-ops\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Jasmine\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"QUnit\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Travis\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n          \"],[6,\"li\"],[7],[0,\"\\n            Communication\\n            \"],[6,\"ul\"],[7],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Slack\"],[8],[0,\"\\n              \"],[6,\"li\"],[7],[0,\"Trello\"],[8],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n  \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Experience\"],[8],[0,\"\\n\"],[4,\"each\",[[19,5,[]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"card\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"card-content\"],[7],[0,\"\\n        \"],[6,\"p\"],[7],[0,\"\\n          \"],[6,\"span\"],[9,\"class\",\"title is-5\"],[7],[6,\"strong\"],[7],[1,[19,1,[\"employer\"]],false],[8],[8],[0,\" \"],[6,\"small\"],[7],[1,[19,1,[\"tenure\"]],false],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"titles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"            \"],[1,[19,4,[]],false],[0,\"\\n\"]],\"parameters\":[4]},null],[0,\"        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Technologies\"],[8],[8],[0,\"\\n          \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"technologies\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"              \"],[6,\"li\"],[7],[1,[19,3,[]],false],[8],[0,\"\\n\"]],\"parameters\":[3]},null],[0,\"          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Company\"],[8],[8],[0,\"\\n          \"],[1,[19,1,[\"company\"]],false],[0,\"\\n        \"],[8],[0,\"\\n\\n        \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n          \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Overview\"],[8],[8],[0,\"\\n          \"],[1,[19,1,[\"overview\"]],false],[0,\"\\n        \"],[8],[0,\"\\n\\n\"],[4,\"if\",[[19,1,[\"leadership\"]]],null,{\"statements\":[[0,\"          \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n            \"],[6,\"h2\"],[9,\"class\",\"title is-6\"],[7],[6,\"strong\"],[7],[0,\"Leadership Experience\"],[8],[8],[0,\"\\n            \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,1,[\"leadership\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"                \"],[6,\"li\"],[7],[1,[19,2,[]],false],[8],[0,\"\\n\"]],\"parameters\":[2]},null],[0,\"            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\\n\"],[4,\"if\",[[19,1,[\"bubbles\"]]],null,{\"statements\":[[0,\"          \"],[6,\"p\"],[7],[0,\"\\n            \"],[6,\"hr\"],[7],[8],[0,\"\\n            \"],[6,\"h1\"],[9,\"class\",\"title is-6\"],[7],[1,[19,1,[\"bubblesTitle\"]],false],[8],[0,\"\\n            \"],[5,\"bubble-chart\",[],[[\"@list\"],[[19,1,[\"bubbles\"]]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"hr\"],[7],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"\\n  \"],[6,\"p\"],[9,\"class\",\"content\"],[7],[0,\"\\n    \"],[6,\"h1\"],[9,\"class\",\"title is-4\"],[7],[0,\"Extras\"],[8],[0,\"\\n    \"],[6,\"ul\"],[7],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Authored iOS App featured on the Apple App Store\"],[8],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Founding member of the Code-heads Club\"],[8],[0,\"\\n      \"],[6,\"li\"],[7],[0,\"Coding Instructor at Oaklawn Language Academy (8th grade)\"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/about-resume" } };
 
+var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+    var c = arguments.length,
+        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+        d;
+    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 var ArticleCard = function (_Component) {
-  inherits(ArticleCard, _Component);
+    inherits(ArticleCard, _Component);
 
-  function ArticleCard() {
-    classCallCheck(this, ArticleCard);
-    return possibleConstructorReturn(this, _Component.apply(this, arguments));
-  }
+    function ArticleCard() {
+        classCallCheck(this, ArticleCard);
 
-  return ArticleCard;
+        /**
+          Signal if preview content should be displayed
+                 @property preview
+        */
+        var _this = possibleConstructorReturn(this, _Component.apply(this, arguments));
+
+        _this.preview = true;
+        return _this;
+    }
+    /**
+      Toggle the article's preview content
+         @method togglePreview
+    */
+
+
+    ArticleCard.prototype.togglePreview = function togglePreview(e) {
+        e.preventDefault();
+        this.preview = !this.preview;
+    };
+
+    return ArticleCard;
 }(Component);
 
-var __ui_components_article_card_template__ = { "id": "RHtZ0CA1", "block": "{\"symbols\":[\"@article\",\"@didRead\"],\"prelude\":[[6,\"div\"]],\"head\":[[10,\"class\",[26,[\"was-read-\",[19,1,[\"read\"]]]]],[7]],\"statements\":[[0,\"\\n\"],[0,\"  \"],[6,\"h1\"],[9,\"class\",\"title is-5\"],[7],[1,[19,1,[\"title\"]],false],[8],[0,\"\\n  \"],[6,\"p\"],[7],[0,\"\\n    \"],[1,[19,1,[\"description\"]],false],[0,\" \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[19,2,[]],null],[7],[1,[19,1,[\"teaser\"]],false],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/article-card" } };
+__decorate([tracked], ArticleCard.prototype, "preview", void 0);
+
+var __ui_components_article_card_template__ = { "id": "PbLKWzFu", "block": "{\"symbols\":[\"@article\"],\"prelude\":[[6,\"div\"]],\"head\":[[10,\"class\",[26,[\"was-read-\",[19,1,[\"read\"]]]]],[7]],\"statements\":[[0,\"\\n\"],[0,\"  \"],[6,\"div\"],[9,\"class\",\"columns is-mobile\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n      \"],[6,\"h1\"],[9,\"class\",\"title is-5\"],[7],[1,[19,1,[\"title\"]],false],[8],[0,\"\\n    \"],[8],[0,\"\\n\"],[4,\"unless\",[[19,0,[\"preview\"]]],null,{\"statements\":[[0,\"      \"],[6,\"div\"],[9,\"class\",\"column is-2 has-text-right\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"togglePreview\"]]],null],null],[7],[6,\"i\"],[9,\"class\",\"icon fa fa-caret-up\"],[7],[8],[8],[0,\"\\n      \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"  \"],[8],[0,\"\\n\\n\"],[4,\"if\",[[19,0,[\"preview\"]]],null,{\"statements\":[[0,\"    \"],[6,\"p\"],[7],[0,\"\\n      \"],[1,[19,1,[\"description\"]],false],[0,\" \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"togglePreview\"]]],null],null],[7],[1,[19,1,[\"teaser\"]],false],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"    \"],[6,\"p\"],[7],[0,\"\\n      Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.\\n      De carne lumbering animata corpora quaeritis. Summus brains sit​​,\\n      morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris.\\n      Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi\\n      dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat\\n      max brucks terribilem incessu zomby.\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]}],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/article-card" } };
 
 var ArticleModal = function (_Component) {
   inherits(ArticleModal, _Component);
@@ -10174,7 +10336,7 @@ var ArticleModal = function (_Component) {
 
 var __ui_components_article_modal_template__ = { "id": "BRvguZhl", "block": "{\"symbols\":[\"@content\"],\"prelude\":[[6,\"div\"]],\"head\":[[9,\"class\",\"modal\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"modal-background\"],[7],[8],[0,\"\\n  \"],[6,\"div\"],[9,\"class\",\"modal-content\"],[7],[0,\"\\n    \"],[1,[19,1,[]],false],[0,\"\\n  \"],[8],[0,\"\\n  \"],[6,\"button\"],[9,\"class\",\"modal-close\"],[7],[8],[0,\"\\n\"],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/article-modal" } };
 
-var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+var __decorate$1 = undefined && undefined.__decorate || function (decorators, target, key, desc) {
     var c = arguments.length,
         r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
         d;
@@ -10209,9 +10371,9 @@ var BubbleChart = function (_Component) {
     return BubbleChart;
 }(Component);
 
-__decorate([tracked], BubbleChart.prototype, "highlighted", void 0);
+__decorate$1([tracked], BubbleChart.prototype, "highlighted", void 0);
 
-var __ui_components_bubble_chart_template__ = { "id": "zhK5534b", "block": "{\"symbols\":[\"bubble\",\"@list\"],\"prelude\":[[6,\"div\"]],\"head\":[[7]],\"statements\":[[0,\"\\n\"],[4,\"if\",[[19,0,[\"highlighted\"]]],null,{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"details content\"],[7],[0,\"\\n      \"],[6,\"h2\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"shade\"]]],null],null],[7],[0,\"\\n          < All projects\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"p\"],[7],[0,\"\\n        \"],[1,[25,\"html-safe\",[[19,0,[\"highlighted\",\"description\"]]],null],false],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"bubble-chart\"],[7],[0,\"\\n      \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,2,[]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"          \"],[6,\"li\"],[10,\"class\",[26,[\"bubble \",[19,1,[\"size\"]]]]],[7],[0,\"\\n            \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"highlight\"]],[19,1,[\"path\"]],[19,1,[]]],null],null],[7],[0,\"\\n              \"],[1,[25,\"html-safe\",[[19,1,[\"text\"]]],null],false],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]}],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/bubble-chart" } };
+var __ui_components_bubble_chart_template__ = { "id": "AuwxFWGf", "block": "{\"symbols\":[\"bubble\",\"@list\"],\"prelude\":[[6,\"div\"]],\"head\":[[7]],\"statements\":[[0,\"\\n\"],[4,\"if\",[[19,0,[\"highlighted\"]]],null,{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"highlighted details content\"],[7],[0,\"\\n      \"],[6,\"h2\"],[9,\"class\",\"subtitle is-6\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"shade\"]]],null],null],[7],[0,\"\\n          < All projects\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n      \"],[6,\"p\"],[7],[0,\"\\n        \"],[1,[25,\"html-safe\",[[19,0,[\"highlighted\",\"description\"]]],null],false],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]},{\"statements\":[[0,\"    \"],[6,\"div\"],[9,\"class\",\"bubble-chart\"],[7],[0,\"\\n      \"],[6,\"ul\"],[7],[0,\"\\n\"],[4,\"each\",[[19,2,[]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"          \"],[6,\"li\"],[10,\"class\",[26,[\"bubble \",[19,1,[\"size\"]]]]],[7],[0,\"\\n            \"],[6,\"a\"],[9,\"href\",\"#\"],[10,\"onclick\",[25,\"action\",[[19,0,[\"highlight\"]],[19,1,[\"path\"]],[19,1,[]]],null],null],[7],[0,\"\\n              \"],[1,[25,\"html-safe\",[[19,1,[\"text\"]]],null],false],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[1]},null],[0,\"      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]}],[8],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/bubble-chart" } };
 
 function equals(params) {
     return params[0] === params[1];
@@ -10241,6 +10403,21 @@ var SafeString = function () {
     return SafeString;
 }();
 
+/**
+  Mark a string as safe for unescaped output with Ember templates. If you
+  return HTML from a helper, use this function to
+  ensure Ember's rendering layer does not escape the HTML.
+
+  ```javascript
+  Ember.String.htmlSafe('<div>someString</div>')
+  ```
+
+  @method htmlSafe
+  @for Ember.String
+  @static
+  @return {Handlebars.SafeString} A string that will not be HTML escaped by Handlebars.
+  @public
+*/
 function htmlSafe(params) {
     var str = params[0];
     if (str === null || str === undefined) {
@@ -10261,13 +10438,16 @@ function strContains(params) {
 /** Detect free variable `global` from Node.js. */
 var freeGlobal = (typeof global === 'undefined' ? 'undefined' : _typeof(global)) == 'object' && global && global.Object === Object && global;
 
+/** Detect free variable `self`. */
 var freeSelf = (typeof self === 'undefined' ? 'undefined' : _typeof(self)) == 'object' && self && self.Object === Object && self;
 
 /** Used as a reference to the global object. */
 var root = freeGlobal || freeSelf || Function('return this')();
 
+/** Built-in value references. */
 var _Symbol = root.Symbol;
 
+/** Used for built-in method references. */
 var objectProto$1 = Object.prototype;
 
 /** Used to check objects for own properties. */
@@ -10331,6 +10511,7 @@ function objectToString(value) {
   return nativeObjectToString$1.call(value);
 }
 
+/** `Object#toString` result references. */
 var nullTag = '[object Null]';
 var undefinedTag = '[object Undefined]';
 
@@ -10365,6 +10546,7 @@ function overArg(func, transform) {
   };
 }
 
+/** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
 
 /**
@@ -10395,6 +10577,7 @@ function isObjectLike(value) {
   return value != null && (typeof value === 'undefined' ? 'undefined' : _typeof(value)) == 'object';
 }
 
+/** `Object#toString` result references. */
 var objectTag = '[object Object]';
 
 /** Used for built-in method references. */
@@ -10485,6 +10668,12 @@ if (typeof self !== 'undefined') {
 
 var result = symbolObservablePonyfill(root$2);
 
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
 var ActionTypes = {
   INIT: '@@redux/INIT'
 };
@@ -10758,6 +10947,10 @@ function warning(message) {
  * (...args) => f(g(h(...args))).
  */
 
+/*
+* This is a dummy function to check if the function name has been altered by minification.
+* If the function has been minified and NODE_ENV !== 'production', warn the user.
+*/
 function isCrushed() {}
 
 if ("production" !== 'production' && typeof isCrushed.name === 'string' && isCrushed.name !== 'isCrushed') {
@@ -10793,7 +10986,7 @@ var articles = [{
 }, {
     id: 3,
     type: 'article',
-    title: 'Start Learning on Your Own',
+    title: 'Start Learning',
     description: 'Content coming soon',
     teaser: 'read more',
     read: false,
@@ -11482,7 +11675,7 @@ var Router = function () {
     return Router;
 }();
 
-var __decorate$1 = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+var __decorate$2 = undefined && undefined.__decorate || function (decorators, target, key, desc) {
     var c = arguments.length,
         r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
         d;
@@ -11587,10 +11780,10 @@ var Website = function (_Component) {
     return Website;
 }(Component);
 
-__decorate$1([tracked], Website.prototype, "routeName", void 0);
-__decorate$1([tracked], Website.prototype, "state", void 0);
-__decorate$1([tracked('state')], Website.prototype, "articles", null);
-__decorate$1([tracked('state')], Website.prototype, "resume", null);
+__decorate$2([tracked], Website.prototype, "routeName", void 0);
+__decorate$2([tracked], Website.prototype, "state", void 0);
+__decorate$2([tracked('state')], Website.prototype, "articles", null);
+__decorate$2([tracked('state')], Website.prototype, "resume", null);
 
 var __ui_components_website_app_template__ = { "id": "/OXaeUBv", "block": "{\"symbols\":[\"article\",\"index\"],\"prelude\":[[6,\"header\"]],\"head\":[[9,\"class\",\"no-print\"],[7]],\"statements\":[[0,\"\\n  \"],[6,\"nav\"],[9,\"class\",\"nav no-backgound\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-left\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"nav--logo nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"#\"],[7],[0,\"\\n          \"],[6,\"img\"],[9,\"class\",\"minimal--logo\"],[9,\"alt\",\"Code-Heads Club\"],[9,\"src\",\"img/minimal_logo.svg\"],[7],[8],[0,\" Code-Heads Club\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"nav-right\"],[7],[0,\"\\n      \"],[6,\"a\"],[9,\"class\",\"nav-item\"],[9,\"href\",\"#!/about\"],[7],[0,\"\\n        About\\n      \"],[8],[0,\"\\n      \"],[6,\"span\"],[9,\"class\",\"nav-item\"],[7],[0,\"\\n        \"],[6,\"a\"],[9,\"href\",\"https://github.com/crodriguez1a/code-heads\"],[9,\"target\",\"_blank\"],[9,\"class\",\"nav-item button is-info is-outlined\"],[7],[0,\"\\n          \"],[6,\"i\"],[9,\"class\",\"icon fa fa-github\"],[7],[8],[0,\" GitHub\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\\n\"],[4,\"if\",[[25,\"equals\",[[19,0,[\"routeName\"]],\"\"],null]],null,{\"statements\":[[0,\"    \"],[6,\"section\"],[9,\"class\",\"hero is-info no-backgound has-text-centered\"],[7],[0,\"\\n      \"],[6,\"div\"],[9,\"class\",\"hero-body\"],[7],[0,\"\\n        \"],[6,\"h1\"],[9,\"class\",\"title\"],[7],[0,\"\\n          \"],[6,\"div\"],[9,\"class\",\"hero--logo\"],[7],[0,\"\\n            \"],[6,\"img\"],[9,\"src\",\"img/logo_single_color.svg\"],[9,\"alt\",\"Code-heads Club Logo\"],[7],[8],[0,\"\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n        \"],[6,\"div\"],[9,\"class\",\"content subtitle\"],[7],[0,\"\\n          \"],[6,\"p\"],[7],[0,\"\\n            The Code-Heads Club is partnership between Engineers and Students.\\n            \"],[6,\"br\"],[7],[8],[0,\"\\n            Our mission is to maintain a \"],[6,\"strong\"],[7],[0,\"free\"],[8],[0,\" curriculum for young adults learning to code.\\n          \"],[8],[0,\"\\n        \"],[8],[0,\"\\n      \"],[8],[0,\"\\n    \"],[8],[0,\"\\n\"]],\"parameters\":[]},null],[8],[0,\"\\n\\n\"],[6,\"main\"],[7],[0,\"\\n  \"],[6,\"section\"],[9,\"class\",\"section\"],[7],[0,\"\\n    \"],[6,\"div\"],[9,\"class\",\"columns\"],[7],[0,\"\\n\\n\"],[4,\"if\",[[25,\"equals\",[[19,0,[\"routeName\"]],\"\"],null]],null,{\"statements\":[[4,\"each\",[[19,0,[\"articles\"]]],[[\"key\"],[\"@index\"]],{\"statements\":[[0,\"          \"],[6,\"div\"],[9,\"class\",\"column\"],[7],[0,\"\\n            \"],[6,\"div\"],[9,\"class\",\"box\"],[7],[0,\"\\n              \"],[5,\"article-card\",[],[[\"@article\",\"@didRead\"],[[19,1,[]],[25,\"action\",[[19,0,[\"markAsRead\"]],[19,2,[]]],null]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n            \"],[8],[0,\"\\n          \"],[8],[0,\"\\n\"]],\"parameters\":[1,2]},null]],\"parameters\":[]},null],[0,\"\\n\"],[4,\"if\",[[25,\"equals\",[[19,0,[\"routeName\"]],\"about\"],null]],null,{\"statements\":[[0,\"        \"],[5,\"about-overview\",[],[[],[]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n\"],[4,\"if\",[[25,\"equals\",[[19,0,[\"routeName\"]],\"resume\"],null]],null,{\"statements\":[[0,\"        \"],[5,\"about-resume\",[],[[\"@resume\",\"@routeName\"],[[18,\"resume\"],[18,\"routeName\"]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"parameters\":[]},null],[0,\"\\n    \"],[8],[0,\"\\n  \"],[8],[0,\"\\n\"],[8],[0,\"\\n\\n\"],[5,\"article-modal\",[],[[\"@content\"],[[18,\"content\"]]],{\"statements\":[],\"parameters\":[]}],[0,\"\\n\"]],\"hasEval\":false}", "meta": { "specifier": "template:/website/components/website-app" } };
 

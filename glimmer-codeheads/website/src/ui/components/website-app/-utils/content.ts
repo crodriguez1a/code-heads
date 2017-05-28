@@ -30,7 +30,7 @@ export const articles = [
   {
     id: 3,
     type: 'article',
-    title: 'Start Learning on Your Own',
+    title: 'Start Learning',
     description: 'Content coming soon',
     teaser: 'read more',
     read: false,

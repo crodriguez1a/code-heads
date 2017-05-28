@@ -11,13 +11,14 @@ $carrot: #F29E4C;
 $colors: $flirt, $cyan, $kiwi, $carmine-pink, $smashed-pumpkin, $munsell, $caribbean-green, $carrot;
 $repeat: 15;
 
+.highlighted {
+  text-align: left;
+  min-height: 18rem;
+}
+
 .bubble-chart {
   text-align: center;
   line-height: 0;
-
-  .details {
-    text-align: left;
-  }
 
   .bubble {
     position: relative;

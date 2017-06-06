@@ -11,7 +11,9 @@ export default class Website extends Component {
     // this.loadMarkdown();
 
     // subscribe to router listener
-    router.listen(this.routeNameUpdate.bind(this));
+    router.listen((name) => {
+      return this.onRouteUpdate(name);
+    });
   }
 
   /**
@@ -26,7 +28,7 @@ export default class Website extends Component {
 
     @method routeUpdate
   */
-  public routeNameUpdate(name) {
+  public onRouteUpdate(name) {
     this.routeName = name;
   }
 

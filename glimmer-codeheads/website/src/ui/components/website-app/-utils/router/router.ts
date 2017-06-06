@@ -10,32 +10,32 @@ export default class Router {
     watcher.watch();
   }
 
-  public listen(sendNameUpdate) {
+  public listen(fnNameUpdate) {
     watcher.listen((url) => {
       if (this.opts.debug) {
         console.log('Route:', url);
       }
-      return this.handle(sendNameUpdate);
+      return this.onUpdate(fnNameUpdate);
     });
 
     // send the intial update before listening begins
-    return this.handle(sendNameUpdate);
+    return this.onUpdate(fnNameUpdate);
   }
 
-  private handle(sendNameUpdate) {
+  private onUpdate(fnNameUpdate) {
     return router
     .on({
       '/about': () => {
-        sendNameUpdate('about');
+        fnNameUpdate('about');
        },
       '/about/resume': () => {
-        sendNameUpdate('resume');
+        fnNameUpdate('resume');
       },
       '/about/resume/:employer/bubbles/:id': (params) => {
-        sendNameUpdate(`resume|${params.employer}|bubbles|${params.id}`);
+        fnNameUpdate(`resume|${params.employer}|bubbles|${params.id}`);
       },
       '': () => {
-        sendNameUpdate('');
+        fnNameUpdate('');
        }
     })
     .resolve();

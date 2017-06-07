@@ -6,10 +6,17 @@ export default function ArticlesReducer (state=content, action) {
   switch (action.type) {
     case 'MARK_AS_READ':
       return state.map((article, index) => {
-        if (index === action.index && article.hasOwnProperty('read')) {
-          return {...article, read: true}
+        if (index === action.index) {
+          return {...article, read: true};
         }
-        return article
+        return article;
+      })
+    case 'TOGGLE_PREVIEW':
+      return state.map((article, index) => {
+        if (index === action.index) {
+          return {...article, preview: !article.preview};
+        }
+        return article;
       })
     default:
       return state

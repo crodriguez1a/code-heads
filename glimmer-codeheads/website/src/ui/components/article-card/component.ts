@@ -7,14 +7,4 @@ export default class ArticleCard extends Component {
     @property preview
   */
   @tracked preview: Boolean = true;
-
-  /**
-    Toggle the article's preview content
-
-    @method togglePreview
-  */
-  private togglePreview(e) {
-    e.preventDefault();
-    this.preview = !this.preview;
-  }
 };

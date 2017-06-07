@@ -1,19 +1,24 @@
-<div class="was-read-{{@article.read}}">
+<div>
   {{! NOTE arguments always start with an @ sign (think "A is for arguments") }}
   <div class="columns is-mobile">
     <div class="column">
       <h1 class="title is-5">{{@article.title}}</h1>
     </div>
-    {{#unless preview}}
-      <div class="column is-2 has-text-right">
-        <a href="#" onclick={{action togglePreview}}><i class="icon fa fa-caret-up"></i></a>
+    {{#unless @article.preview}}
+      <div class="column is-1 has-text-right">
+        <a href="#" onclick={{action @togglePreview}}><i class="fa fa-caret-up"></i></a>
       </div>
     {{/unless}}
+    <div class="columm is-1">
+      <a href="#" onclick={{action @markAsRead}}>
+        <i class="fa fa-bookmark{{_if @article.read '' '-o'}}"></i>
+      </a>
+    </div>
   </div>
 
-  {{#if preview}}
+  {{#if @article.preview}}
     <p>
-      {{@article.description}} <a href="#" onclick={{action togglePreview}}>{{@article.teaser}}</a>
+      {{@article.description}} <a href="#" onclick={{action @togglePreview}}>{{@article.teaser}}</a>
     </p>
   {{else}}
     <p>

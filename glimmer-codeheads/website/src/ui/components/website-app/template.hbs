@@ -48,7 +48,7 @@
         {{#each articles key="@index" as |article index|}}
           <div class="column">
             <div class="box">
-              <article-card @article={{article}} @didRead={{action markAsRead index}} />
+              <article-card @article={{article}} @togglePreview={{action togglePreview index}} @markAsRead={{action markAsRead index}} />
             </div>
           </div>
         {{/each}}

@@ -7,6 +7,7 @@ export const articles = [
     description: 'Content coming soon',
     teaser: 'read more',
     read: false,
+    preview: true,
     markdown: './-utils/md/articles/foo.md'
   },
   {
@@ -16,6 +17,7 @@ export const articles = [
     description: 'Content coming soon',
     teaser: 'read more',
     read: false,
+    preview: true,
     markdown: './-utils/md/articles/foo.md'
   },
   {
@@ -25,6 +27,7 @@ export const articles = [
     description: 'Content coming soon',
     teaser: 'read more',
     read: false,
+    preview: true,
     markdown: './-utils/md/articles/foo.md'
   },
   {
@@ -34,6 +37,7 @@ export const articles = [
     description: 'Content coming soon',
     teaser: 'read more',
     read: false,
+    preview: true,
     markdown: './-utils/md/articles/foo.md'
   }
 ];

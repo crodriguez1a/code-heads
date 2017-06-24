@@ -3,12 +3,20 @@ import { createStore } from 'redux';
 import Reducers from './-utils/reducers';
 import Router from './-utils/router/router';
 
+// router instance
 const router = new Router({ debug:true });
+
+import Showdown from 'showdown';
+const converter = new Showdown.Converter();
+
+console.log('Showdown', Showdown);
 
 export default class Website extends Component {
   constructor(options) {
     super(options);
-    // TODO pending async - this.loadMarkdown();
+
+    // go and get markdown content
+    this.loadMarkdown();
 
     // subscribe to router listener
     router.listen((name) => this.onRouteUpdate(name));
@@ -32,13 +40,20 @@ export default class Website extends Component {
 
   /*
     NOTE async await Throws regenaratorRuntime error https://github.com/glimmerjs/glimmer-website/issues/62
-
-  async loadMarkdown(file='foo') {
-    let req = await fetch(`./-utils/md/articles/${file}.md`);
-    let json = await request.json();
-    console.log('async response', json);
-  }
+    Instructions for fix here:  https://github.com/glimmerjs/glimmer-application-pipeline#enabling-use-of-async-await-in-components.
   */
+  async loadMarkdown(file='foo') {
+    let req = await fetch(`./md/articles/${file}.md`);
+    console.log('req', req);
+    let text = await req.text();
+
+    // console.log(markdown);
+    console.log('async response', text);
+    let html = converter.makeHtml(text);
+    console.log('html', html);
+    return html;
+  }
+
 
   /**
     Create a redux store using the reducer

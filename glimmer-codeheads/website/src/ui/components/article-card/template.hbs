@@ -1,15 +1,15 @@
-<div>
+<div class="article-card">
   {{! NOTE arguments always start with an @ sign (think "A is for arguments") }}
   <div class="columns is-mobile">
-    <div class="column">
+    <div class="column is-two-thirds">
       <h1 class="title is-5">{{@article.title}}</h1>
     </div>
-    {{#unless @article.preview}}
-      <div class="column is-1 has-text-right">
+
+    <div class="column has-text-right action-items">
+      {{#unless @article.preview}}
         <a href="#" onclick={{action @togglePreview}}><i class="fa fa-caret-up"></i></a>
-      </div>
-    {{/unless}}
-    <div class="columm is-1">
+      {{/unless}}
+
       <a href="#" onclick={{action @markAsRead}}>
         <i class="fa fa-bookmark{{_if @article.read '' '-o'}}"></i>
       </a>

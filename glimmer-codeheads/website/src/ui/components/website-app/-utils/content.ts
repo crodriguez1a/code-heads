@@ -23,7 +23,7 @@ export const articles = [
   {
     id: 2,
     type: 'article',
-    title: 'Contributors & Curators',
+    title: 'Mentors & Curators',
     description: 'Content coming soon',
     teaser: 'read more',
     read: false,

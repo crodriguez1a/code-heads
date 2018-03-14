@@ -88,7 +88,7 @@ export const resume = [
       'Logentries'
     ],
     company: 'Big Sky provides retail management software used by Facilities, Operations, Loss Prevention and IT to better support stores and manage contractors.',
-    overview: 'At Big Sky, I was charged with architecting solutions for a unique set of problems including ensuring that the software platform could support notification driven ETL, maintaining data integrity across multiple databases, designing and building first party APIs, integration with various third party APIs, and ORM design.',
+    overview: 'At Big Sky, I was charged with architecting solutions that would solve a unique set of problems including ensuring that the software platform could support notification driven ETL, maintaining data integrity across multiple databases, designing and building first party APIs, integration with various third party APIs, and ORM design.',
     leadership: [
       'Solutions Architecture',
       'API Design',

@@ -1,3 +1,0 @@
-tricks:
-- watchdog.tricks.LoggerTrick:
-    patterns: ["*.py", "*.js", "*.md"]

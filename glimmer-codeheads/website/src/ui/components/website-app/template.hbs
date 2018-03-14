@@ -31,7 +31,7 @@
           <p>
             The Code-Heads Club is partnership between Engineers and Students.
             <br>
-            Our mission is to maintain a <strong>free</strong> curriculum for young adults learning to code.
+            Our mission is to maintain a <strong>free</strong> curriculum for anyone learning to code.
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@
         {{#each articles key="@index" as |article index|}}
           <div class="column">
             <div class="box">
-              <article-card @article={{article}} @togglePreview={{action togglePreview index}} @markAsRead={{action markAsRead index}} />
+              <article-card @article={{article}} @visitArticle={{action visitArticle article.path}} @markAsRead={{action markAsRead index}} />
             </div>
           </div>
         {{/each}}
@@ -66,6 +66,21 @@
 
     </div>
   </section>
+  <footer class="footer no-print">
+    <div class="container">
+    <div class="content has-text-centered">
+      <a href="mailto:crodriguez1a@gmail.com" class="footer-item">
+        <i class="icon fa fa-icon fa-envelope-o" aria-hidden="true"></i>
+      </a> |
+      <a href="https://www.linkedin.com/in/carlos-rodriguez-83a9189/" class="footer-item">
+        <i class="icon fa fa-icon fa-linkedin" aria-hidden="true"></i>
+      </a> |
+      <a href="https://github.com/crodriguez1a/code-heads" class="footer-item">
+        <i class="icon fa fa-icon fa-github" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+  </footer>
 </main>
 
 <article-modal @content={{content}} />

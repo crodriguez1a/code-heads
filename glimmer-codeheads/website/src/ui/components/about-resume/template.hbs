@@ -1,4 +1,5 @@
 <div class="column resume">
+  {{! TODO Move all content to JSON}}
   <div class="columns">
     <div class="column">
       <h1 class="title is-4">
@@ -8,15 +9,20 @@
         Engineer + Father of 3 + Founder of the Code-Heads Club
       </h2>
       <p>
-        <a href="https://github.com/crodriguez1a" target="_blank">
-          <i class="icon fa fa-github" aria-hidden="true"></i>crodriguez1a
-        </a>
-      </p>
-      <p>
         <a target="_blank" href="mailto:crodriguez1a@gmail.com">crodriguez1a@gmail.com</a>
       </p>
       <p>
         <a href="tel:(980)267-4467">980-267-4467</a>
+      </p>
+      <p>
+        <a href="https://github.com/crodriguez1a" target="_blank">
+          <i class="icon fa fa-github" aria-hidden="true"></i> | crodriguez1a
+        </a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/carlos-rodriguez-83a9189/" target="_blank">
+          <i class="icon fa fa-icon fa-linkedin" aria-hidden="true"></i> | carlos-rodriguez-83a9189
+        </a>
       </p>
       <br>
     </div>
@@ -24,19 +30,29 @@
       <a href="#" onclick={{action print}}><i class="fa fa-icon fa-print"></i></a>
     </div>
   </div>
-
-  <div class="columns page-break">
+  <div class="columns">
+    <div class="column">
+      <h1 class="title is-4">Summary</h1>
+    </div>
+  </div>
+  <div class="columns">
     <div class="column">
       <p class="content">
-        <h1 class="title is-4">Summary</h1>
         <ul>
           <li>14 years of experience in Tech</li>
           <li>9 years of experience building enterprise solutions</li>
           <li>Open Source Author/Contributor</li>
           <li>Senior Software Engineer</li>
+          <li>Solutions Architect</li>
+          <li>Full Stack Engineer</li>
           <li>Application Architect</li>
           <li>Senior Javascript Engineer</li>
-          <li>Full Stack Engineer</li>
+        </ul>
+      </p>
+    </div>
+    <div class="column">
+      <p class="content">
+        <ul>
           <li>Team Lead</li>
           <li>Project Lead</li>
           <li>Consultant</li>
@@ -48,8 +64,14 @@
         </ul>
       </p>
     </div>
+  </div>
+  <div class="columns">
     <div class="column">
       <h1 class="title is-4">Preferred Languages, Frameworks, and Tools</h1>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="column">
       <p class="content">
         <ul>
           <li>
@@ -67,6 +89,8 @@
             <ul>
               <li>Swift</li>
               <li>React Native</li>
+              <li>Xamarin</li>
+              <li>Flutter</li>
             </ul>
           </li>
           <li>
@@ -80,16 +104,56 @@
             Server
             <ul>
               <li>Node/Express</li>
-              <li>Python/Flask</li>
-              <li>Ruby/Rails</li>
+              <li>Python/Django</li>
             </ul>
           </li>
           <li>
-            Testing/Dev-ops
+            Database
             <ul>
-              <li>Jasmine</li>
+              <li>Postgres/PostgreSQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </li>
+        </ul>
+      </p>
+    </div>
+    <div class="column page-break">
+      <p class="content">
+        <ul>
+          <li>
+            Cloud
+            <ul>
+              <li>Serverless Framework</li>
+              <li>AWS
+                <ul>
+                  <li>Alexa</li>
+                  <li>AWS Serverless Platform</li>
+                  <li>Boto3</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Machine Learning
+            <ul>
+              <li>Sagemaker</li>
+              <li>TensorFlow</li>
+            </ul>
+          </li>
+          <li>
+            Monitoring, Logging
+            <ul>
+              <li>Amazon CloudWatch</li>
+            </ul>
+          </li>
+          <li>
+            Testing/Dev-ops/CI
+            <ul>
+              <li>Mabl</li>
               <li>QUnit</li>
+              <li>Jasmine</li>
               <li>Travis</li>
+              <li>Jenkins</li>
             </ul>
           </li>
           <li>
@@ -122,7 +186,7 @@
           <h2 class="title is-6"><strong>Technologies</strong></h2>
           <ul>
             {{#each resume.technologies key="@index" as |technology|}}
-              <li>{{technology}}</li>
+              <li>{{html-safe technology}}</li>
             {{/each}}
           </ul>
         </p>
@@ -150,7 +214,7 @@
 
 
         {{#if resume.bubbles}}
-          <p>
+          <p class="bubbles">
             <hr>
             <h1 class="title is-6">{{resume.bubblesTitle}}</h1>
             <bubble-chart @list={{resume.bubbles}} />

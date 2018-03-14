@@ -1,3 +1,4 @@
+import 'regenerator-runtime/runtime';
 import App from './main';
 import { ComponentManager, setPropertyDidChange } from '@glimmer/component';
 

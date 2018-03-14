@@ -8,8 +8,6 @@ const router = new Router({ debug:true });
 export default class Website extends Component {
   constructor(options) {
     super(options);
-    // TODO pending async - this.loadMarkdown();
-
     // subscribe to router listener
     router.listen((name) => this.onRouteUpdate(name));
   }
@@ -19,7 +17,7 @@ export default class Website extends Component {
 
     @property routeName
   */
-  @tracked routeName;
+  @tracked routeName: string;
 
   /**
     Call back for route listener
@@ -29,16 +27,6 @@ export default class Website extends Component {
   public onRouteUpdate(name) {
     this.routeName = name;
   }
-
-  /*
-    NOTE async await Throws regenaratorRuntime error https://github.com/glimmerjs/glimmer-website/issues/62
-
-  async loadMarkdown(file='foo') {
-    let req = await fetch(`./-utils/md/articles/${file}.md`);
-    let json = await request.json();
-    console.log('async response', json);
-  }
-  */
 
   /**
     Create a redux store using the reducer
@@ -65,6 +53,28 @@ export default class Website extends Component {
   }
 
   /**
+    An array of resources
+
+    @property resources
+  */
+  @tracked('state')
+  get resources() {
+    return this.state.filter((item) => item && item.type === 'resource');
+  }
+
+  /**
+    Single out highlighted article
+
+    @property highlighted_article
+  */
+  @tracked('state')
+  get highlighted_article() {
+    const articles = this.state.filter(item => item && item.type === 'article');
+    const list = articles.filter(article => article.highlighted)
+    return list && list[0];
+  }
+
+  /**
     An array of resume parts
 
     @property resume
@@ -83,12 +93,16 @@ export default class Website extends Component {
     return this.store.dispatch(action);
   }
 
-  // TODO Abstract this similar behavior
-  public togglePreview(index: Number, e) {
+  /**
+    Populates an article in a modal view
+
+    @method visitArticle
+  */
+  public visitArticle(index: Number, e) {
     e.preventDefault();
 
     this.dispatch({
-      type: 'TOGGLE_PREVIEW',
+      type: 'HIGHLIGHT_ARTICLE',
       index
     });
 
@@ -97,16 +111,15 @@ export default class Website extends Component {
   }
 
   /**
-    Tell the store that the item has been read
+    Populates an article in a modal view
 
-    @method markAsRead
+    @method visitArticle
   */
-  public markAsRead(index: Number, e) {
+  public unvisitArticle(index: Number, e) {
     e.preventDefault();
 
-    // dispatch an action created on the fly to update the store
     this.dispatch({
-      type: 'MARK_AS_READ',
+      type: 'UNHIGHLIGHT_ARTICLE',
       index
     });
 

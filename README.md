@@ -1,6 +1,6 @@
 # code-heads
-An open source curriculum for young adults learning to code
+A mentoring program for young people learning to code
 
 ---
 
-![image](http://demos.evolutionaryapps.com/storage/codeheads_logo.png)
+![image](http://crodriguez1a.github.io/code-heads/img/logo_single_color.svg)

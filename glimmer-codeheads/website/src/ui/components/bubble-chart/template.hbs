@@ -14,10 +14,8 @@
     <div class="bubble-chart">
       <ul>
         {{#each @list key="@index" as |bubble|}}
-          <li class="bubble {{bubble.size}}">
-            <a href="#" onclick={{action highlight bubble.path bubble}}>
-              {{html-safe bubble.text}}
-            </a>
+          <li class="bubble {{bubble.size}}" onclick={{action highlight bubble.path bubble}}>
+            {{html-safe bubble.text}}
           </li>
         {{/each}}
       </ul>

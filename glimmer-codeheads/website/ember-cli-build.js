@@ -2,6 +2,8 @@
 
 const GlimmerApp = require('@glimmer/application-pipeline').GlimmerApp;
 const replace = require('rollup-plugin-replace');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 
 module.exports = function(defaults) {
   let app = new GlimmerApp(defaults, {
@@ -13,8 +15,14 @@ module.exports = function(defaults) {
         */
         replace({
           'process.env.NODE_ENV': JSON.stringify( 'production' )
-        })
-      ]
+        }),
+        resolve({ jsnext: true, module: true, main: true }),
+        commonjs()
+      ]/*,
+      external: ['marked'],
+      globals: {
+        'marked': 'marked'
+      }*/
     }
   });
 

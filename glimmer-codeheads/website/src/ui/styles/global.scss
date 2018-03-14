@@ -2,6 +2,20 @@ html {
   background: #121b26;
 }
 
+main {
+  background: $grey-lighter;
+}
+
+section.section {
+  @media screen and (min-width: $desktop) {
+    width: 80%;
+  }
+
+  margin: 0 auto;
+  border-left: 1px solid $grey;
+  border-right: 1px solid $grey;
+}
+
 .no-backgound {
   background: none !important;
 }
@@ -13,7 +27,7 @@ html {
   }
 }
 
-.nav-item {
+.navbar-item {
   color: $blue !important;
 }
 
@@ -42,5 +56,22 @@ html {
       .page-break {
         page-break-after: always;
       }
+
+      section.section {
+        width: 100%;
+        border: none;
+      }
+
+      .card {
+        box-shadow: none;
+        border-top: 1px solid $grey-lighter;
+      }
     }
+}
+
+.google-form {
+  border-left: 1px solid $grey-lighter;
+  border-right: 1px solid $grey-lighter;
+  min-height: 1000px;
+  margin: 0 auto;
 }

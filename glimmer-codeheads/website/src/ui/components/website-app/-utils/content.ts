@@ -3,51 +3,303 @@ export const articles = [
   {
     id: 0,
     type: 'article',
-    title: 'A Practical Approach',
-    description: 'Content coming soon',
-    teaser: 'read more',
-    read: false,
+    title: 'A Pragmatic Approach',
+    description: 'At Code-Heads, we\'re keenly aware of the pace at which both students and engineers live...',
+    teaser: 'Read More',
+    highlighted: false,
     preview: true,
-    markdown: './-utils/md/articles/foo.md'
+    markdown: 'md/articles/a-pragmatic-approach.md'
   },
   {
     id: 1,
     type: 'article',
     title: 'Keep Learning Free',
-    description: 'Content coming soon',
-    teaser: 'read more',
-    read: false,
+    description: 'Expensive code camps are for the birds...',
+    teaser: 'Read More',
+    highlighted: false,
     preview: true,
-    markdown: './-utils/md/articles/foo.md'
+    markdown: 'md/articles/keep-learning-free.md'
   },
   {
     id: 2,
     type: 'article',
-    title: 'Contributors & Curators',
-    description: 'Content coming soon',
-    teaser: 'read more',
-    read: false,
-    preview: true,
-    markdown: './-utils/md/articles/foo.md'
-  },
-  {
-    id: 3,
-    type: 'article',
     title: 'Start Learning',
-    description: 'Content coming soon',
-    teaser: 'read more',
-    read: false,
+    description: 'What are you waiting for? Answer a few questions and let\'s gets started!',
+    teaser: 'Apply for a Mentorship',
+    highlighted: false,
     preview: true,
-    markdown: './-utils/md/articles/foo.md'
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdDstnhJCBB06Y6si2_eduyQAo82J9egLEk9rnU1y_MBUqZrQ/viewform?usp=sf_link'
   }
 ];
 
 export const resume = [
   {
-    id: 4,
+    id: 1,
+    type: 'resume',
+    employer: 'Big Sky Technologies (ServiceChannel)',
+    tenure: '2017 - Present',
+    titles: ['Full Stack Engineer'],
+    technologies: [
+      'Python \
+      <ul> \
+      <li>Django \
+      <ul> \
+      <li>Django Rest Framework</li> \
+      <li>Django ORM (Postgres)</li> \
+      <li>Django Stripe Primitives</li> \
+      </ul> \
+      </li> \
+      <li>Celery</li> \
+      <li>Boto3</li> \
+      <li>Redis Interface</li> \
+      </ul>',
+
+      'JavaScript ES5/6/7',
+      'Node',
+
+      'Ember <ul> \
+      <li>Ember-Simple-Auth</li> \
+      <li>Ember-Changeset</li> \
+      <li>Ember-Concurrency</li> \
+      <li>Corber</li> \
+      <li>Ember-QUnit</li> \
+      <li>Ember-Page-Object</li> \
+      <li>Ember-Native-Dom-Helpers</li> \
+      </ul>',
+
+      'AWS <ul> \
+      <li>SQS</li> \
+      <li>S3</li> \
+      </ul>',
+
+      'Sass/Bootstrap',
+      'Github Enterprise',
+      'Jenkins',
+      'Logentries'
+    ],
+    company: 'Big Sky provides retail management software used by Facilities, Operations, Loss Prevention and IT to better support stores and manage contractors.',
+    overview: 'At Big Sky, I was charged with architecting solutions that would solve a unique set of problems including ensuring that the software platform could support notification driven ETL, maintaining data integrity across multiple databases, designing and building first party APIs, integration with various third party APIs, and ORM design.',
+    leadership: [
+      'Solutions Architecture',
+      'API Design',
+      'ORM Design',
+      'Project Leadership',
+      'Project and Timeline Management',
+      'Code Pairing',
+      'Code Reviews',
+      'Mentoring',
+    ],
+    bubblesTitle: 'Core contributor on:',
+    bubbles: [
+      {
+        id: 0,
+        path: '#!/about/resume/ally/bubbles/0',
+        text: 'API Proxy<br>Design',
+        size: 'medium',
+        get description() {
+          const title = (this.text).replace(/<br>/g, ' ');
+          return `
+          <h1 class="title is-5"><small>2017</small> &nbsp;${title}</h1>
+          <p>
+            One of the challenges of working on a piece software with multiple
+            data layers, is the question of API proxying. Our client application
+            faces a Django web API for performing CRUD actions on many of its models,
+            but in some cases the application would need to transact with other APIs.
+          </p>
+
+          <p>
+            I was charged with designing solution that would allow a Django view to bypass
+            its typical serialization and model validation, and instead borrow those responsibilities
+            from a separate web API, as well as proxy a response from the remote view.
+
+            At a high level, the solution was as follows:
+          </p>
+
+          <ul>
+            <li>
+              Decorate the Django View with an API adapter. This decorator would inform
+              the view of the following:
+              <ul>
+                <li>
+                  Outgoing:
+                  <ul>
+                    <li>Authorization for remote requests</li>
+                    <li>Serialization</li>
+                  </ul>
+                </li>
+
+                <li>
+                  Incoming:
+                  <ul>
+                    <li>Proxying of validation errors</li>
+                    <li>Proxying of success response</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          `;
+        }
+      },
+      {
+        id: 1,
+        path: '#!/about/resume/ally/bubbles/1',
+        text: 'ETL<sup>*</sup> Design',
+        size: 'large',
+        get description() {
+          const title = (this.text).replace(/<br>/g, ' ');
+          return `
+            <h1 class="title is-5"><small>2017</small> &nbsp;${title}</h1>
+            <p>
+              Very early on in the life cyle of the software (pre-dating my joining the team),
+              a decisions was made to re-shape source data into a more flexible
+              schema customized for this application's target customer.
+
+              That decision presented various challenges. One of which
+              was ensuring data integrity between the two databases. Another
+              was managing data consistency in as close to real time as possible.
+
+              Without the benefit of time to explore the viability of products like
+              Amazon Glue, the Senior Engineering team architected a solution that would
+              address the aforementioned challenges.
+            </p>
+            <p>
+              At a high level we designed and implemented the following:
+            </p>
+            <ul>
+              <li>Subscription to change events via Amazon SQS Queue</li>
+              <li>When an event occurred, workers executed asynchronous synchronization tasks</li>
+              <li>
+                Transformation adapters for each model type facilitated the most
+                efficient and prioritized synchronization strategy.
+              </li>
+            </ul>
+            <small>
+              * ETL is the extraction, transformation, and loading of data between
+              one database and another.
+            </small>
+          `;
+        }
+      },
+      {
+        id: 2,
+        path: '#!/about/resume/ally/bubbles/2',
+        text: 'Stripe API<br>Adapter',
+        size: 'small',
+        get description() {
+          const title = (this.text).replace(/<br>/g, ' ');
+          return `
+          <h1 class="title is-5"><small>2017</small> &nbsp;${title}</h1>
+          <p>
+            To facilitate simple subscription management for our customers,
+            I paired with a junior developer to implement an elegant
+            Stripe API adapter for our Django API.
+            <ul>
+              <li>Exhaustive exception handling behind a decorator</li>
+              <li>Logical abstractions of the Stripe Primitives related to the subscription flow</li>
+            </ul>
+          </p>
+          `;
+        }
+      },
+      {
+        id: 2,
+        path: '#!/about/resume/ally/bubbles/2',
+        text: 'Authentication<br>rewrite',
+        size: 'large',
+        get description() {
+          const title = (this.text).replace(/<br>/g, ' ');
+          return `
+            <h1 class="title is-5"><small>2017</small> &nbsp;${title}</h1>
+            <p>
+              As a prerequisite to a packaging our app for native devices (Corber),
+              I was handed the task of decomissioning our Django templated login flows
+              and replacing them with Ember routes supported by Ember Simple Auth
+              <ul>
+                <li>Custom authenticator to support JWT Bearer Token Flow</li>
+                <li>Integration with Ember Concurrency</li>
+                <li>Integration with Ember Changeset</li>
+              </ul>
+            </p>
+            `;
+        }
+      },
+      {
+        id: 4,
+        path: '#!/about/resume/ally/bubbles/4',
+        text: 'Automation<br>Scheduler',
+        size: 'large',
+        get description() {
+          const title = (this.text).replace(/<br>/g, ' ');
+          return `
+          <p>
+            Many of our customers who have regularly scheduled maintenance
+            at multiple retail locations, had to manually and repeatedly
+            process work orders on a monthly or weekly basis.
+
+            Using some templated data, I was able to alleviate our customers
+            of that process by automating the following chores.
+            <ul>
+              <li>
+                Determine which and how many work orders should be processed on a particular day
+              </li>
+              <li>
+                Calculate and schedule when work orders should be processed
+                the next time around. (e.g. in 30 days and on a particular day of the week)
+              </li>
+              <li>
+                Automate the extrapolation of work order processing across multiple locations
+              </li>
+            </ul>
+          </p>
+          `;
+        }
+      },
+      {
+        id: 5,
+        path: '#!/about/resume/ally/bubbles/5',
+        text: 'Django<br>Admin<br>Dashboard',
+        size: 'medium',
+        get description() {
+          const title = (this.text).replace(/<br>/g, ' ');
+          return `
+          <h1 class="title is-5"><small>2017</small> &nbsp;${title}</h1>
+          <p>
+            As a precaution for any potential desynchronization or data infedelity,
+            I wired up a Django AdminSite giving administrators a simple way to
+            invoke management commands, and subsequent synchronization tasks on demand.
+          </p>
+          `;
+        }
+      },
+      {
+        id: 6,
+        path: '#!/about/resume/ally/bubbles/7',
+        text: 'Routable<br>Modal',
+        size: 'small',
+        get description() {
+          const title = (this.text).replace(/<br>/g, ' ');
+          return `
+          <p>
+            This criteria for this task was to accomplish a multi-step UX
+            from within a modal, and that state could be shared across users
+            (via deeplink), or survive a refresh. Also, for maintainability, we
+            did not want introduce any additional modal add-ons to accomplish this.
+
+            In the end, I combined ember-modal-dialog's routable usage
+            with dynamic segments so that state (a customer's selections)
+            could easily be re-built from the url path.
+          </p>
+          `;
+        }
+      }
+    ]
+  },
+  {
+    id: 2,
     type: 'resume',
     employer: 'Ally Financial',
-    tenure: '2013 - Present',
+    tenure: '2013 - 2017',
     titles: ['Senior Software Engineer', '+ Application Architect'],
     technologies: [
       'Vanilla JavaScript ES5/6/7',
@@ -62,12 +314,12 @@ export const resume = [
       'Bitbucket Enterprise'
     ],
     company: 'A Leader in Digital Financial Services. The Ally Online Services web application has over 1 million active users',
-    overview: 'Architecting and engineering software infrastructure for various enterprise web applications that make up Ally Online Services. Project Lead responsible for oversight and code-review of first party, third party, and off-shore engineers and developers. Teaching repeatable patterns, intelligent abstractions, and best practices. Responsibilities for overall applications stability, maintainability, and scalability.',
+    overview: 'Architecting and engineering software infrastructure for various enterprise web applications that make up Ally Online Services. Project Lead responsible for oversight and code-review of first party, third party, and offshore engineers and developers. Teaching repeatable patterns, intelligent abstractions, and best practices. Responsibilities for overall applications stability, maintainability, and scalability.',
     leadership: [
       'Project leadership',
       'Architecting and Solutioning',
       'Project and Timeline Management',
-      'Live coding reviews with off-shore teams, and staff augmentation teams',
+      'Live coding reviews with offshore teams, and staff augmentation teams',
       'Oversight and live code review of third party feature contributors',
       'Peer code review',
       'Mentoring and Education',
@@ -99,9 +351,9 @@ export const resume = [
       {
         id: 4,
         path: '#!/about/resume/ally/bubbles/3',
-        text: 'Authentication<br>Protocol Re-write',
+        text: 'Authentication<br>Protocol rewrite',
         size: 'large',
-        description: '<h1 class="title is-5"><small>2016</small> &nbsp;Authentication Protocol Re-write</h1> <ul> <li>Multi-factor flows (with dozens of edge cases)</li><li>Custom adapter, serializer (endpoints were too overloaded for ember-data)</li><li>Intelligent routing and redirects</li><li>Re-usable client micro-services to perform auth related tasks</li><li>Secure third-party post-authentication hand-off</li><li>Modularization (in progress)</li></ul>'
+        description: '<h1 class="title is-5"><small>2016</small> &nbsp;Authentication Protocol rewrite</h1> <ul> <li>Multi-factor flows (with dozens of edge cases)</li><li>Custom adapter, serializer (endpoints were too overloaded for ember-data)</li><li>Intelligent routing and redirects</li><li>Re-usable client micro-services to perform auth related tasks</li><li>Secure third-party post-authentication hand-off</li><li>Modularization (in progress)</li></ul>'
       },
       {
         id: 5,
@@ -134,7 +386,7 @@ export const resume = [
     ]
   },
   {
-    id: 5,
+    id: 3,
     type: 'resume',
     employer: 'AM-to-PM Creative',
     tenure: '2008 - 2013',
@@ -153,7 +405,7 @@ export const resume = [
       'Linux'
     ],
     overview: 'Engineering and consulting with a focus on data driven web applications, platform migrations, intranet/operations applications. Responsible for architectural and strategic consulting, API design/implementation, UX design/development.',
-    company: 'Whether it is a start up or a business re-inventing itself, AM-to-PM delivers big agency quality without the bloat.',
+    company: 'Whether it is a startup or a business re-inventing itself, AM-to-PM delivers big agency quality without the bloat.',
     leadership: [
       'Technical Sales',
       'Resource Management',
@@ -188,7 +440,7 @@ export const resume = [
         path: '#!/about/resume/ampm/bubbles/3',
         text: 'Keppler Speakers<br>Search API',
         size: 'x-large',
-        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Search API re-write to support large-scale database and platform migration</h1><ul><li>Migration of platform from ASP to PHP</li><li>Aggregation middleware cross-referencing across Microsoft SQL Server and Oracle databases</li><li>Asynchrounous Results and Pagination</li><li>Mobile web implementation</li></li></ul>'
+        description: '<h1 class="title is-5"><small>2012</small> &nbsp;Search API rewrite to support large-scale database and platform migration</h1><ul><li>Migration of platform from ASP to PHP</li><li>Aggregation middleware cross-referencing across Microsoft SQL Server and Oracle databases</li><li>Asynchrounous Results and Pagination</li><li>Mobile web implementation</li></li></ul>'
       },
       {
         id: 4,
@@ -200,7 +452,7 @@ export const resume = [
     ]
   },
   {
-    id: 5,
+    id: 4,
     type: 'resume',
     employer: 'Dakota Group',
     tenure: '2007 - 2008',
@@ -230,7 +482,7 @@ export const resume = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     type: 'resume',
     employer: 'Worx Group',
     tenure: '2004 - 2005',
@@ -246,5 +498,56 @@ export const resume = [
   }
 ];
 
+export const resources = [
+  {
+    type: 'resource',
+    group: 'Free Learning',
+    list: [
+      { link: "https://www.codecademy.com/", name: "CodeAcademy" }
+      ,
+      { link: "http://www.codewars.com/", name: "CodeWars" }
+      ,
+      { link: "http://freecodecamp.com/", name: " Free Code Camp&nbsp;" }
+      ,
+      { link: "https://www.khanacademy.org/", name: "Khan Academy" }
+      ,
+      { link: "https://dash.generalassemb.ly/", name: "GA Dash&nbsp;" }
+      ,
+      { link: "http://www.theodinproject.com/home", name: "The Odin Project" }
+      ,
+      { link: "https://code.org/", name: "Code.org" }
+      ,
+      { link: "http://www.codeconquest.com/", name: "Code Conquest&nbsp;" }
+      ,
+      { link: "http://ocw.mit.edu/index.htm", name: "MIT Open CourseWare&nbsp;" }
+    ]
+  },
+  {
+    type: "resource",
+    group: "Free Software",
+    list: [
+      { link:"https://codeanywhere.com", name: "Code Anywhere"},
+      { link:"https://ide.atom.io/", name: "Atom"},
+      { link:"https://www.xamarin.com/download", name: "Xamarin"},
+      { link:"https://developer.apple.com/xcode/downloads/", name: "XCode"},
+      { link:"https://flutter.io/", name: "Flutter"},
+      { link:"https://macdown.uranusjr.com/", name: "MacDown"},
+      { link:"https://eggerapps.at/postico/", name: "Postico"}
+    ]
+  },
+  {
+    type: "resource",
+    group: "Collaboration",
+    list: [
+      { link:"http://slack.com", name: "Slack"},
+      { link:"https://hangouts.google.com/", name: "Google Hangoouts"},
+      { link:"https://drive.google.com/", name: "Google Drive"},
+      { link:"https://keep.google.com/", name: "Google Keep"},
+      { link:"https://www.dropbox.com/h", name: "Dropbox"},
+      { link:"https://trello.com/", name: "Trello"}
+    ]
+  }
+];
 
-export const content = [].concat(articles, resume);
+
+export const content = [].concat(articles, resume, resources);

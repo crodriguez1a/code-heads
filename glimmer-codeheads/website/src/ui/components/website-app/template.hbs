@@ -8,12 +8,19 @@
       </div>
     </div>
     <div class="nav-right">
-      <a class="nav-item" href="#!/about">
-        About
-      </a>
       <span class="nav-item">
-        <a href="https://github.com/crodriguez1a/code-heads" target="_blank" class="nav-item button is-info is-outlined">
-          <i class="icon fa fa-github"></i>&nbsp;GitHub
+        <a class="navbar-item" href="#!/about">
+          About
+        </a>
+      </span>
+      <span class="nav-item">
+        <a href="https://github.com/crodriguez1a/code-heads" target="_blank" class="navbar-item">
+          <i class="icon fa fa-github"></i>Github
+        </a>
+      </span>
+      <span class="nav-item">
+        <a href="http://code-heads-club.slack.com" target="_blank" class="navbar-item">
+          <i class="icon fa fa-slack"></i>Slack
         </a>
       </span>
     </div>
@@ -29,9 +36,9 @@
         </h1>
         <div class="content subtitle">
           <p>
-            The Code-Heads Club is partnership between Engineers and Students.
+            The Code-Heads Club is a partnership between Engineers and Students.
             <br>
-            Our mission is to maintain a <strong>free</strong> curriculum for young adults learning to code.
+            Our mission is to facilitate mentorships for young people learning to code.
           </p>
         </div>
       </div>
@@ -41,18 +48,72 @@
 
 <main>
   <section class="section">
-    <div class="columns">
-
       {{! Home}}
       {{#if (equals routeName '')}}
-        {{#each articles key="@index" as |article index|}}
-          <div class="column">
-            <div class="box">
-              <article-card @article={{article}} @togglePreview={{action togglePreview index}} @markAsRead={{action markAsRead index}} />
+        <div class="columns is-mobile">
+          {{#each articles key="@index" as |article index|}}
+            <div class="column">
+              <article-card @article={{article}} @visitArticle={{action visitArticle index}} />
+            </div>
+          {{/each}}
+        </div>
+        <div class="columns">
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-content">
+                <p class="title">
+                  “Everybody in this country should learn to program a computer, because it teaches you how to think.”
+                </p>
+                <p class="subtitle">
+                  Steve Jobs
+                </p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    <a href="mailto:crodriguez1a@gmail.com">Engineers</a>
+                  </span>
+                </p>
+                <p class="card-footer-item">
+                  <span>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDstnhJCBB06Y6si2_eduyQAo82J9egLEk9rnU1y_MBUqZrQ/viewform?usp=sf_link" target="_blank">Students</a>
+                  </span>
+                </p>
+              </footer>
             </div>
           </div>
-        {{/each}}
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <p class="title">Some Great Resources</p>
+                <div class="columns">
+                  {{#each resources key="@index" as |resource|}}
+                    <div class="column">
+                      <p class="content">
+                        <p class="subtitle">{{resource.group}}</p>
+                        <ul>
+                          {{#each resource.list key="@index" as |item|}}
+                            <li><a href="{{item.link}}">{{html-safe item.name}}</a></li>
+                          {{/each}}
+                        </ul>
+                      </p>
+                    </div>
+                  {{/each}}
+                </div>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    Contribute to this list: <a href="https://github.com/crodriguez1a/code-heads" class="footer-item"><i class="fa fa-icon fa-github"></i></a>
+                  </span>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
       {{/if}}
+
+    <div class="columns">
 
       {{! About}}
       {{#if (equals routeName 'about')}}
@@ -64,8 +125,34 @@
         <about-resume @resume={{resume}} @routeName={{routeName}} />
       {{/if}}
 
+      {{! Apply}}
+      {{#if (equals routeName 'apply')}}
+        <div class="google-form">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdDstnhJCBB06Y6si2_eduyQAo82J9egLEk9rnU1y_MBUqZrQ/viewform?embedded=true" width="800" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
+      {{/if}}
+
     </div>
   </section>
+  <footer class="footer no-print">
+    <div class="container">
+    <div class="content has-text-centered">
+      <a href="mailto:crodriguez1a@gmail.com" class="footer-item">
+        <i class="icon fa fa-icon fa-envelope-o" aria-hidden="true"></i>
+      </a> |
+      <a href="https://www.linkedin.com/in/carlos-rodriguez-83a9189/" class="footer-item">
+        <i class="icon fa fa-icon fa-linkedin" aria-hidden="true"></i>
+      </a> |
+      <a href="https://github.com/crodriguez1a/code-heads" class="footer-item">
+        <i class="icon fa fa-icon fa-github" aria-hidden="true"></i>
+      </a> |
+      <a href="http://code-heads-club.slack.com" class="footer-item">
+        <i class="fa fa-icon fa-slack"></i>
+      </a>
+    </div>
+  </div>
+  </footer>
 </main>
 
-<article-modal @content={{content}} />
+{{! https://github.com/emberjs/rfcs/blob/master/text/0226-named-blocks.md }}
+<article-modal @content={{highlighted_article}} @closeModal={{action unvisitArticle highlighted_article.id}} />

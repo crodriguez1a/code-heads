@@ -17,12 +17,16 @@ $repeat: 15;
 }
 
 .bubble-chart {
+  @media screen and (min-width: $desktop) {
+    max-width: 75%;
+    margin: 0 auto;
+  }
   text-align: center;
   line-height: 0;
 
   .bubble {
     position: relative;
-    border: 1px dashed;
+    border: 2px dotted;
     border-radius: 100%;
     width: auto;
     max-width: 50%;
@@ -35,6 +39,15 @@ $repeat: 15;
     padding: 1rem;
     line-height: 1.25;
     margin: 0.05rem 0.05rem 0.5rem 0.05rem;
+    flex: 1;
+    cursor: pointer;
+
+    &:hover {
+      transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
+      transition-duration:400ms;
+      transform:scale(1.2,1.2);
+      border-style: solid;
+    }
 
     @for $i from 1 through $repeat {
       &:nth-child(#{length($colors)}n+#{$i}) {
@@ -45,7 +58,7 @@ $repeat: 15;
     a {
       color: $black;
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
 

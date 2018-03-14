@@ -1,33 +1,22 @@
-<div>
   {{! NOTE arguments always start with an @ sign (think "A is for arguments") }}
-  <div class="columns is-mobile">
-    <div class="column">
-      <h1 class="title is-5">{{@article.title}}</h1>
-    </div>
-    {{#unless @article.preview}}
-      <div class="column is-1 has-text-right">
-        <a href="#" onclick={{action @togglePreview}}><i class="fa fa-caret-up"></i></a>
-      </div>
-    {{/unless}}
-    <div class="columm is-1">
-      <a href="#" onclick={{action @markAsRead}}>
-        <i class="fa fa-bookmark{{_if @article.read '' '-o'}}"></i>
-      </a>
-    </div>
+<div class="card">
+  <div class="card-content">
+    <h1 class="title">{{@article.title}}</h1>
+      <p>
+        {{@article.description}}
+      </p>
   </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        {{#if @article.markdown}}
+          <a href="#" onclick={{action @visitArticle}}>{{@article.teaser}}</a>
+        {{/if}}
 
-  {{#if @article.preview}}
-    <p>
-      {{@article.description}} <a href="#" onclick={{action @togglePreview}}>{{@article.teaser}}</a>
+        {{#if @article.link}}
+          <a href="{{@article.link}}" target="_blank">{{@article.teaser}}</a>
+        {{/if}}
+      </span>
     </p>
-  {{else}}
-    <p>
-      Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.
-      De carne lumbering animata corpora quaeritis. Summus brains sit​​,
-      morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris.
-      Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi
-      dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat
-      max brucks terribilem incessu zomby.
-    </p>
-  {{/if}}
+  </footer>
 </div>

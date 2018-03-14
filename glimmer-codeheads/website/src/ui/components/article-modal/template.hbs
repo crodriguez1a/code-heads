@@ -1,7 +1,19 @@
-<div class="modal">
+<div class="modal {{_if @content 'is-active'}}">
   <div class="modal-background"></div>
-  <div class="modal-content">
-    {{@content}}
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">{{@content.title}}</p>
+      <button class="delete" aria-label="close" onclick={{action @closeModal}}></button>
+    </header>
+    <section class="modal-card-body">
+      {{#if @content}}
+        <div class="content">
+          <mark-down @path={{@content.markdown}} />
+        </div>
+      {{/if}}
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" onclick={{action @closeModal}}>Close</button>
+    </footer>
   </div>
-  <button class="modal-close"></button>
 </div>

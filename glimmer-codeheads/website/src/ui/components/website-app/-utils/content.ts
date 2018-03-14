@@ -8,7 +8,7 @@ export const articles = [
     teaser: 'Read More',
     highlighted: false,
     preview: true,
-    markdown: '/md/articles/a-pragmatic-approach.md'
+    markdown: 'md/articles/a-pragmatic-approach.md'
   },
   {
     id: 1,
@@ -18,7 +18,7 @@ export const articles = [
     teaser: 'Read More',
     highlighted: false,
     preview: true,
-    markdown: '/md/articles/keep-learning-free.md'
+    markdown: 'md/articles/keep-learning-free.md'
   },
   {
     id: 2,

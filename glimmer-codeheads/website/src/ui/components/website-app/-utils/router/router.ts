@@ -34,6 +34,9 @@ export default class Router {
       '/about/resume/:employer/bubbles/:id': (params) => {
         fnNameUpdate(`resume|${params.employer}|bubbles|${params.id}`);
       },
+      '/apply': () => {
+        fnNameUpdate('apply');
+      },
       '': () => {
         fnNameUpdate('');
        }

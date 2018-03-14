@@ -3,42 +3,32 @@ export const articles = [
   {
     id: 0,
     type: 'article',
-    title: 'A Practical Approach',
-    description: 'Content coming soon',
+    title: 'A Pragmatic Approach',
+    description: 'At Code-Heads, we\'re keenly aware of the pace at which both students and engineers live...',
     teaser: 'read more',
-    read: false,
+    highlighted: false,
     preview: true,
-    markdown: './-utils/md/articles/foo.md'
+    markdown: '/md/articles/a-pragmatic-approach.md'
   },
   {
     id: 1,
     type: 'article',
     title: 'Keep Learning Free',
-    description: 'Content coming soon',
+    description: 'Expensive code camps are for the birds...',
     teaser: 'read more',
-    read: false,
+    highlighted: false,
     preview: true,
-    markdown: './-utils/md/articles/foo.md'
+    markdown: '/md/articles/keep-learning-free.md'
   },
   {
     id: 2,
     type: 'article',
-    title: 'Mentorships',
-    description: 'Content coming soon',
-    teaser: 'read more',
-    read: false,
-    preview: true,
-    markdown: './-utils/md/articles/foo.md'
-  },
-  {
-    id: 3,
-    type: 'article',
     title: 'Start Learning',
-    description: 'Content coming soon',
-    teaser: 'read more',
-    read: false,
+    description: 'What are you waiting for?',
+    teaser: 'Apply for a mentorship',
+    highlighted: false,
     preview: true,
-    markdown: './-utils/md/articles/foo.md'
+    link: 'https://docs.google.com/forms/d/e/1FAIpQLSdDstnhJCBB06Y6si2_eduyQAo82J9egLEk9rnU1y_MBUqZrQ/viewform?usp=sf_link'
   }
 ];
 

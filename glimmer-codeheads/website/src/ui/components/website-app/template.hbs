@@ -31,7 +31,7 @@
           <p>
             The Code-Heads Club is partnership between Engineers and Students.
             <br>
-            Our mission is to maintain a <strong>free</strong> curriculum for anyone learning to code.
+            Our mission is to facilitate mentorships for young people learning to code.
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@
         {{#each articles key="@index" as |article index|}}
           <div class="column">
             <div class="box">
-              <article-card @article={{article}} @visitArticle={{action visitArticle article.path}} @markAsRead={{action markAsRead index}} />
+              <article-card @article={{article}} @visitArticle={{action visitArticle index}} />
             </div>
           </div>
         {{/each}}
@@ -62,6 +62,13 @@
       {{! About/resume}}
       {{#if (equals routeName 'resume')}}
         <about-resume @resume={{resume}} @routeName={{routeName}} />
+      {{/if}}
+
+      {{! Apply}}
+      {{#if (equals routeName 'apply')}}
+        <div class="google-form">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdDstnhJCBB06Y6si2_eduyQAo82J9egLEk9rnU1y_MBUqZrQ/viewform?embedded=true" width="800" height="1500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </div>
       {{/if}}
 
     </div>
@@ -83,4 +90,5 @@
   </footer>
 </main>
 
-<article-modal @content={{content}} />
+{{! https://github.com/emberjs/rfcs/blob/master/text/0226-named-blocks.md }}
+<article-modal @content={{highlighted_article}} @closeModal={{action unvisitArticle highlighted_article.id}} />

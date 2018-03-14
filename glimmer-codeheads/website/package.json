@@ -30,7 +30,7 @@
     "navigo": "^4.8.0",
     "process": "^0.11.10",
     "redux": "^3.6.0",
-    "regenerator-runtime": "^0.10.5",
+    "regenerator-runtime": "^0.11.1",
     "rollup-plugin-commonjs": "^8.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-replace": "^1.1.1",
@@ -42,6 +42,6 @@
   },
   "private": true,
   "dependencies": {
-    "showdown": "^1.7.1"
+    "showdown": "^1.8.6"
   }
 }

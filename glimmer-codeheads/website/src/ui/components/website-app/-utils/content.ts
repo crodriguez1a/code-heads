@@ -5,7 +5,7 @@ export const articles = [
     type: 'article',
     title: 'A Pragmatic Approach',
     description: 'At Code-Heads, we\'re keenly aware of the pace at which both students and engineers live...',
-    teaser: 'read more',
+    teaser: 'Read More',
     highlighted: false,
     preview: true,
     markdown: '/md/articles/a-pragmatic-approach.md'
@@ -15,7 +15,7 @@ export const articles = [
     type: 'article',
     title: 'Keep Learning Free',
     description: 'Expensive code camps are for the birds...',
-    teaser: 'read more',
+    teaser: 'Read More',
     highlighted: false,
     preview: true,
     markdown: '/md/articles/keep-learning-free.md'
@@ -24,8 +24,8 @@ export const articles = [
     id: 2,
     type: 'article',
     title: 'Start Learning',
-    description: 'What are you waiting for?',
-    teaser: 'Apply for a mentorship',
+    description: 'What are you waiting for? Answer a few questions and let\'s gets started!',
+    teaser: 'Apply for a Mentorship',
     highlighted: false,
     preview: true,
     link: 'https://docs.google.com/forms/d/e/1FAIpQLSdDstnhJCBB06Y6si2_eduyQAo82J9egLEk9rnU1y_MBUqZrQ/viewform?usp=sf_link'
@@ -498,5 +498,56 @@ export const resume = [
   }
 ];
 
+export const resources = [
+  {
+    type: 'resource',
+    group: 'Free Learning',
+    list: [
+      { link: "https://www.codecademy.com/", name: "CodeAcademy" }
+      ,
+      { link: "http://www.codewars.com/", name: "CodeWars" }
+      ,
+      { link: "http://freecodecamp.com/", name: " Free Code Camp&nbsp;" }
+      ,
+      { link: "https://www.khanacademy.org/", name: "Khan Academy" }
+      ,
+      { link: "https://dash.generalassemb.ly/", name: "GA Dash&nbsp;" }
+      ,
+      { link: "http://www.theodinproject.com/home", name: "The Odin Project" }
+      ,
+      { link: "https://code.org/", name: "Code.org" }
+      ,
+      { link: "http://www.codeconquest.com/", name: "Code Conquest&nbsp;" }
+      ,
+      { link: "http://ocw.mit.edu/index.htm", name: "MIT Open CourseWare&nbsp;" }
+    ]
+  },
+  {
+    type: "resource",
+    group: "Free Software",
+    list: [
+      { link:"https://codeanywhere.com", name: "Code Anywhere"},
+      { link:"https://ide.atom.io/", name: "Atom"},
+      { link:"https://www.xamarin.com/download", name: "Xamarin"},
+      { link:"https://developer.apple.com/xcode/downloads/", name: "XCode"},
+      { link:"https://flutter.io/", name: "Flutter"},
+      { link:"https://macdown.uranusjr.com/", name: "MacDown"},
+      { link:"https://eggerapps.at/postico/", name: "Postico"}
+    ]
+  },
+  {
+    type: "resource",
+    group: "Collaboration",
+    list: [
+      { link:"http://slack.com", name: "Slack"},
+      { link:"https://hangouts.google.com/", name: "Google Hangoouts"},
+      { link:"https://drive.google.com/", name: "Google Drive"},
+      { link:"https://keep.google.com/", name: "Google Keep"},
+      { link:"https://www.dropbox.com/h", name: "Dropbox"},
+      { link:"https://trello.com/", name: "Trello"}
+    ]
+  }
+];
 
-export const content = [].concat(articles, resume);
+
+export const content = [].concat(articles, resume, resources);

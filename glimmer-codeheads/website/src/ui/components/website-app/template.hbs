@@ -8,12 +8,19 @@
       </div>
     </div>
     <div class="nav-right">
-      <a class="nav-item" href="#!/about">
-        About
-      </a>
       <span class="nav-item">
-        <a href="https://github.com/crodriguez1a/code-heads" target="_blank" class="nav-item button is-info is-outlined">
-          <i class="icon fa fa-github"></i>&nbsp;GitHub
+        <a class="navbar-item" href="#!/about">
+          About
+        </a>
+      </span>
+      <span class="nav-item">
+        <a href="https://github.com/crodriguez1a/code-heads" target="_blank" class="navbar-item">
+          <i class="icon fa fa-github"></i>Github
+        </a>
+      </span>
+      <span class="nav-item">
+        <a href="http://code-heads-club.slack.com" target="_blank" class="navbar-item">
+          <i class="icon fa fa-slack"></i>Slack
         </a>
       </span>
     </div>
@@ -41,18 +48,72 @@
 
 <main>
   <section class="section">
-    <div class="columns">
-
       {{! Home}}
       {{#if (equals routeName '')}}
-        {{#each articles key="@index" as |article index|}}
-          <div class="column">
-            <div class="box">
+        <div class="columns is-mobile">
+          {{#each articles key="@index" as |article index|}}
+            <div class="column">
               <article-card @article={{article}} @visitArticle={{action visitArticle index}} />
             </div>
+          {{/each}}
+        </div>
+        <div class="columns">
+          <div class="column is-4">
+            <div class="card">
+              <div class="card-content">
+                <p class="title">
+                  “Everybody in this country should learn to program a computer, because it teaches you how to think.”
+                </p>
+                <p class="subtitle">
+                  Steve Jobs
+                </p>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    <a href="mailto:crodriguez1a@gmail.com">Engineers</a>
+                  </span>
+                </p>
+                <p class="card-footer-item">
+                  <span>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDstnhJCBB06Y6si2_eduyQAo82J9egLEk9rnU1y_MBUqZrQ/viewform?usp=sf_link" target="_blank">Students</a>
+                  </span>
+                </p>
+              </footer>
+            </div>
           </div>
-        {{/each}}
+          <div class="column">
+            <div class="card">
+              <div class="card-content">
+                <p class="title">Some Great Resources</p>
+                <div class="columns">
+                  {{#each resources key="@index" as |resource|}}
+                    <div class="column">
+                      <p class="content">
+                        <p class="subtitle">{{resource.group}}</p>
+                        <ul>
+                          {{#each resource.list key="@index" as |item|}}
+                            <li><a href="{{item.link}}">{{html-safe item.name}}</a></li>
+                          {{/each}}
+                        </ul>
+                      </p>
+                    </div>
+                  {{/each}}
+                </div>
+              </div>
+              <footer class="card-footer">
+                <p class="card-footer-item">
+                  <span>
+                    Contribute to this list: <a href="https://github.com/crodriguez1a/code-heads" class="footer-item"><i class="fa fa-icon fa-github"></i></a>
+                  </span>
+                </p>
+              </footer>
+            </div>
+          </div>
+        </div>
       {{/if}}
+
+    <div class="columns">
 
       {{! About}}
       {{#if (equals routeName 'about')}}
@@ -84,6 +145,9 @@
       </a> |
       <a href="https://github.com/crodriguez1a/code-heads" class="footer-item">
         <i class="icon fa fa-icon fa-github" aria-hidden="true"></i>
+      </a> |
+      <a href="http://code-heads-club.slack.com" class="footer-item">
+        <i class="fa fa-icon fa-slack"></i>
       </a>
     </div>
   </div>

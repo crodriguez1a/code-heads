@@ -53,6 +53,16 @@ export default class Website extends Component {
   }
 
   /**
+    An array of resources
+
+    @property resources
+  */
+  @tracked('state')
+  get resources() {
+    return this.state.filter((item) => item && item.type === 'resource');
+  }
+
+  /**
     Single out highlighted article
 
     @property highlighted_article

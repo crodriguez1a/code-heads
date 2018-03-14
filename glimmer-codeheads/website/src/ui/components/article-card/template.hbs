@@ -1,20 +1,22 @@
-<div>
   {{! NOTE arguments always start with an @ sign (think "A is for arguments") }}
-  <div class="columns is-mobile">
-    <div class="column">
-      <h1 class="title is-5">{{@article.title}}</h1>
-        <p>
-          {{@article.description}}
-        </p>
-        <p>
-          {{#if @article.markdown}}
-            <a href="#" onclick={{action @visitArticle}}>{{@article.teaser}}</a>
-          {{/if}}
-
-          {{#if @article.link}}
-            <a href="{{@article.link}}" target="_blank">{{@article.teaser}}</a>
-          {{/if}}
-        </p>
-    </div>
+<div class="card">
+  <div class="card-content">
+    <h1 class="title">{{@article.title}}</h1>
+      <p>
+        {{@article.description}}
+      </p>
   </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span>
+        {{#if @article.markdown}}
+          <a href="#" onclick={{action @visitArticle}}>{{@article.teaser}}</a>
+        {{/if}}
+
+        {{#if @article.link}}
+          <a href="{{@article.link}}" target="_blank">{{@article.teaser}}</a>
+        {{/if}}
+      </span>
+    </p>
+  </footer>
 </div>

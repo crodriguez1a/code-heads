@@ -15,12 +15,12 @@
       </span>
       <span class="nav-item">
         <a href="https://github.com/crodriguez1a/code-heads" target="_blank" class="navbar-item">
-          <i class="icon fa fa-github"></i>Github
+          <i class="icon fa fa-github"></i>
         </a>
       </span>
       <span class="nav-item">
         <a href="http://code-heads-club.slack.com" target="_blank" class="navbar-item">
-          <i class="icon fa fa-slack"></i>Slack
+          <i class="icon fa fa-slack"></i>
         </a>
       </span>
     </div>
@@ -50,7 +50,7 @@
   <section class="section">
       {{! Home}}
       {{#if (equals routeName '')}}
-        <div class="columns is-mobile">
+        <div class="columns">
           {{#each articles key="@index" as |article index|}}
             <div class="column">
               <article-card @article={{article}} @visitArticle={{action visitArticle index}} />

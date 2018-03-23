@@ -4,7 +4,7 @@ import urlWatcher from './watcher';
 const router = new Navigo(null, true, '#!');
 const watcher = new urlWatcher(window.location);
 
-export default class Router {
+class Router {
   constructor(public opts = {debug:false}) {
     this.opts = opts;
     watcher.watch();
@@ -44,3 +44,5 @@ export default class Router {
     .resolve();
   }
 }
+
+export default new Router({ debug:false });

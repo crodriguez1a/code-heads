@@ -1,0 +1,32 @@
+[
+   {
+      "id":0,
+      "type":"article",
+      "title":"A Pragmatic Approach",
+      "description":"At Code-Heads, we're keenly aware of the pace at which both students and engineers live...",
+      "teaser":"Read More",
+      "highlighted":false,
+      "preview":true,
+      "markdown":"md/articles/a-pragmatic-approach.md"
+   },
+   {
+      "id":1,
+      "type":"article",
+      "title":"Keep Learning Free",
+      "description":"Expensive code camps are for the birds...",
+      "teaser":"Read More",
+      "highlighted":false,
+      "preview":true,
+      "markdown":"md/articles/keep-learning-free.md"
+   },
+   {
+      "id":2,
+      "type":"article",
+      "title":"Start Learning",
+      "description":"What are you waiting for? Answer a few questions and let's gets started!",
+      "teaser":"Apply for a Mentorship",
+      "highlighted":false,
+      "preview":true,
+      "link":"https://docs.google.com/forms/d/e/1FAIpQLSdDstnhJCBB06Y6si2_eduyQAo82J9egLEk9rnU1y_MBUqZrQ/viewform?usp=sf_link"
+   }
+]

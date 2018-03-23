@@ -1,6 +1,4 @@
-import { content } from './content';
-
-export default function ArticlesReducer (state=content, action) {
+export default function ArticlesReducer (state=null, action) {
   switch (action.type) {
     case 'HIGHLIGHT_ARTICLE':
       return state.map((article, index) => {

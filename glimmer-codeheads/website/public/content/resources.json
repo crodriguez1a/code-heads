@@ -1,0 +1,82 @@
+[{
+	"type": "resource",
+	"group": "Free Learning",
+	"list": [{
+		"link": "https://www.codecademy.com/",
+		"name": "CodeAcademy"
+	}, {
+		"link": "http://www.codewars.com/",
+		"name": "CodeWars"
+	}, {
+		"link": "http://freecodecamp.com/",
+		"name": " Free Code Camp&nbsp;"
+	}, {
+		"link": "https://www.khanacademy.org/",
+		"name": "Khan Academy"
+	}, {
+		"link": "https://dash.generalassemb.ly/",
+		"name": "GA Dash&nbsp;"
+	}, {
+		"link": "http://www.theodinproject.com/home",
+		"name": "The Odin Project"
+	}, {
+		"link": "https://code.org/",
+		"name": "Code.org"
+	}, {
+		"link": "http://www.codeconquest.com/",
+		"name": "Code Conquest&nbsp;"
+	}, {
+		"link": "http://ocw.mit.edu/index.htm",
+		"name": "MIT Open CourseWare&nbsp;"
+	}, {
+		"link": "https://github.com/brennerm/PyTricks",
+		"name": "PyTricks"
+	}]
+}, {
+	"type": "resource",
+	"group": "Free Software",
+	"list": [{
+		"link": "https://codeanywhere.com",
+		"name": "Code Anywhere"
+	}, {
+		"link": "https://ide.atom.io/",
+		"name": "Atom"
+	}, {
+		"link": "https://www.xamarin.com/download",
+		"name": "Xamarin"
+	}, {
+		"link": "https://developer.apple.com/xcode/downloads/",
+		"name": "XCode"
+	}, {
+		"link": "https://flutter.io/",
+		"name": "Flutter"
+	}, {
+		"link": "https://macdown.uranusjr.com/",
+		"name": "MacDown"
+	}, {
+		"link": "https://eggerapps.at/postico/",
+		"name": "Postico"
+	}]
+}, {
+	"type": "resource",
+	"group": "Collaboration",
+	"list": [{
+		"link": "http://slack.com",
+		"name": "Slack"
+	}, {
+		"link": "https://hangouts.google.com/",
+		"name": "Google Hangoouts"
+	}, {
+		"link": "https://drive.google.com/",
+		"name": "Google Drive"
+	}, {
+		"link": "https://keep.google.com/",
+		"name": "Google Keep"
+	}, {
+		"link": "https://www.dropbox.com/h",
+		"name": "Dropbox"
+	}, {
+		"link": "https://trello.com/",
+		"name": "Trello"
+	}]
+}]

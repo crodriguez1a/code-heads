@@ -1,4 +1,7 @@
 <div>
-  {{#unless text}}loading..{{/unless}}
-  {{html-safe text}}
+  {{#if isLoading}}
+    <loading-indicator @percent=100 />
+  {{else}}
+    {{html-safe text}}
+  {{/if}}
 </div>

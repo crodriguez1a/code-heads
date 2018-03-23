@@ -14,12 +14,20 @@ export default class MarkDown extends Component {
   constructor(options) {
     super(options);
     this.path = options.args.path;
-    this.loadFile();
+    this._loadFile();
   }
 
-  loadFile() {
-    fetch(this.path)
-      .then(request => request.text())
-      .then((text) => this.text = converter.makeHtml(text));
+  @tracked isLoading:boolean = true;
+
+  private async _loadFile():Promise<any> {
+    if (this.path) {
+      let request  = await fetch(this.path);
+      let text = await request.text();
+
+      setTimeout((() => {
+        this.isLoading = false;
+        this.text = converter.makeHtml(text);
+      }), 500);
+    }
   }
 };

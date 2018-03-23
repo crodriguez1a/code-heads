@@ -31,10 +31,21 @@ section.section {
   color: $blue !important;
 }
 
+.nav-item {
+  padding: 0.25rem;
+
+  &:last-child {
+    padding-right: 0.5rem;
+  }
+}
+
 .nav--logo {
-  &.nav-item a {
-    color: $white !important;
-    font-size: 1.25em;
+  &.nav-item {
+    padding-left: 0.5rem;
+    a {
+      color: $white !important;
+      font-size: 1.25em;
+    }
   }
 
   .minimal--logo {
